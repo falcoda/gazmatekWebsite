@@ -1,0 +1,108 @@
+@use "variables" as *;
+@use "sass:math";
+@use "sass:meta";
+
+@function strip-unit($number) {
+  @if (meta.type-of($number) == "number" and not math.is-unitless($number)) {
+    @return math.div($number, ($number * 0 + 1));
+  }
+
+  @return $number;
+}
+
+@mixin smoothValue(
+  $prop,
+  $min,
+  $max,
+  $minViewPort: $mobile,
+  $maxViewPort: $desktop,
+  $minScreen: true
+) {
+  @if $minScreen {
+    @media (min-width: $minViewPort) {
+      #{$prop}: $max;
+    }
+  }
+
+  @media (min-width: $minViewPort) and (max-width: ($maxViewPort - 1)) {
+    #{$prop}: calc(
+      #{$min} + #{strip-unit($max - $min)} *
+        (
+          (100vw - #{$minViewPort}) /
+            (#{strip-unit($maxViewPort - $minViewPort)})
+        )
+    );
+  }
+
+  @media (max-width: ($minViewPort - 1)) {
+    #{$prop}: $min;
+  }
+}
+
+@mixin minScreen($size) {
+  @media only screen and (min-width: $size) {
+    @content;
+  }
+}
+
+@mixin maxScreen($size) {
+  @media only screen and (max-width: $size) {
+    @content;
+  }
+}
+
+@mixin maxHeight($size) {
+  @media only screen and (max-height: $size) {
+    @content;
+  }
+}
+
+@mixin linkMargin {
+  margin-left: $link-padding;
+  margin-right: $link-padding;
+
+  @include maxScreen($breakpoint-sm) {
+    margin: $link-padding-mobile;
+  }
+}
+
+@mixin linkPadding {
+  padding-left: $link-padding;
+  padding-right: $link-padding;
+
+  @include maxScreen($breakpoint-sm) {
+    padding: $link-padding-mobile;
+  }
+}
+
+@mixin linkVerticaMargin {
+  @include smoothValue("margin-top", 30px, 45px, $breakpoint-sm, $breakpoint-lg);
+  @include smoothValue(
+    "margin-bottom",
+    30px,
+    45px,
+    $breakpoint-sm,
+    $breakpoint-lg
+  );
+}
+
+@mixin linkVerticaPadding {
+  @include smoothValue("padding-top", 30px, 45px, $breakpoint-sm, $breakpoint-lg);
+  @include smoothValue(
+    "padding-bottom",
+    30px,
+    45px,
+    $breakpoint-sm,
+    $breakpoint-lg
+  );
+}
+
+@mixin linkBottomMargin {
+  @include smoothValue(
+    "margin-bottom",
+    30px,
+    45px,
+    $breakpoint-sm,
+    $breakpoint-lg
+  );
+}

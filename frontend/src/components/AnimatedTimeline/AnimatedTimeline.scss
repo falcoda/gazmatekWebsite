@@ -1,0 +1,331 @@
+.animatedTimeline {
+  --timeline-offset: 50%;
+  --timeline-mobile-offset: 28px;
+
+  .animatedTimelineTitle {
+    font-family: $raw-display-font-family;
+    font-size: $font-size-display-md;
+    font-weight: 700;
+    margin: 0 0 1.5rem;
+    text-align: center;
+    color: $accent-color;
+    text-transform: uppercase;
+    line-height: $line-height-display;
+    letter-spacing: 0.08em;
+  }
+
+  .animatedTimelineFrame {
+    position: relative;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 1rem 0 0;
+  }
+
+  .animatedTimelineEyebrow {
+    max-width: 640px;
+    margin: 0 auto 3.5rem;
+    text-align: center;
+    color: rgba($gray-color, 0.92);
+    font-size: $font-size-body-md;
+    line-height: $line-height-body;
+    letter-spacing: 0.03em;
+  }
+
+  .animatedTimelineRail {
+    position: absolute;
+    top: 0;
+    left: var(--timeline-offset);
+    width: 26px;
+    height: 0;
+    transform: translateX(-50%);
+    pointer-events: none;
+
+    @include maxScreen($breakpoint-md-3) {
+      left: var(--timeline-mobile-offset);
+      transform: none;
+    }
+  }
+
+  .animatedTimelineRailBase,
+  .animatedTimelineRailGlow,
+  .animatedTimelineRailCore {
+    position: absolute;
+    left: 50%;
+    top: 0;
+    width: 3px;
+    height: 100%;
+    border-radius: 999px;
+    transform: translateX(-50%);
+
+    @include maxScreen($breakpoint-md-3) {
+      left: 0;
+      transform: none;
+    }
+  }
+
+  .animatedTimelineRailBase {
+    background: rgba($accent-color, 0.34);
+    box-shadow:
+      0 0 0 1px rgba($accent-color, 0.04),
+      0 0 10px rgba($accent-color, 0.08);
+  }
+
+  .animatedTimelineRailGlow {
+    background: linear-gradient(
+      180deg,
+      rgba($accent-color, 0.1) 0%,
+      rgba($accent-color, 0.85) 52%,
+      rgba($accent-color, 0.12) 100%
+    );
+    filter: blur(7px);
+    opacity: 0.95;
+  }
+
+  .animatedTimelineRailCore {
+    background: linear-gradient(
+      180deg,
+      rgba($light-color, 0.16) 0%,
+      $accent-color 48%,
+      rgba($light-color, 0.18) 100%
+    );
+    box-shadow:
+      0 0 0 1px rgba($accent-color, 0.08),
+      0 0 20px rgba($accent-color, 0.22);
+  }
+
+  .animatedTimelinePulse {
+    position: absolute;
+    left: 50%;
+    top: 0;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background: $light-color;
+    border: 2px solid rgba($accent-color, 0.9);
+    box-shadow: 0 0 18px rgba($accent-color, 0.32);
+    transform: translate(-50%, -50%);
+
+    @include maxScreen($breakpoint-md-3) {
+      left: 0;
+      transform: translate(0, -50%);
+    }
+  }
+
+  .animatedTimelineContent {
+    display: flex;
+    flex-direction: column;
+    gap: 2.75rem;
+  }
+
+  .animatedTimelineItem {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 96px 1fr;
+    align-items: center;
+
+    &.left {
+      .animatedTimelineCard {
+        grid-column: 1;
+        text-align: right;
+
+        &::after {
+          right: -44px;
+        }
+      }
+    }
+
+    &.right {
+      .animatedTimelineCard {
+        grid-column: 3;
+        text-align: left;
+
+        &::after {
+          left: -44px;
+        }
+      }
+    }
+
+    @include maxScreen($breakpoint-md-3) {
+      grid-template-columns: 56px 1fr;
+
+      &.left,
+      &.right {
+        .animatedTimelineCard {
+          grid-column: 2;
+          text-align: left;
+
+          &::after {
+            left: -28px;
+            right: auto;
+            width: 28px;
+          }
+        }
+      }
+    }
+  }
+
+  .animatedTimelineMarker {
+    position: absolute;
+    top: 50%;
+    left: var(--timeline-offset);
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 3px solid $accent-color;
+    background: $primary-color;
+    box-shadow:
+      0 0 0 7px rgba($accent-color, 0.08),
+      0 0 18px rgba($accent-color, 0.2);
+    transform: translate(-50%, -50%);
+    z-index: 2;
+
+    @include maxScreen($breakpoint-md-3) {
+      left: var(--timeline-mobile-offset);
+      transform: translate(0, -50%);
+    }
+  }
+
+  .animatedTimelineCard {
+    --timeline-connector-fill: 0;
+    position: relative;
+    padding: 1.45rem 1.6rem;
+    border: 1px solid transparent;
+    border-radius: $radius-medium;
+    background-color: rgba($primary-color, 0.88);
+    background-image: linear-gradient(
+      160deg,
+      rgba($light-color, 0.08) 0%,
+      rgba($accent-color, 0.08) 100%
+    );
+    box-shadow:
+      0 18px 40px rgba($primary-color, 0.22),
+      inset 0 1px 0 rgba($light-color, 0.06);
+    backdrop-filter: blur(10px);
+    transition:
+      transform 0.28s ease,
+      box-shadow 0.28s ease,
+      background-color 0.28s ease;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      width: 44px;
+      height: 2px;
+      background: rgba($accent-color, 0.34);
+      border-radius: 999px;
+      z-index: 1;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      width: 44px;
+      height: 2px;
+      background: rgba($accent-color, 0.98);
+      border-radius: 999px;
+      box-shadow: 0 0 10px rgba($accent-color, 0.22);
+      z-index: 2;
+    }
+
+    &:hover {
+      transform: translateY(-6px);
+      box-shadow:
+        0 22px 44px rgba($primary-color, 0.32),
+        0 0 24px rgba($accent-color, 0.12);
+    }
+  }
+
+  .timelineBorderSvg {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 3;
+    overflow: visible;
+  }
+
+  .timelineBorderBase {
+    fill: none;
+    stroke: rgba($accent-color, 0.34);
+    stroke-width: 2;
+    vector-effect: non-scaling-stroke;
+    shape-rendering: geometricPrecision;
+  }
+
+  .timelineBorderActive {
+    fill: none;
+    stroke: rgba($accent-color, 0.98);
+    stroke-width: 2;
+    stroke-linecap: butt;
+    stroke-linejoin: round;
+    vector-effect: non-scaling-stroke;
+    shape-rendering: geometricPrecision;
+  }
+
+  .animatedTimelineCard > :not(.timelineBorderSvg) {
+    position: relative;
+    z-index: 1;
+  }
+
+  .animatedTimelineItem.right {
+    .animatedTimelineCard {
+      &::after,
+      &::before {
+        left: -44px;
+      }
+
+      &::before {
+        transform: translateY(-50%) scaleX(var(--timeline-connector-fill));
+        transform-origin: left center;
+      }
+    }
+  }
+
+  .animatedTimelineItem.left {
+    .animatedTimelineCard {
+      &::after,
+      &::before {
+        right: -44px;
+      }
+
+      &::before {
+        transform: translateY(-50%) scaleX(var(--timeline-connector-fill));
+        transform-origin: right center;
+      }
+    }
+  }
+
+  @include maxScreen($breakpoint-md-3) {
+    .animatedTimelineTitle {
+      margin-bottom: 1rem;
+    }
+
+    .animatedTimelineEyebrow {
+      margin-bottom: 2.5rem;
+      padding-left: 56px;
+      text-align: left;
+    }
+
+    .animatedTimelineContent {
+      gap: 2rem;
+    }
+
+    .animatedTimelineCard {
+      padding: 1.2rem 1.15rem;
+
+      &::after,
+      &::before {
+        left: -28px;
+        right: auto;
+        width: 28px;
+      }
+
+      &::before {
+        transform-origin: left center;
+      }
+    }
+  }
+}

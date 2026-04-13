@@ -1,0 +1,259 @@
+{
+  "hero": {
+    "welcome": "Bienvenue",
+    "baseline": "Label belge | Organisateur | Location Sound System",
+    "ctaPrimary": "Voir les événements",
+    "ctaSecondary": "Nous contacter"
+  },
+  "nextEvent": {
+    "title": "Prochain événement",
+    "empty": "Stay tuned...",
+    "archiveTitle": "Quelques soirees memorables",
+    "cta": "Voir plus"
+  },
+  "soundcloud": {
+    "title": "Nos dernieres sorties sur SoundCloud"
+  },
+  "nav": {
+    "home": "Accueil",
+    "about": "Qui sommes nous",
+    "artists": "Nos artistes",
+    "events": "Evenements",
+    "more": "More",
+    "services": "Location",
+    "contact": "Contact"
+  },
+  "seo": {
+    "defaultTitle": "Gazmatek",
+    "defaultDescription": "Collectif belge, organisateur d'événements tekno et location de sound system.",
+    "homeTitle": "Gazmatek — Collectif belge, tekno underground",
+    "homeDescription": "Gazmatek : sound system belge, événements tekno underground, artistes résidents et location de matériel depuis 2016.",
+    "artistsTitle": "Artistes | Gazmatek",
+    "artistsDescription": "Découvrez les artistes résidents du collectif Gazmatek — producteurs et DJs actifs sur la scène tekno, acid et hardcore.",
+    "contactTitle": "Contact | Gazmatek",
+    "contactDescription": "Contactez Gazmatek pour un booking, une location son, une demande artiste ou un partenariat. Réponse sous 48h.",
+    "termsTitle": "Conditions générales | Gazmatek",
+    "termsDescription": "Conditions générales d'utilisation et de location de matériel Gazmatek ASBL."
+  },
+  "cta": {
+    "discover": "Decouvrir",
+    "learnMore": "Voir plus",
+    "requestQuote": "Demander un devis"
+  },
+  "validation": {
+    "required": "Ce champ est requis.",
+    "email": "Merci d'entrer une adresse email valide."
+  },
+  "carousel": {
+    "title": " Découvrez nos dernières soirées"
+  },
+  "artistSeparator": {
+    "title": "Nos Artistes"
+  },
+  "about": {
+    "title": "À propos",
+    "text": "Gazmatek est plus qu'un simple sound system ; nous sommes le cœur battant de l'underground. Avec un engagement inébranlable pour l'exploration sonore, nous organisons des nuits inoubliables de musique et de culture."
+  },
+  "soundHire": {
+    "title": "Location de sound system",
+    "text": "Spécialisés dans la location de sound system, nous proposons différents packages.",
+    "button": "Voir plus"
+  },
+  "contact": {
+    "emailCta": "Écrire à Gazmatek",
+    "emailSubject": "Demande de contact",
+    "socialTitle": "Retrouvez-nous",
+    "subjectsLabel": "Types de demandes",
+    "contextLeft": "Booking, location son, demande artiste, partenariat ou simple prise de contact — un seul point d'entrée.",
+    "responseTime": "Réponse sous 48h",
+    "subjects": {
+      "booking": "Booking événement",
+      "rental": "Location son",
+      "artist": "Demande artiste",
+      "partnership": "Partenariat",
+      "general": "Info générale"
+    }
+  },
+  "servicesSection": {
+    "title": "Nos services",
+    "text": "Nous proposons une large gamme de services pour répondre à vos besoins.",
+    "button": "Voir plus"
+  },
+  "aboutUs": {
+    "heroTitle": "Qui sommes-nous",
+    "heroSubtitle": "Le collectif derrière Gazmatek",
+    "introText": "Gazmatek a été fondé par des passionnés de musique avec pour objectif de mettre en avant les artistes belges désireux de se faire entendre et de créer des expériences uniques pour tous les participants. Notre mission est de faire découvrir et vivre des moments exceptionnels à travers la musique, en offrant une plateforme où les talents locaux peuvent briller et où chacun peut se sentir pleinement immergé dans une ambiance musicale unique.",
+    "teamTitle": "Notre equipe"
+  },
+  "artists": {
+    "pageTitle": "Nos Artistes",
+    "pageSubtitle": "Découvrez les artistes résidents du collectif Gazmatek",
+    "discover": "Découvrir",
+    "backToList": "Retour aux artistes",
+    "linksTitle": "Retrouvez-le en ligne",
+    "listenTitle": "Ecouter",
+    "galleryTitle": "Galerie",
+    "allTitle": "Tous les artistes",
+    "spotlightTitle": "En vedette",
+    "bioIntroLabel": "En bref",
+    "bioFullLabel": "Biographie",
+    "galleryPrev": "Image précédente",
+    "galleryNext": "Image suivante",
+    "gallerySlide": "Image {{n}}"
+  },
+  "events": {
+    "seoHubTitle": "Evenements | Gazmatek",
+    "seoHubDescription": "Hub des evenements Gazmatek: parcours a venir et archive curatee a partir des vraies sources legacy.",
+    "seoUpcomingTitle": "Evenements a venir | Gazmatek",
+    "seoUpcomingDescription": "Consulte les prochains evenements Gazmatek ou rebondis vers les archives s'il n'y a aucune date annoncee.",
+    "seoArchiveTitle": "Archives evenements | Gazmatek",
+    "seoArchiveDescription": "Timeline verticale des archives Gazmatek, reconstruite a partir des dossiers legacy, flyers et galeries photo.",
+    "hubEyebrow": "Parcours events",
+    "hubTitle": "Evenements",
+    "hubSubtitle": "Deux portes d'entree: les prochaines dates quand elles existent, et une archive reconstruite a partir des vrais dossiers, flyers et photos Gazmatek.",
+    "upcoming": "A venir",
+    "upcomingTitle": "Prochaines dates",
+    "upcomingEyebrow": "Agenda",
+    "upcomingSubtitle": "La page ne montre que les dates futures. S'il n'y en a aucune, elle te renvoie directement vers les archives.",
+    "upcomingFallbackPreview": "Aucune date future n'est documentee pour le moment. Le parcours reste ouvert et bascule vers les archives.",
+    "upcomingCount": "{{count}} date future documentee",
+    "upcomingFallbackCta": "Basculer vers les archives",
+    "past": "Archive",
+    "archivesTitle": "Archives",
+    "archivesDesc": "Chronologie reconstruite a partir des dossiers legacy",
+    "archiveEyebrow": "Memoire Gazmatek",
+    "archiveCount": "{{count}} dates archivees",
+    "discover": "Voir le parcours a venir",
+    "browse": "Ouvrir la timeline",
+    "nextEventsTitle": "Evenements a venir",
+    "backToHub": "Retour au hub events",
+    "noUpcoming": "Aucune date future verifiee n'est disponible dans les sources actuelles. Les archives restent le meilleur point d'entree pour explorer l'historique Gazmatek.",
+    "moreInfo": "Voir la fiche",
+    "archivesPageTitle": "Archives",
+    "archivesSubtitle": "Une timeline verticale legere, alimentee par des evenements normalises et des visuels reels au lieu d'un dump de dossiers.",
+    "archiveEntryRich": "Archive riche",
+    "archiveEntryDocumented": "Archive factuelle",
+    "pastBadge": "Passe",
+    "back": "Retour",
+    "date": "Date",
+    "location": "Lieu",
+    "locationUnknown": "Lieu non documente",
+    "description": "Description",
+    "lineup": "Line-up",
+    "bookTicket": "Billetterie",
+    "gallery": "Galerie photo"
+  },
+  "collectiveIntro": {
+    "title": "Le Collectif",
+    "text": "Gazmatek est un sound system belge fondé par des passionnés : artistes, ingénieurs du son et organisateurs d'événements. Autogéré et reinvesti dans le son, la production et les lives, le crew pousse la tekno underground depuis 2016. Artistes résidents, label, location de matériel : tout converge vers une même obsession sonore.",
+    "cta": "En savoir plus"
+  },
+  "pillars": {
+    "sectionTitle": "Trois univers",
+    "events": {
+      "title": "Événements",
+      "text": "Des soirées tekno underground à Bruxelles et au-delà. Grandes salles, warehouses, free parties.",
+      "cta": "Explorer"
+    },
+    "artists": {
+      "title": "Artistes",
+      "text": "Un crew de résidents producteurs et DJs actifs sur la scène tekno, acid et hardcore.",
+      "cta": "Découvrir"
+    },
+    "services": {
+      "title": "Location & Services",
+      "text": "Sound system professionnel, light show, réglage et restauration d'enceintes pour vos événements.",
+      "cta": "En savoir plus"
+    }
+  },
+  "featuredArtists": {
+    "sectionTitle": "Artistes Residents",
+    "seeAll": "Voir tous les artistes"
+  },
+  "servicesTeaser": {
+    "sectionTitle": "Nos Services",
+    "cta": "Voir tous nos services"
+  },
+  "language": {
+    "switcher_aria": "Changer de langue"
+  },
+  "footer": {
+    "tagline": "Collectif belge, organisateur d'événements tekno et location de sound system.",
+    "navigation": "Navigation",
+    "followUs": "Suivez-nous",
+    "findUsOn": "Retrouvez nous sur",
+    "termsOfUse": "Conditions d'utilisation"
+  },
+  "services": {
+    "button": "Voir plus",
+    "list": [
+      {
+        "name": "LOCATION DE SYSTÈME SON",
+        "title": "Optez pour ambiance sonore irréprochable avec notre service de Location De Système Son",
+        "description": "Gazmatek propose différentes solutions de systèmes audio adaptées aux événements de toutes tailles. La large gamme d’équipements audio s’accompagne de l’expertise de nos ingénieurs du son. La qualité de nos prestations est notre priorité. En optant pour ce service, vous garantirez à votre clientèle une expérience acoustique professionnelle et immersive.",
+        "image": "son.jpg"
+      },
+      {
+        "name": "LIGHT SHOW",
+        "title": "Apporter une dimension visuelle captivante à chaque moment, voilà notre promesse avec notre service de Light Show",
+        "description": "Gazmatek porte un soin particulier à transformer votre événement en un espace dynamique, suscitant un souvenir mémorable à votre clientèle. Nos ingénieurs lumière s’appuient sur une solide expérience du terrain. Ce qui nous permet de proposer des solutions adaptées à chaque demande.",
+        "image": "light.jpg"
+      },
+      {
+        "name": "RÉGLAGE SYSTÈME SON",
+        "title": "Optimisez l'acoustique de votre lieu avec notre service de Réglage Système Son professionnel.",
+        "description": "Nos experts en son veillent à créer une expérience auditive exceptionnelle pour les personnes qui profiteront de votre système son. Faites confiance à Gazmatek pour ajuster votre système avec précision, garantissant une qualité sonore incomparable. Nous intervenons autant sur système fixe que système éphémère et vous accompagnons également dans l’utilisation de votre matériel.",
+        "image": "reglage-son.jpg"
+      },
+      {
+        "name": "RESTAURATION D'ENCEINTES",
+        "title": "Redonnez vie à vos enceintes avec notre service de Restauration d'Enceintes.",
+        "description": "Chez Gazmatek, nous réparons, entretenons et optimisons vos équipements audio pour assurer une performance dans la durée. Nos techniciens spécialisés mettent leur expertise au service de la qualité sonore, prolongeant la durée de vie de vos enceintes et garantissant un son fidèle à celui d’origine.",
+        "image": "restauration-enceintes.jpg"
+      },
+      {
+        "name": "SCÉNOGRAPHIE",
+        "title": "Donnez vie à vos idées avec notre service de Scénographie.",
+        "description": "Nos équipes travaillent avec vous pour créer une scène évocatrice et mémorable. Soutenus par l’expertise de nos ingénieurs sur le terrain, nous créons une expérience visuelle inoubliable pour vos invités.",
+        "image": "scenographie.jpg"
+      },
+      {
+        "name": "CONCEPTION DE LINE-UP",
+        "title": "Laissez-nous composer l'expérience musicale optimale avec notre service de Conception de Line-Up.",
+        "description": "Nous construisons chaque line-up pour correspondre à l'essence, au budget et à l’envergure de votre événement. Gazmatek collabore avec une multitude d’artistes renommés ainsi que des talents émergents, ce qui nous permet de créer une programmation musicale parfaitement adaptée à vos besoins.",
+        "image": "line-up.jpg"
+      },
+      {
+        "name": "ÉVÉNEMENT SUR MESURE",
+        "title": "Créez des moments uniques avec notre service d'Événement Sur Mesure.",
+        "description": "Chez Gazmatek, chaque détail est pris en compte pour personnaliser votre événement selon vos besoins et vos souhaits. Nous mettons notre créativité au service de la réalisation de vos idées, assurant une expérience sur mesure qui marquera les esprits.",
+        "image": "evenement-sur-mesure.jpg"
+      },
+      {
+        "name": "DÉCORATION",
+        "title": "Transformez votre espace avec notre service de Décoration.",
+        "description": "Dotés d’une expérience dans le développement et la conception en décors, Gazmatek embelli vos événements avec des créations au rendu professionnel. Notre technique de mêler matière brut et électronique permet de créer des décors dynamiques, avec une finition soignée.",
+        "image": "decoration.jpg"
+      }
+    ]
+  },
+  "servicesPage": {
+    "seoTitle": "Services & Location | Gazmatek",
+    "seoDescription": "Location de systeme son, reglage, restauration d'enceintes et conception de line-up. Parc materiel Gazmatek disponible pour vos evenements.",
+    "heroEyebrow": "Services & location",
+    "offersEyebrow": "Ce que l'on fait",
+    "offersTitle": "Nos services",
+    "equipmentEyebrow": "Parc materiel",
+    "equipmentTitle": "Equipements disponibles",
+    "equipmentSubtitle": "Catalogue issu de l'inventaire legacy, photographie et verifie.",
+    "specsLabel": "Specifications",
+    "quoteEyebrow": "Travailler avec nous",
+    "quoteTitle": "Demander un devis",
+    "quoteBody": "Pour toute demande de location, reglage ou devis, le formulaire de contact est le point d'entree unique. Precisez le type d'evenement et le materiel souhaite dans le message.",
+    "quoteCta": "Contacter Gazmatek",
+    "noSpecs": "Specifications en cours de documentation"
+  },
+  "contactPage": {
+    "title": "Contact"
+  }
+}

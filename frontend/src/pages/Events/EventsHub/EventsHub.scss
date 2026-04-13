@@ -1,0 +1,204 @@
+.eventsHub {
+  .hero {
+    position: relative;
+    padding-top: 140px;
+    padding-bottom: 52px;
+    text-align: center;
+
+    .heroContent {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 14px;
+      @include linkPadding;
+    }
+
+    .eyebrow {
+      color: $blue-color;
+      font-size: $font-size-label;
+      font-weight: 700;
+      letter-spacing: $letter-spacing-eyebrow;
+      line-height: $line-height-label;
+      text-transform: uppercase;
+      margin: 0;
+    }
+
+    .title {
+      font-family: $raw-display-font-family;
+      color: $light-color;
+      font-size: $font-size-display-lg;
+      font-weight: 700;
+      line-height: $line-height-display;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      margin: 0;
+    }
+
+    .subtitle {
+      color: $gray-color;
+      font-size: $font-size-body-lg;
+      font-weight: 400;
+      letter-spacing: $letter-spacing-nav;
+      line-height: $line-height-body;
+      margin: 0;
+      max-width: 640px;
+    }
+  }
+
+  .blocksGrid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 32px;
+    @include linkMargin;
+    @include linkPadding;
+    padding-bottom: 96px;
+
+    @include maxScreen($breakpoint-md) {
+      grid-template-columns: 1fr;
+      gap: 24px;
+    }
+  }
+
+  .block {
+    position: relative;
+    overflow: hidden;
+    border-radius: $radius-large;
+    border: 1px solid rgba($light-color, 0.08);
+    min-height: 460px;
+    cursor: pointer;
+    text-align: left;
+    background: none;
+    padding: 0;
+    width: 100%;
+    transition:
+      border-color $medium-animation,
+      transform $medium-animation,
+      box-shadow $medium-animation;
+
+    &:hover {
+      border-color: rgba($blue-color, 0.5);
+      transform: translateY(-6px);
+      box-shadow: 0 32px 80px rgba($primary-color, 0.4);
+
+      .blockBgImage {
+        transform: scale(1.05);
+      }
+
+      .blockCta {
+        color: $blue-color;
+      }
+    }
+
+    @include maxScreen($breakpoint-md) {
+      min-height: 340px;
+    }
+  }
+
+  .blockBg {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    overflow: hidden;
+
+    .blockBgImage {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      opacity: 0.48;
+      transition: transform 0.7s ease;
+    }
+
+    .blockOverlay,
+    .blockOverlayArchive {
+      position: absolute;
+      inset: 0;
+    }
+
+    .blockOverlay {
+      background: linear-gradient(
+        180deg,
+        rgba($primary-color, 0.22) 0%,
+        rgba($primary-color, 0.82) 100%
+      );
+    }
+
+    .blockOverlayArchive {
+      background: linear-gradient(
+        180deg,
+        rgba($primary-color, 0.08) 0%,
+        rgba($primary-color, 0.92) 100%
+      );
+    }
+  }
+
+  .blockContent {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    min-height: 460px;
+    padding: 40px;
+    gap: 12px;
+
+    @include maxScreen($breakpoint-md) {
+      min-height: 340px;
+    }
+
+    @include maxScreen($breakpoint-sm) {
+      padding: 24px;
+    }
+  }
+
+  .blockLabel {
+    display: inline-flex;
+    width: fit-content;
+    font-size: $font-size-label;
+    font-weight: 700;
+    letter-spacing: $letter-spacing-eyebrow;
+    line-height: $line-height-label;
+    text-transform: uppercase;
+    color: $blue-color;
+    background: rgba($blue-color, 0.16);
+    border: 1px solid rgba($blue-color, 0.22);
+    padding: 6px 14px;
+    border-radius: 999px;
+  }
+
+  .blockTitle {
+    font-family: $raw-display-font-family;
+    color: $light-color;
+    font-size: $font-size-display-md;
+    font-weight: 700;
+    margin: 0;
+    letter-spacing: 0.06em;
+    line-height: $line-height-display;
+  }
+
+  .blockPreview {
+    color: rgba($light-color, 0.82);
+    font-size: $font-size-body-md;
+    line-height: $line-height-body;
+    margin: 0;
+    max-width: 520px;
+  }
+
+  .blockMeta {
+    color: rgba($light-color, 0.56);
+    font-size: $font-size-body-sm;
+    font-weight: 700;
+    letter-spacing: $letter-spacing-nav;
+    line-height: $line-height-label;
+    text-transform: uppercase;
+  }
+
+  .blockCta {
+    color: $light-color;
+    font-size: $font-size-button;
+    font-weight: 700;
+    letter-spacing: $letter-spacing-nav;
+    line-height: $line-height-label;
+    margin-top: 10px;
+    transition: color $medium-animation;
+  }
+}

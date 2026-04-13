@@ -1,0 +1,243 @@
+.nextEvent {
+  position: relative;
+  @include linkPadding;
+  padding-top: 80px;
+  padding-bottom: 80px;
+
+  .bg {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    overflow: hidden;
+
+    .bgImage {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      opacity: 0.18;
+      filter: blur(6px);
+      transform: scale(1.05);
+    }
+
+    .bgOverlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(
+        180deg,
+        rgba($primary-color, 0.6) 0%,
+        rgba($primary-color, 0.9) 100%
+      );
+    }
+  }
+
+  .content {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    text-align: center;
+  }
+
+  .sectionLabel {
+    font-size: $font-size-label;
+    font-weight: 600;
+    letter-spacing: $letter-spacing-eyebrow;
+    line-height: $line-height-label;
+    text-transform: uppercase;
+    color: $accent-color;
+    margin: 0;
+  }
+
+  .eventName {
+    font-family: $display-font-family;
+    color: $light-color;
+    font-size: $font-size-display-md;
+    font-weight: 700;
+    line-height: $line-height-display;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    margin: 0;
+    max-width: 800px;
+  }
+
+  .eventMeta {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    .metaItem {
+      font-size: $font-size-body-md;
+      color: $gray-color;
+      letter-spacing: $letter-spacing-nav;
+    }
+
+    .metaSep {
+      color: $border-color;
+      font-size: $font-size-body-lg;
+    }
+  }
+
+  .lineup {
+    font-size: $font-size-body-sm;
+    color: $gray-color;
+    letter-spacing: $letter-spacing-nav;
+    line-height: $line-height-label;
+    text-transform: uppercase;
+    margin: 0;
+  }
+
+  .flyerWrapper {
+    display: flex;
+    justify-content: center;
+    max-width: 420px;
+    width: 100%;
+    margin-top: $padding-sm;
+  }
+
+  .flyer {
+    width: 100%;
+    height: auto;
+    border-radius: $radius-medium;
+    box-shadow: 0 20px 60px rgba($color-bg-base, 0.6);
+  }
+
+  .eventCta {
+    margin-top: $padding-sm;
+    padding: 12px 32px;
+    font-size: $font-size-button;
+    font-weight: 600;
+    letter-spacing: $letter-spacing-nav;
+    line-height: $line-height-label;
+    text-transform: uppercase;
+    background: $accent-color;
+    color: $primary-color;
+    border: 2px solid $accent-color;
+    border-radius: $radius-medium;
+    cursor: pointer;
+    transition: all $medium-animation;
+    font-family: $default-font-family;
+
+    &:hover {
+      background: $color-transparent;
+      color: $accent-color;
+    }
+  }
+
+  // Archive fallback
+  &.archive {
+    .content {
+      align-items: flex-start;
+      text-align: left;
+    }
+
+    .title {
+      font-family: $raw-display-font-family;
+      color: $light-color;
+      font-size: $font-size-display-md;
+      font-weight: 700;
+      line-height: $line-height-display;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      margin: 0 0 $padding-lg-2;
+    }
+
+    .archiveGrid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: $padding-lg;
+      width: 100%;
+    }
+
+    .archiveCard {
+      background: $materials-color;
+      border: 1px solid $border-color;
+      border-radius: $radius-large;
+      overflow: hidden;
+      cursor: pointer;
+      transition: border-color $medium-animation, transform $medium-animation;
+      text-align: left;
+
+      &:hover {
+        border-color: $accent-color;
+        transform: translateY(-4px);
+      }
+
+      .archiveCardPoster {
+        aspect-ratio: 3 / 4;
+        overflow: hidden;
+
+        .archiveCardImg {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          filter: grayscale(1);
+          transition: filter $medium-animation;
+        }
+      }
+
+      &:hover .archiveCardImg {
+        filter: grayscale(0);
+      }
+
+      .archiveCardInfo {
+        padding: $padding-md;
+
+        .archiveCardName {
+          font-family: $display-font-family;
+          color: $light-color;
+          font-size: clamp(0.78rem, 1.3vw, 0.92rem);
+          font-weight: 700;
+          line-height: $line-height-display;
+          letter-spacing: 0.06em;
+          text-transform: uppercase;
+          margin: 0 0 6px;
+        }
+
+        .archiveCardDate {
+          color: $accent-color;
+          font-size: $font-size-label;
+          letter-spacing: $letter-spacing-nav;
+          margin: 0 0 4px;
+        }
+
+        .archiveCardCity {
+          color: $gray-color;
+          font-size: $font-size-body-sm;
+          letter-spacing: $letter-spacing-nav;
+          margin: 0;
+        }
+      }
+    }
+  }
+
+  @include maxScreen($breakpoint-md) {
+    padding-top: 50px;
+    padding-bottom: 50px;
+
+    .flyerWrapper {
+      max-width: 90%;
+    }
+
+    &.archive {
+      .archiveGrid {
+        grid-template-columns: 1fr;
+        gap: $padding-md;
+      }
+
+      .archiveCard {
+        display: flex;
+        flex-direction: row;
+
+        .archiveCardPoster {
+          aspect-ratio: unset;
+          width: 100px;
+          flex-shrink: 0;
+        }
+      }
+    }
+  }
+}

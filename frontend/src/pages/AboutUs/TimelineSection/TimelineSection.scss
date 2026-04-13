@@ -1,0 +1,50 @@
+.timelineSection {
+  .timelineCard {
+    .year {
+      display: inline-flex;
+      align-items: center;
+      margin-bottom: 0.85rem;
+      padding: 0.25rem 0.6rem;
+      border: 1px solid rgba($accent-color, 0.24);
+      border-radius: 999px;
+      color: $accent-color;
+      background: rgba($accent-color, 0.08);
+      font-size: $font-size-label;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: $letter-spacing-nav;
+      line-height: $line-height-label;
+    }
+
+    .itemTitle {
+      margin: 0 0 0.8rem;
+      font-family: $raw-display-font-family;
+      font-size: clamp(1rem, 1vw + 0.9rem, 1.38rem);
+      font-weight: 700;
+      color: $light-color;
+      line-height: $line-height-display;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+
+      &.fallbackDisplay {
+        font-family: $display-font-family;
+      }
+    }
+
+    .description {
+      margin: 0;
+      color: rgba($gray-color, 0.94);
+      font-size: $font-size-body-md;
+      line-height: $line-height-body;
+    }
+
+    .proof {
+      margin: 1rem 0 0;
+      color: rgba($accent-color, 0.95);
+      font-size: $font-size-body-sm;
+      line-height: $line-height-body;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+    }
+  }
+}

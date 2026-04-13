@@ -1,0 +1,218 @@
+.servicesPage {
+  min-height: 100vh;
+
+  // ── Shared ──────────────────────────────────────────────────────────────────
+
+  .eyebrow {
+    margin: 0 0 0.75rem;
+    color: $color-accent;
+    font-size: 0.8rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+  }
+
+  .sectionHead {
+    margin-bottom: 2.5rem;
+  }
+
+  .sectionTitle {
+    margin: 0 0 0.5rem;
+    font-family: $raw-display-font-family;
+    color: $color-text-primary;
+    font-size: clamp(1.8rem, 3vw, 2.4rem);
+    line-height: 1.1;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+  }
+
+  .sectionSubtitle {
+    margin: 0;
+    color: $color-text-secondary;
+    font-size: 0.95rem;
+    line-height: 1.6;
+  }
+
+  // ── Hero ────────────────────────────────────────────────────────────────────
+
+  .hero {
+    padding: 9rem 6vw 5rem;
+    border-bottom: 1px solid $color-border-subtle;
+  }
+
+  .heroTitle {
+    margin: 0 0 1.25rem;
+    max-width: 12ch;
+    font-family: $raw-display-font-family;
+    color: $color-text-primary;
+    font-size: clamp(3.5rem, 9vw, 7rem);
+    line-height: 0.92;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+  }
+
+  .heroBody {
+    max-width: 44rem;
+    margin: 0;
+    color: $color-text-secondary;
+    font-size: 1.05rem;
+    line-height: 1.75;
+  }
+
+  // ── Section ─────────────────────────────────────────────────────────────────
+
+  .section {
+    padding: 5rem 6vw;
+    border-bottom: 1px solid $color-border-subtle;
+
+    &.dark {
+      background: $color-bg-surface;
+    }
+  }
+
+  // ── Offers ──────────────────────────────────────────────────────────────────
+
+  .offerGrid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1.5rem;
+
+    @include maxScreen($breakpoint-lg-4) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .offerCard {
+    position: relative;
+    padding: 2rem 2rem 2rem 3.5rem;
+    border: 1px solid $color-border-subtle;
+    border-radius: $radius-large;
+    background: $color-bg-elevated;
+    transition: border-color 0.2s ease;
+
+    &:hover {
+      border-color: rgba($color-accent, 0.35);
+    }
+  }
+
+  .offerIndex {
+    position: absolute;
+    top: 2rem;
+    left: 1.5rem;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: $color-accent;
+  }
+
+  .offerTitle {
+    margin: 0 0 0.6rem;
+    font-family: $raw-display-font-family;
+    color: $color-text-primary;
+    font-size: 1.15rem;
+    line-height: 1.2;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+  }
+
+  .offerDesc {
+    margin: 0;
+    color: $color-text-secondary;
+    font-size: 0.9rem;
+    line-height: 1.7;
+  }
+
+  // ── Equipment grid ──────────────────────────────────────────────────────────
+
+  .equipmentGrid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 1.25rem;
+
+    @include maxScreen($breakpoint-lg-4) {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    @include maxScreen($breakpoint-md) {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    @include maxScreen($breakpoint-md-4) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  // ── Quote CTA ───────────────────────────────────────────────────────────────
+
+  .quoteSection {
+    padding: 5rem 6vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .quoteContent {
+    max-width: 52rem;
+    text-align: center;
+  }
+
+  .quoteTitle {
+    margin: 0 0 1rem;
+    font-family: $raw-display-font-family;
+    color: $color-text-primary;
+    font-size: clamp(2rem, 4vw, 3rem);
+    line-height: 1.1;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+  }
+
+  .quoteBody {
+    margin: 0 0 2.5rem;
+    color: $color-text-secondary;
+    font-size: 1rem;
+    line-height: 1.75;
+  }
+
+  .quoteCta {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.85rem 2rem;
+    border: 1px solid $color-accent;
+    border-radius: $radius-medium-small;
+    background: $color-accent;
+    color: $color-bg-base;
+    font-size: 0.9rem;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: background 0.2s ease, color 0.2s ease;
+
+    &:hover {
+      background: $color-accent-hover;
+      border-color: $color-accent-hover;
+    }
+  }
+
+  // ── Mobile ──────────────────────────────────────────────────────────────────
+
+  @include maxScreen($breakpoint-md) {
+    .hero {
+      padding: 7rem 5vw 4rem;
+    }
+
+    .section {
+      padding: 4rem 5vw;
+    }
+
+    .quoteSection {
+      padding: 4rem 5vw;
+    }
+  }
+
+  @include maxScreen($breakpoint-md-3) {
+    .hero {
+      padding: 6rem 4vw 3rem;
+    }
+  }
+}

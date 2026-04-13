@@ -1,0 +1,24 @@
+// Display scale - Anton
+$font-size-display-xl: clamp(3rem, 8vw, 5rem);
+$font-size-display-lg: clamp(2rem, 5vw, 3.2rem);
+$font-size-display-md: clamp(1.4rem, 3vw, 2rem);
+
+// Body scale - default font family
+$font-size-body-lg: clamp(0.72rem, 1.5vw, 0.88rem);
+$font-size-body-md: clamp(0.62rem, 1.2vw, 0.76rem);
+$font-size-body-sm: clamp(0.52rem, 1vw, 0.64rem);
+
+// UI scale
+$font-size-label: clamp(0.44rem, 0.8vw, 0.56rem);
+$font-size-nav: 0.56rem;
+$font-size-button: clamp(0.52rem, 1vw, 0.72rem);
+
+// Letter spacing
+$letter-spacing-eyebrow: 0.12em;
+$letter-spacing-nav: 0.04em;
+
+// Line heights
+$line-height-display: 1.05;
+$line-height-body: 1.55;
+$line-height-label: 1.2;
+

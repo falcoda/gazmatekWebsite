@@ -1,0 +1,87 @@
+// FONTS
+// Primary body and UI font with real 300-700 weights for copy, forms and navigation.
+$default-font-family: "Anton", Arial, sans-serif;
+// Display font — Anton. Full Latin Extended (accents + digits). Use everywhere by default.
+$display-font-family: "Anton", "Impact", "Arial Narrow Bold", sans-serif;
+// Raw display font — Bang4YaBuck. Latin basic only (no accents, no digits).
+// Use ONLY for hardcoded text that is guaranteed accent-free in both FR and EN.
+$raw-display-font-family:
+  "DAMAGEPLAN", "Bang4YaBuck", "ABITE", "Impact", "Arial Narrow Bold",
+  sans-serif;
+
+// COLORS
+$color-bg-base: #0b0b0d;
+$color-bg-surface: #141416;
+$color-bg-elevated: #1b1b1f;
+$color-text-primary: #f7f7f7;
+$color-text-secondary: #8b8b8b;
+$color-border-subtle: rgba(247, 247, 247, 0.12);
+$color-accent: #169bff;
+$color-accent-hover: #4ab4ff;
+$color-danger: #d11b1b;
+$color-transparent: transparent;
+$color-card-surface: #232426;
+$color-social-soundcloud: #ff5500;
+$color-social-instagram: #e1306c;
+$color-social-facebook: #1877f2;
+$color-social-youtube: #ff0000;
+
+// Template aliases
+$primary-color: $color-bg-base;
+$light-color: $color-text-primary;
+$gray-color: $color-text-secondary;
+$blue-color: $color-accent;
+$materials-color: $color-bg-surface;
+$border-color: $color-border-subtle;
+$accent-color: $color-accent;
+$secondary-color: $color-bg-surface;
+$primary-font: $color-text-primary;
+$secondary-font: $color-text-secondary;
+$tertiary-font: rgba($color-text-primary, 0.72);
+$danger-color: $color-danger;
+
+// SPACING
+$padding-xxxs: 4px;
+$padding-xxs: 7px;
+$padding-xs: 10px;
+$padding-sm: 14px;
+$padding-md: 20px;
+$padding-md-2: 25px;
+$padding-lg: 30px;
+$padding-lg-2: 32px;
+$padding-xl: 40px;
+$margin-md: 16px;
+
+// BORDER RADIUS
+$radius-extra-small: 4px;
+$radius-small: 6px;
+$radius-medium-small: 10px;
+$radius-medium: 8px;
+$radius-large: 16px;
+$radius-extra-large: 24px;
+
+// ANIMATIONS
+$medium-animation: 0.3s ease;
+
+$link-padding: 69px;
+$link-padding-mobile: $padding-sm;
+
+// OTHER
+$navbar-height-sm: 60px;
+$footer-height: 30px;
+
+// MEDIA QUERIES
+$breakpoint-xl: 2560px;
+$breakpoint-lg: 1920px;
+$breakpoint-lg-2: 1600px;
+$breakpoint-lg-3: 1440px;
+$breakpoint-lg-4: 1280px;
+$breakpoint-md: 1024px;
+$breakpoint-md-2: 992px;
+$breakpoint-md-3: 768px;
+$breakpoint-md-4: 640px;
+$breakpoint-sm: 576px;
+$breakpoint-xs: 393px;
+
+$mobile: $breakpoint-sm;
+$desktop: $breakpoint-lg;

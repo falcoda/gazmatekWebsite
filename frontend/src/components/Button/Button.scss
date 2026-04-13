@@ -1,0 +1,73 @@
+.styledButton {
+  display: flex;
+  justify-content: center;
+  width: 300px;
+  height: 67px;
+  padding: 20px 80px 20px 79px;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+  border-radius: 10px;
+  border: 1px solid $color-accent;
+  background: $color-text-primary;
+  color: $color-bg-base;
+  cursor: pointer;
+  font-family: $default-font-family;
+  font-weight: 700;
+  font-size: 40px;
+  backdrop-filter: blur(10px);
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease,
+    border 0.3s ease,
+    box-shadow 0.3s ease;
+
+  &:focus {
+    outline: none;
+    border: 3px solid $color-accent;
+  }
+
+  &:hover {
+    background-color: $color-transparent;
+    color: $color-text-primary;
+    border: 1px solid $color-accent;
+    box-shadow: 0 10px 20px -10px $color-accent;
+  }
+
+  .loaderButton {
+    animation: spin 1.2s infinite linear;
+  }
+
+  @keyframes spin {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+
+  @include maxScreen($breakpoint-md) {
+    width: 80%;
+    height: 52px;
+    padding: 20px 0;
+  }
+}
+
+.big {
+  @include smoothValue("font-size", 25px, 30px, $breakpoint-xs, $breakpoint-lg);
+}
+
+.small {
+}
+.transparent {
+  background-color: $color-transparent;
+  color: $color-text-primary;
+  border: none;
+  @include smoothValue("font-size", 12px, 32px, $breakpoint-sm, $breakpoint-lg);
+  &:hover {
+    color: $color-accent;
+    border: none;
+    box-shadow: none;
+  }
+}

@@ -1,0 +1,9 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+  box-shadow: 0px 4px 4px rgba($color-bg-base, 0.25);
+  background: $color-card-surface;
+  border-radius: 10px;
+}

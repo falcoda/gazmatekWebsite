@@ -1,0 +1,19 @@
+.App {
+  display: flex;
+  flex-direction: column;
+  background:
+    radial-gradient(circle at top, rgba($color-accent, 0.08), $color-transparent 38%),
+    $color-bg-base;
+  color: $color-text-primary;
+  font-family: $default-font-family;
+  height: 100%;
+  width: 100%;
+  overflow-x: hidden;
+  overflow-y: auto;
+
+  // mix-blend-mode: difference;
+}
+::selection {
+  background-color: $color-accent;
+  color: $color-bg-base;
+}

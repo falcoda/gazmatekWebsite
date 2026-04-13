@@ -1,0 +1,143 @@
+.featuredArtists {
+  background: $primary-color;
+  @include linkPadding;
+  padding-top: 80px;
+  padding-bottom: 80px;
+
+  .featuredArtistsHeader {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 36px;
+  }
+
+  .featuredArtistsSectionTitle {
+    font-family: $raw-display-font-family;
+    font-size: clamp(1.35rem, 3.6vw, 2.3rem);
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    line-height: 1.05;
+    text-transform: uppercase;
+    color: $accent-color;
+    margin: 0;
+  }
+
+  .featuredArtistsSeeAll {
+    background: none;
+    border: none;
+    padding: 0;
+    font-size: $font-size-button;
+    font-weight: 600;
+    color: $gray-color;
+    letter-spacing: $letter-spacing-nav;
+    line-height: $line-height-label;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: color $medium-animation;
+    font-family: $default-font-family;
+
+    &:hover {
+      color: $light-color;
+    }
+  }
+
+  .featuredArtistsGrid {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: $padding-md;
+  }
+
+  .artistCard {
+    background: $materials-color;
+    border-radius: $radius-large;
+    overflow: hidden;
+    cursor: pointer;
+    border: 1px solid $border-color;
+    transition:
+      border-color $medium-animation,
+      transform $medium-animation;
+    text-align: left;
+    padding: 0;
+
+    &:hover {
+      border-color: $accent-color;
+      transform: translateY(-4px);
+
+      .artistCardImg {
+        filter: grayscale(0);
+        transform: scale(1.04);
+      }
+    }
+  }
+
+  .artistCardPhoto {
+    aspect-ratio: 4 / 5;
+    overflow: hidden;
+
+    .artistCardImg {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      filter: grayscale(1);
+      transition:
+        filter $medium-animation,
+        transform $medium-animation;
+    }
+  }
+
+  .artistCardInfo {
+    padding: 12px $padding-md;
+
+    .artistCardName {
+      font-family: $display-font-family;
+      color: $light-color;
+      font-size: clamp(0.95rem, 1.8vw, 1.2rem);
+      font-weight: 700;
+      line-height: $line-height-display;
+      letter-spacing: $letter-spacing-nav;
+      text-transform: uppercase;
+      margin: 0 0 4px;
+    }
+
+    .artistCardStyle {
+      color: $accent-color;
+      font-size: clamp(0.78rem, 1.2vw, 0.92rem);
+      letter-spacing: $letter-spacing-nav;
+      line-height: $line-height-label;
+      text-transform: uppercase;
+      margin: 0;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+  }
+
+  @include maxScreen($breakpoint-lg-4) {
+    .featuredArtistsGrid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+
+  @include maxScreen($breakpoint-md) {
+    padding-top: 60px;
+    padding-bottom: 60px;
+
+    .featuredArtistsGrid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @include maxScreen($breakpoint-sm) {
+    .featuredArtistsHeader {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: $padding-xs;
+    }
+
+    .featuredArtistsGrid {
+      grid-template-columns: repeat(2, 1fr);
+      gap: $padding-sm;
+    }
+  }
+}
+

@@ -1,0 +1,259 @@
+{
+  "hero": {
+    "welcome": "Welcome",
+    "baseline": "Belgian Label | Event Organizer | Sound System Rental",
+    "ctaPrimary": "See events",
+    "ctaSecondary": "Contact us"
+  },
+  "nextEvent": {
+    "title": "Next event",
+    "empty": "Stay tuned...",
+    "archiveTitle": "Some memorable nights",
+    "cta": "See more"
+  },
+  "soundcloud": {
+    "title": "Our latest releases on SoundCloud"
+  },
+  "nav": {
+    "home": "Home",
+    "about": "About us",
+    "artists": "Our artists",
+    "events": "Events",
+    "more": "More",
+    "services": "Services",
+    "contact": "Contact"
+  },
+  "seo": {
+    "defaultTitle": "Gazmatek",
+    "defaultDescription": "Belgian collective, tekno event organizer and sound system rental.",
+    "homeTitle": "Gazmatek — Belgian collective, underground tekno",
+    "homeDescription": "Gazmatek: Belgian sound system, underground tekno events, resident artists and equipment rental since 2016.",
+    "artistsTitle": "Artists | Gazmatek",
+    "artistsDescription": "Discover the resident artists of the Gazmatek collective — producers and DJs active on the tekno, acid and hardcore scene.",
+    "contactTitle": "Contact | Gazmatek",
+    "contactDescription": "Contact Gazmatek for a booking, sound rental, artist request or partnership. Reply within 48h.",
+    "termsTitle": "Terms of use | Gazmatek",
+    "termsDescription": "General terms and conditions of use and equipment rental for Gazmatek ASBL."
+  },
+  "cta": {
+    "discover": "Discover",
+    "learnMore": "Learn more",
+    "requestQuote": "Request a quote"
+  },
+  "validation": {
+    "required": "This field is required.",
+    "email": "Please enter a valid email address."
+  },
+  "carousel": {
+    "title": "Discover our most popular parties"
+  },
+  "artistSeparator": {
+    "title": "Our Artists"
+  },
+  "about": {
+    "title": "About us",
+    "text": "Gazmatek is more than just a sound system; we are the pulsating heartbeat of the underground. With an unwavering commitment to sonic exploration, we curate unforgettable nights of music and culture."
+  },
+  "soundHire": {
+    "title": "Sound Hire",
+    "text": "Specialized in sound system hire, we offer different packages",
+    "button": "See more"
+  },
+  "contact": {
+    "emailCta": "Write to Gazmatek",
+    "emailSubject": "Contact request",
+    "socialTitle": "Find us",
+    "subjectsLabel": "Types of requests",
+    "contextLeft": "Booking, sound rental, artist request, partnership, or a first conversation — one clear contact point.",
+    "responseTime": "Reply within 48h",
+    "subjects": {
+      "booking": "Event booking",
+      "rental": "Sound rental",
+      "artist": "Artist request",
+      "partnership": "Partnership",
+      "general": "General info"
+    }
+  },
+  "servicesSection": {
+    "title": "Our Services",
+    "text": "We offer a wide range of services to make your event a success",
+    "button": "See more"
+  },
+  "aboutUs": {
+    "heroTitle": "About Us",
+    "heroSubtitle": "The collective behind Gazmatek",
+    "introText": "Gazmatek was founded by music enthusiasts with the goal of showcasing Belgian artists eager to be heard and creating unique experiences for all participants. Our mission is to discover and deliver exceptional moments through music, offering a platform where local talents can shine and where everyone can feel fully immersed in a unique musical atmosphere.",
+    "teamTitle": "Our Team"
+  },
+  "artists": {
+    "pageTitle": "Our Artists",
+    "pageSubtitle": "Discover the resident artists of the Gazmatek collective",
+    "discover": "Discover",
+    "backToList": "Back to artists",
+    "linksTitle": "Find them online",
+    "listenTitle": "Listen",
+    "galleryTitle": "Gallery",
+    "allTitle": "All Artists",
+    "spotlightTitle": "Spotlight",
+    "bioIntroLabel": "At a Glance",
+    "bioFullLabel": "Biography",
+    "galleryPrev": "Previous image",
+    "galleryNext": "Next image",
+    "gallerySlide": "Image {{n}}"
+  },
+  "events": {
+    "seoHubTitle": "Events | Gazmatek",
+    "seoHubDescription": "Gazmatek events hub: an upcoming path and a curated archive rebuilt from real legacy folders, flyers, and photos.",
+    "seoUpcomingTitle": "Upcoming events | Gazmatek",
+    "seoUpcomingDescription": "Browse the next Gazmatek dates or jump to the archive when no future event is currently documented.",
+    "seoArchiveTitle": "Event archive | Gazmatek",
+    "seoArchiveDescription": "Vertical Gazmatek archive timeline rebuilt from legacy folders, flyers, and photo galleries.",
+    "hubEyebrow": "Event paths",
+    "hubTitle": "Events",
+    "hubSubtitle": "Two entry points: upcoming dates when they exist, and a rebuilt archive sourced from real Gazmatek folders, flyers, and photography.",
+    "upcoming": "Upcoming",
+    "upcomingTitle": "Upcoming dates",
+    "upcomingEyebrow": "Schedule",
+    "upcomingSubtitle": "This page lists future dates only. If none are documented yet, it sends visitors straight to the archive.",
+    "upcomingFallbackPreview": "No future date is currently documented. The path stays open and redirects naturally toward the archive.",
+    "upcomingCount": "{{count}} documented future date",
+    "upcomingFallbackCta": "Jump to the archive",
+    "past": "Archive",
+    "archivesTitle": "Archive",
+    "archivesDesc": "A rebuilt chronology sourced from legacy folders",
+    "archiveEyebrow": "Gazmatek memory",
+    "archiveCount": "{{count}} archived dates",
+    "discover": "Open the upcoming path",
+    "browse": "Open the timeline",
+    "nextEventsTitle": "Upcoming events",
+    "backToHub": "Back to the events hub",
+    "noUpcoming": "No verified future date is available in the current sources. The archive remains the best starting point to explore Gazmatek history.",
+    "moreInfo": "Open event page",
+    "archivesPageTitle": "Archive",
+    "archivesSubtitle": "A lightweight vertical timeline fed by normalized events and real visuals instead of a raw file dump.",
+    "archiveEntryRich": "Rich archive entry",
+    "archiveEntryDocumented": "Factual archive entry",
+    "pastBadge": "Past",
+    "back": "Back",
+    "date": "Date",
+    "location": "Venue",
+    "locationUnknown": "Venue not documented",
+    "description": "Description",
+    "lineup": "Line-up",
+    "bookTicket": "Ticketing",
+    "gallery": "Photo gallery"
+  },
+  "collectiveIntro": {
+    "title": "The Collective",
+    "text": "Gazmatek is a Belgian sound system built by passionate people: artists, sound engineers and event organisers. Self-managed and fully reinvested in sound, production and live performance, the crew has been pushing underground tekno since 2016. Resident artists, record label, equipment rental — all converge on a single sonic obsession.",
+    "cta": "Learn more"
+  },
+  "pillars": {
+    "sectionTitle": "Three worlds",
+    "events": {
+      "title": "Events",
+      "text": "Underground tekno nights in Brussels and beyond. Big venues, warehouses, free parties.",
+      "cta": "Explore"
+    },
+    "artists": {
+      "title": "Artists",
+      "text": "A crew of resident producers and DJs active on the tekno, acid and hardcore scene.",
+      "cta": "Discover"
+    },
+    "services": {
+      "title": "Rental & Services",
+      "text": "Professional sound system, light show, tuning and speaker restoration for your events.",
+      "cta": "Learn more"
+    }
+  },
+  "featuredArtists": {
+    "sectionTitle": "Resident Artists",
+    "seeAll": "See all artists"
+  },
+  "servicesTeaser": {
+    "sectionTitle": "Our Services",
+    "cta": "See all our services"
+  },
+  "language": {
+    "switcher_aria": "Change language"
+  },
+  "footer": {
+    "tagline": "Belgian collective, tekno event organizer and sound system rental.",
+    "navigation": "Navigation",
+    "followUs": "Follow us",
+    "findUsOn": "Find us on",
+    "termsOfUse": "Terms of use"
+  },
+  "services": {
+    "button": "See more",
+    "list": [
+      {
+        "name": "SOUND SYSTEM RENTAL",
+        "title": "Opt for an impeccable sound ambiance with our Sound System Rental service",
+        "description": "Gazmatek offers various audio system solutions suitable for events of all sizes. Our wide range of audio equipment is complemented by the expertise of our sound engineers. The quality of our services is our priority. By opting for this service, you will guarantee your clientele a professional and immersive acoustic experience.",
+        "image": "son.jpg"
+      },
+      {
+        "name": "LIGHT SHOW",
+        "title": "Bring a captivating visual dimension to every moment, that's our promise with our Light Show service",
+        "description": "Gazmatek takes special care in transforming your event into a dynamic space, creating a memorable experience for your clientele. Our lighting engineers rely on solid field experience, allowing us to offer solutions tailored to every request.",
+        "image": "light.jpg"
+      },
+      {
+        "name": "SOUND SYSTEM TUNING",
+        "title": "Optimize the acoustics of your venue with our professional Sound System Tuning service.",
+        "description": "Our sound experts ensure to create an exceptional auditory experience for those who will enjoy your sound system. Trust Gazmatek to adjust your system with precision, ensuring incomparable sound quality. We intervene on both permanent and temporary systems and also assist you in using your equipment.",
+        "image": "reglage-son.jpg"
+      },
+      {
+        "name": "SPEAKER RESTORATION",
+        "title": "Give new life to your speakers with our Speaker Restoration service.",
+        "description": "At Gazmatek, we repair, maintain, and optimize your audio equipment to ensure long-term performance. Our specialized technicians apply their expertise to sound quality, extending the life of your speakers and ensuring a sound faithful to the original.",
+        "image": "restauration-enceintes.jpg"
+      },
+      {
+        "name": "SCENOGRAPHY",
+        "title": "Bring your ideas to life with our Scenography service.",
+        "description": "Our teams collaborate with you to create an evocative and memorable stage. Supported by the expertise of our engineers in the field, we create an unforgettable visual experience for your guests.",
+        "image": "scenographie.jpg"
+      },
+      {
+        "name": "LINE-UP DESIGN",
+        "title": "Let us compose the optimal musical experience with our Line-Up Design service.",
+        "description": "We build each line-up to match the essence, budget, and scale of your event. Gazmatek collaborates with a multitude of renowned artists as well as emerging talents, allowing us to create a musical program perfectly suited to your needs.",
+        "image": "line-up.jpg"
+      },
+      {
+        "name": "CUSTOM EVENT",
+        "title": "Create unique moments with our Custom Event service.",
+        "description": "At Gazmatek, every detail is considered to personalize your event according to your needs and wishes. We put our creativity at the service of realizing your ideas, ensuring a tailor-made experience that will leave a lasting impression.",
+        "image": "evenement-sur-mesure.jpg"
+      },
+      {
+        "name": "DECORATION",
+        "title": "Transform your space with our Decoration service.",
+        "description": "With experience in development and design of decors, Gazmatek enhances your events with professionally finished creations. Our technique of blending raw materials with electronics allows for dynamic decors with a polished finish.",
+        "image": "decoration.jpg"
+      }
+    ]
+  },
+  "servicesPage": {
+    "seoTitle": "Services & Rental | Gazmatek",
+    "seoDescription": "Sound system rental, tuning, speaker restoration and line-up curation. Gazmatek equipment available for your events.",
+    "heroEyebrow": "Services & rental",
+    "offersEyebrow": "What we do",
+    "offersTitle": "Our services",
+    "equipmentEyebrow": "Equipment inventory",
+    "equipmentTitle": "Available gear",
+    "equipmentSubtitle": "Catalogue sourced from the legacy inventory, photographed and verified.",
+    "specsLabel": "Specifications",
+    "quoteEyebrow": "Work with us",
+    "quoteTitle": "Request a quote",
+    "quoteBody": "For any rental, tuning, or quote request, the contact form is the single entry point. Include your event type and the gear you need in your message.",
+    "quoteCta": "Contact Gazmatek",
+    "noSpecs": "Specifications being documented"
+  },
+  "contactPage": {
+    "title": "Contact"
+  }
+}

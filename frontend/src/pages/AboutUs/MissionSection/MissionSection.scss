@@ -1,0 +1,69 @@
+.missionSection {
+  .sectionTitle {
+    font-family: $raw-display-font-family;
+    font-size: $font-size-display-md;
+    font-weight: 700;
+    margin-bottom: 2rem;
+    text-align: center;
+    color: $accent-color;
+    text-transform: uppercase;
+    line-height: $line-height-display;
+    letter-spacing: 0.08em;
+  }
+
+  .intro {
+    max-width: 800px;
+    margin: 0 auto 3rem;
+    text-align: center;
+  }
+
+  .introText {
+    font-size: $font-size-body-lg;
+    line-height: $line-height-body;
+    color: $primary-font;
+    opacity: 0.95;
+  }
+
+  .values {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+
+    @media (max-width: 768px) {
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+    }
+  }
+}
+
+.value {
+  padding: 1.5rem;
+  border-left: 3px solid $accent-color;
+  background: rgba($accent-color, 0.05);
+  transition: all 0.3s ease;
+
+  &:hover {
+    background: rgba($accent-color, 0.1);
+    transform: translateX(4px);
+  }
+
+  .valueTitle {
+    font-family: $raw-display-font-family;
+    font-size: clamp(0.78rem, 1.6vw, 0.98rem);
+    font-weight: 700;
+    line-height: $line-height-display;
+    margin-bottom: 0.75rem;
+    color: $accent-color;
+    text-transform: uppercase;
+    letter-spacing: $letter-spacing-nav;
+  }
+
+  .valueDescription {
+    font-size: $font-size-body-md;
+    line-height: $line-height-body;
+    color: $primary-font;
+    opacity: 0.9;
+  }
+}
+

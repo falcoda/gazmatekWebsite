@@ -1,0 +1,23 @@
+@use "./variables.scss" as *;
+.noSelect {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+a:-webkit-any-link {
+  color: inherit;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+body {
+  margin: 0;
+  color: $light-color;
+}
+
+.root {
+}

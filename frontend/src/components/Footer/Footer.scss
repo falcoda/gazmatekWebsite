@@ -1,0 +1,114 @@
+.footer {
+  background: $materials-color;
+  border-top: 1px solid $border-color;
+  z-index: 3;
+  @include linkPadding;
+  @include smoothValue(
+    "padding-top",
+    24px,
+    40px,
+    $breakpoint-sm,
+    $breakpoint-lg
+  );
+  @include smoothValue(
+    "padding-bottom",
+    24px,
+    40px,
+    $breakpoint-sm,
+    $breakpoint-lg
+  );
+
+  .footerContent {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    @include maxScreen($breakpoint-md-3) {
+      flex-direction: column;
+      gap: 32px;
+      text-align: center;
+    }
+  }
+
+  .footerBrand {
+    display: flex;
+    align-items: center;
+  }
+
+  .footerLogo {
+    cursor: pointer;
+    transition: opacity $medium-animation;
+    @include smoothValue("width", 80px, 130px, $breakpoint-sm, $breakpoint-lg);
+    @include smoothValue("height", 80px, 130px, $breakpoint-sm, $breakpoint-lg);
+
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+
+  .footerSocial {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .footerTitle {
+    color: $light-color;
+    font-size: $font-size-body-md;
+    font-weight: 400;
+    letter-spacing: $letter-spacing-nav;
+    line-height: $line-height-label;
+    text-transform: uppercase;
+    margin: 0;
+  }
+
+  .footerSocialLinks {
+    display: flex;
+    gap: 12px;
+  }
+
+  .footerSocialLink {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .socialIcon {
+    color: $light-color;
+    transition: color $medium-animation;
+    width: 40px;
+    height: 40px;
+  }
+
+  .footerCredits {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 4px;
+
+    @include maxScreen($breakpoint-md-3) {
+      align-items: center;
+    }
+  }
+
+  .footerCopyright {
+    color: $light-color;
+    font-size: $font-size-body-sm;
+    font-weight: 500;
+    line-height: $line-height-label;
+    margin: 0;
+  }
+
+  .footerDesigner {
+    color: $gray-color;
+    font-size: $font-size-label;
+    line-height: $line-height-label;
+    margin: 0;
+  }
+
+  .footerDesignerName {
+    color: $gray-color;
+    font-weight: 500;
+  }
+}

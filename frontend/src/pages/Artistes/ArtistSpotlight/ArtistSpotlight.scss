@@ -1,0 +1,176 @@
+.artistSpotlight {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  .spotlightHeader {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+  }
+
+  .spotlightTitle {
+    font-family: $display-font-family;
+    color: $light-color;
+    font-size: clamp(1.2rem, 2.7vw, 1.9rem);
+    font-weight: 700;
+    line-height: $line-height-display;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    margin: 0;
+  }
+
+  .spotlightArrows {
+    display: flex;
+    gap: 8px;
+  }
+
+  .arrowBtn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    background: $materials-color;
+    border: 1px solid $border-color;
+    border-radius: $radius-small;
+    color: $light-color;
+    font-size: 14px;
+    cursor: pointer;
+    transition:
+      background $medium-animation,
+      border-color $medium-animation,
+      color $medium-animation;
+
+    &:hover:not(.arrowDisabled) {
+      background: rgba($blue-color, 0.12);
+      border-color: $blue-color;
+      color: $blue-color;
+    }
+
+    &.arrowDisabled {
+      opacity: 0.3;
+      cursor: default;
+    }
+  }
+
+  .spotlightStrip {
+    display: flex;
+    gap: 20px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none;
+    padding-bottom: 4px;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+
+  .spotlightCard {
+    flex: 0 0 260px;
+    scroll-snap-align: start;
+    background: $materials-color;
+    border: 1px solid $border-color;
+    border-radius: $radius-large;
+    overflow: hidden;
+    cursor: pointer;
+    text-align: left;
+    padding: 0;
+    transition:
+      border-color $medium-animation,
+      transform $medium-animation;
+
+    &:hover {
+      border-color: $blue-color;
+      transform: translateY(-4px);
+
+      .spotlightImg {
+        transform: scale(1.04);
+      }
+
+      .spotlightCta {
+        color: $blue-color;
+      }
+    }
+  }
+
+  .spotlightImgWrap {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 3 / 4;
+    overflow: hidden;
+  }
+
+  .spotlightImg {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+  }
+
+  .spotlightGrad {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+      180deg,
+      $color-transparent 50%,
+      rgba($primary-color, 0.7) 100%
+    );
+  }
+
+  .spotlightInfo {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    padding: $padding-md;
+  }
+
+  .spotlightStyles {
+    color: $blue-color;
+    font-size: clamp(0.78rem, 1.2vw, 0.95rem);
+    font-weight: 600;
+    letter-spacing: $letter-spacing-nav;
+    line-height: $line-height-label;
+    text-transform: uppercase;
+  }
+
+  .spotlightName {
+    font-family: $display-font-family;
+    color: $light-color;
+    font-size: clamp(0.98rem, 2vw, 1.25rem);
+    font-weight: 700;
+    line-height: $line-height-display;
+    letter-spacing: $letter-spacing-nav;
+    margin: 0;
+  }
+
+  .spotlightBio {
+    color: $gray-color;
+    font-size: $font-size-body-sm;
+    line-height: $line-height-body;
+    margin: 0;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+
+  .spotlightCta {
+    color: $gray-color;
+    font-size: $font-size-button;
+    font-weight: 600;
+    letter-spacing: $letter-spacing-nav;
+    line-height: $line-height-label;
+    transition: color $medium-animation;
+    margin-top: 4px;
+  }
+
+  @include maxScreen($breakpoint-sm) {
+    .spotlightCard {
+      flex: 0 0 220px;
+    }
+  }
+}
+

@@ -1,0 +1,12 @@
+node_modules
+
+frontend/build
+frontend/.env.sentry-build-plugin
+frontend/.env
+frontend/.graphclientrc.yml
+
+backend/dist
+backend/.env
+backend/pgtyped.json
+old-website-assets
+

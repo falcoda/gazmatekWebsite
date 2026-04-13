@@ -1,0 +1,238 @@
+.nextEventsPage {
+  .hero {
+    position: relative;
+    padding-top: 140px;
+    padding-bottom: 52px;
+    text-align: center;
+
+    .heroContent {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 14px;
+      @include linkPadding;
+    }
+
+    .eyebrow {
+      color: $blue-color;
+      font-size: $font-size-label;
+      font-weight: 700;
+      letter-spacing: $letter-spacing-eyebrow;
+      line-height: $line-height-label;
+      text-transform: uppercase;
+      margin: 0;
+    }
+
+    .title {
+      font-family: $raw-display-font-family;
+      color: $light-color;
+      font-size: $font-size-display-lg;
+      font-weight: 700;
+      line-height: $line-height-display;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      margin: 0;
+    }
+
+    .subtitle {
+      color: $gray-color;
+      font-size: $font-size-body-lg;
+      margin: 0;
+      max-width: 620px;
+      line-height: $line-height-body;
+    }
+  }
+
+  .eventsSection {
+    @include linkMargin;
+    @include linkPadding;
+    padding-bottom: 96px;
+  }
+
+  .backButton,
+  .archiveFallbackButton {
+    background: none;
+    border: 1px solid rgba($light-color, 0.14);
+    color: $gray-color;
+    font-size: $font-size-button;
+    font-weight: 600;
+    cursor: pointer;
+    padding: 10px 20px;
+    border-radius: $radius-medium;
+    width: fit-content;
+    letter-spacing: $letter-spacing-nav;
+    line-height: $line-height-label;
+    transition:
+      color $medium-animation,
+      border-color $medium-animation,
+      background $medium-animation;
+
+    &:hover {
+      color: $light-color;
+      border-color: rgba($blue-color, 0.5);
+      background: rgba($blue-color, 0.08);
+    }
+  }
+
+  .backButton {
+    margin-bottom: 40px;
+  }
+
+  .emptyState {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+    padding: 72px 24px;
+    text-align: center;
+    border: 1px solid rgba($light-color, 0.08);
+    border-radius: $radius-large;
+    background:
+      radial-gradient(
+        circle at top,
+        rgba($blue-color, 0.12),
+        $color-transparent 45%
+      ),
+      rgba($materials-color, 0.72);
+
+    .emptyText {
+      color: $gray-color;
+      font-size: $font-size-body-lg;
+      line-height: $line-height-body;
+      margin: 0;
+      max-width: 540px;
+    }
+  }
+
+  .eventsGrid {
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+  }
+
+  .eventCard {
+    display: grid;
+    grid-template-columns: minmax(220px, 300px) 1fr;
+    gap: 0;
+    background: rgba($materials-color, 0.82);
+    border: 1px solid rgba($light-color, 0.08);
+    border-radius: $radius-large;
+    overflow: hidden;
+    transition:
+      border-color $medium-animation,
+      transform $medium-animation;
+
+    &:hover {
+      border-color: rgba($blue-color, 0.4);
+      transform: translateY(-3px);
+    }
+
+    @include maxScreen($breakpoint-md) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .cardPoster {
+    .posterImage {
+      width: 100%;
+      height: 100%;
+      min-height: 100%;
+      object-fit: cover;
+      display: block;
+      aspect-ratio: 4 / 5;
+    }
+  }
+
+  .cardInfo {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    padding: 30px;
+
+    @include maxScreen($breakpoint-sm) {
+      padding: 22px;
+    }
+  }
+
+  .cardName {
+    font-family: $raw-display-font-family;
+    color: $light-color;
+    font-size: $font-size-display-md;
+    font-weight: 700;
+    margin: 0;
+    line-height: $line-height-display;
+
+    &.fallbackDisplay {
+      font-family: $display-font-family;
+      letter-spacing: 0.06em;
+    }
+  }
+
+  .cardDate {
+    color: $blue-color;
+    font-size: $font-size-body-md;
+    font-weight: 700;
+    letter-spacing: $letter-spacing-nav;
+    line-height: $line-height-label;
+    text-transform: uppercase;
+    margin: 0;
+  }
+
+  .cardLocation,
+  .cardSummary,
+  .cardLineup {
+    color: $gray-color;
+    font-size: $font-size-body-md;
+    margin: 0;
+    line-height: $line-height-body;
+  }
+
+  .cardLineup {
+    font-style: italic;
+  }
+
+  .cardActions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 10px;
+  }
+
+  .cardCta {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: none;
+    border: 1px solid rgba($blue-color, 0.45);
+    color: $blue-color;
+    font-size: $font-size-button;
+    font-weight: 700;
+    letter-spacing: $letter-spacing-nav;
+    line-height: $line-height-label;
+    padding: 12px 22px;
+    border-radius: $radius-medium;
+    cursor: pointer;
+    text-decoration: none;
+    transition:
+      background $medium-animation,
+      color $medium-animation,
+      border-color $medium-animation;
+
+    &:hover {
+      background: rgba($blue-color, 0.12);
+      border-color: $blue-color;
+      color: $light-color;
+    }
+  }
+
+  .cardCtaPrimary {
+    background: $blue-color;
+    color: $primary-color;
+
+    &:hover {
+      background: $light-color;
+      border-color: $light-color;
+      color: $primary-color;
+    }
+  }
+}

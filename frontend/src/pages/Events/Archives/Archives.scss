@@ -1,0 +1,306 @@
+.archivesPage {
+  .hero {
+    position: relative;
+    padding-top: 140px;
+    padding-bottom: 52px;
+    text-align: center;
+
+    .heroContent {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 14px;
+      @include linkPadding;
+    }
+
+    .eyebrow {
+      color: $blue-color;
+      font-size: $font-size-label;
+      font-weight: 700;
+      letter-spacing: $letter-spacing-eyebrow;
+      line-height: $line-height-label;
+      text-transform: uppercase;
+      margin: 0;
+    }
+
+    .title {
+      font-family: $raw-display-font-family;
+      color: $light-color;
+      font-size: $font-size-display-lg;
+      font-weight: 700;
+      line-height: $line-height-display;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      margin: 0;
+    }
+
+    .subtitle {
+      color: $gray-color;
+      font-size: $font-size-body-lg;
+      margin: 0;
+      max-width: 680px;
+      line-height: $line-height-body;
+    }
+  }
+
+  .archivesSection {
+    @include linkMargin;
+    @include linkPadding;
+    padding-bottom: 110px;
+  }
+
+  .backButton {
+    background: none;
+    border: 1px solid rgba($light-color, 0.14);
+    color: $gray-color;
+    font-size: $font-size-button;
+    font-weight: 600;
+    cursor: pointer;
+    padding: 10px 20px;
+    border-radius: $radius-medium;
+    width: fit-content;
+    margin-bottom: 44px;
+    letter-spacing: $letter-spacing-nav;
+    line-height: $line-height-label;
+    transition:
+      color $medium-animation,
+      border-color $medium-animation,
+      background $medium-animation;
+
+    &:hover {
+      color: $light-color;
+      border-color: rgba($blue-color, 0.5);
+      background: rgba($blue-color, 0.08);
+    }
+  }
+
+  .archivesTimeline {
+    --timeline-offset: 50%;
+    --timeline-mobile-offset: 26px;
+
+    .animatedTimelineFrame {
+      max-width: none;
+      padding-top: 0;
+    }
+
+    .animatedTimelineContent {
+      gap: 64px;
+      isolation: isolate;
+
+      @include maxScreen($breakpoint-md) {
+        gap: 52px;
+      }
+    }
+
+    .animatedTimelineMarker {
+      width: 18px;
+      height: 18px;
+      border-width: 2px;
+    }
+
+    .animatedTimelinePulse {
+      width: 18px;
+      height: 18px;
+    }
+
+    .timelineCard {
+      width: min(100%, 700px);
+      display: grid;
+      grid-template-columns: minmax(220px, 280px) 1fr;
+      gap: 0;
+      padding: 0;
+      border-radius: $radius-large;
+      overflow: visible;
+      background:
+        linear-gradient(
+          160deg,
+          rgba($materials-color, 0.9) 0%,
+          rgba($primary-color, 0.86) 100%
+        );
+      text-align: left;
+      cursor: pointer;
+      transition:
+        border-color $medium-animation,
+        transform $medium-animation,
+        box-shadow $medium-animation;
+      box-shadow:
+        0 18px 42px rgba($primary-color, 0.18),
+        inset 0 1px 0 rgba($light-color, 0.03);
+
+      &:hover {
+        transform: translateY(-6px);
+        border-color: rgba($blue-color, 0.42);
+        box-shadow:
+          0 28px 62px rgba($primary-color, 0.28),
+          0 0 0 1px rgba($blue-color, 0.08);
+      }
+
+      @include maxScreen($breakpoint-sm) {
+        grid-template-columns: 1fr;
+        width: 100%;
+      }
+    }
+
+    .archiveTimelineItem.left {
+      .timelineCard {
+        justify-self: end;
+      }
+    }
+
+    .archiveTimelineItem.right {
+      .timelineCard {
+        justify-self: start;
+      }
+    }
+  }
+
+  .yearSection {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+  }
+
+  .yearHeader {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+  }
+
+  .yearLine {
+    display: none;
+  }
+
+  .yearTitle {
+    color: $light-color;
+    font-family: $default-font-family;
+    font-weight: 700;
+    background:
+      linear-gradient(
+        135deg,
+        rgba($primary-color, 0.94) 0%,
+        rgba($materials-color, 0.9) 100%
+      );
+    border: 1px solid rgba($light-color, 0.08);
+    border-radius: 999px;
+    padding: 12px 24px;
+    margin: 0;
+    letter-spacing: $letter-spacing-nav;
+    text-transform: uppercase;
+    box-shadow:
+      0 10px 28px rgba($primary-color, 0.24),
+      inset 0 1px 0 rgba($light-color, 0.06);
+    @include smoothValue(
+      "font-size",
+      18px,
+      26px,
+      $breakpoint-sm,
+      $breakpoint-lg
+    );
+  }
+
+  .yearItems {
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+  }
+
+  .cardImageWrap {
+    min-height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 18px;
+    overflow: hidden;
+    border-radius: calc($radius-large - 1px) 0 0 calc($radius-large - 1px);
+    background:
+      radial-gradient(
+        circle at top,
+        rgba($blue-color, 0.12) 0%,
+        rgba($blue-color, 0.04) 30%,
+        rgba($primary-color, 0.16) 100%
+      ),
+      linear-gradient(
+        180deg,
+        rgba($primary-color, 0.84) 0%,
+        rgba($materials-color, 0.9) 100%
+      );
+
+    .cardImage {
+      width: 100%;
+      height: auto;
+      max-height: 460px;
+      display: block;
+      object-fit: contain;
+      object-position: center;
+      aspect-ratio: 4 / 5;
+      border-radius: calc($radius-medium + 2px);
+      box-shadow:
+        0 14px 34px rgba($primary-color, 0.34),
+        0 0 0 1px rgba($light-color, 0.06);
+    }
+  }
+
+  .cardBody {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    padding: 26px 24px;
+    border-radius: 0 calc($radius-large - 1px) calc($radius-large - 1px) 0;
+    font-family: $default-font-family;
+  }
+
+  .cardDate {
+    color: rgba($light-color, 0.72);
+    font-size: $font-size-label;
+    font-weight: 700;
+    letter-spacing: $letter-spacing-nav;
+    line-height: $line-height-label;
+    text-transform: uppercase;
+  }
+
+  .cardName {
+    color: $light-color;
+    font-family: $display-font-family;
+    font-weight: 700;
+    margin: 0;
+    line-height: $line-height-display;
+    @include smoothValue(
+      "font-size",
+      26px,
+      44px,
+      $breakpoint-sm,
+      $breakpoint-lg
+    );
+  }
+
+  .cardLocation,
+  .cardSummary {
+    color: $gray-color;
+    font-size: $font-size-body-md;
+    margin: 0;
+    line-height: $line-height-body;
+  }
+
+  @include maxScreen($breakpoint-sm) {
+    .archivesSection {
+      padding-bottom: 88px;
+    }
+
+    .cardImageWrap {
+      padding: 16px 16px 0;
+      border-radius: calc($radius-large - 1px) calc($radius-large - 1px) 0 0;
+
+      .cardImage {
+        max-height: 420px;
+      }
+    }
+
+    .cardBody {
+      padding: 20px 18px 22px;
+      border-radius: 0 0 calc($radius-large - 1px) calc($radius-large - 1px);
+    }
+  }
+}

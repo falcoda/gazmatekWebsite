@@ -1,0 +1,32 @@
+.contactPage {
+  .contactHero {
+    padding: 9rem 0 4rem;
+    border-bottom: 1px solid $color-border-subtle;
+
+    h1 {
+      margin: 0;
+      color: $color-text-primary;
+      font-size: clamp(3.5rem, 8vw, 6.5rem);
+      line-height: 0.95;
+      text-transform: uppercase;
+    }
+
+    .intro {
+      max-width: 40rem;
+      color: $color-text-secondary;
+      line-height: 1.7;
+    }
+  }
+
+  .eyebrow {
+    margin: 0 0 0.75rem;
+    color: $color-accent;
+    font-size: 0.85rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+  }
+
+  .contactSection {
+    padding-top: 0;
+  }
+}

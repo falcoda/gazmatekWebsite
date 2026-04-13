@@ -1,0 +1,62 @@
+@use "./assets/styles/global.scss" as *;
+@use "./assets/styles/_reset.scss" as *;
+
+@font-face {
+  font-family: "Anton";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src:
+    url("./assets/fonts/Anton-Regular.woff2") format("woff2"),
+    url("./assets/fonts/Anton-Regular.woff") format("woff");
+}
+
+// Raw display fonts — Latin basic only (no accents, no digits).
+// Use exclusively for fixed hardcoded text that is guaranteed accent-free.
+@font-face {
+  font-family: "Bang4YaBuck";
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("./assets/fonts/Bang4YaBuck.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "ABITE";
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("./assets/fonts/ABITE.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "DAMAGEPLAN";
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("./assets/fonts/DAMAGEPLAN.ttf") format("truetype");
+}
+
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+  background-color: $primary-color;
+}
+
+body {
+  font-family: $default-font-family;
+  height: max-content;
+  line-height: $line-height-body;
+}
+
+body > * {
+  box-sizing: border-box;
+}
+
+:root {
+  font-synthesis: none;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+}
+

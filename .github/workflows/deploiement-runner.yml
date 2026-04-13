@@ -1,0 +1,167 @@
+name: PROD CI
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  check-changes:
+    runs-on: [self-hosted, gazmatek]
+    outputs:
+      backend-changed: ${{ steps.detect-backend.outputs.changed }}
+      frontend-changed: ${{ steps.detect-frontend.outputs.changed }}
+      docker-changed: ${{ steps.detect-docker.outputs.changed }}
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          fetch-depth: 2
+
+      - name: Detect backend changes
+        id: detect-backend
+        run: |
+          if [ $(git rev-list --count HEAD) -eq 1 ]; then
+            echo "changed=true" >> $GITHUB_OUTPUT
+          elif git diff --name-only HEAD~1 | grep '^backend/'; then
+            echo "changed=true" >> $GITHUB_OUTPUT
+          else
+            echo "changed=false" >> $GITHUB_OUTPUT
+          fi
+
+      - name: Detect frontend changes
+        id: detect-frontend
+        run: |
+          if [ $(git rev-list --count HEAD) -eq 1 ]; then
+            echo "changed=true" >> $GITHUB_OUTPUT
+          elif git diff --name-only HEAD~1 | grep '^frontend/'; then
+            echo "changed=true" >> $GITHUB_OUTPUT
+          else
+            echo "changed=false" >> $GITHUB_OUTPUT
+          fi
+
+      - name: Detect docker changes
+        id: detect-docker
+        run: |
+          if [ $(git rev-list --count HEAD) -eq 1 ]; then
+            echo "changed=true" >> $GITHUB_OUTPUT
+          elif git diff --name-only HEAD~1 | grep '^docker/'; then
+            echo "changed=true" >> $GITHUB_OUTPUT
+          else
+            echo "changed=false" >> $GITHUB_OUTPUT
+          fi
+
+  build-backend:
+    runs-on: [self-hosted, gazmatek]
+    needs: check-changes
+    if: |
+      needs.check-changes.outputs.backend-changed == 'true' ||
+      needs.check-changes.outputs.docker-changed == 'true'
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Setup Node 20.x
+        uses: actions/setup-node@v3
+        with:
+          node-version: 20.x
+
+      - name: Install backend dependencies
+        working-directory: backend
+        run: npm i
+
+      - name: Build backend
+        working-directory: backend
+        run: CI= npm run build
+
+      - name: Copy Docker to Backend
+        run: cp -R docker backend/dist
+
+      - name: Move Node modules to backend dist
+        run: |
+          mv backend/node_modules backend/dist/node_modules
+
+      - name: Move backend build to shared directory
+        run: |
+          mkdir -p /tmp/shared/PROD/${{ github.event.repository.name }}/backend-build
+          cp -R backend/dist/* /tmp/shared/PROD/${{ github.event.repository.name }}/backend-build
+
+  build-frontend:
+    runs-on: [self-hosted, gazmatek]
+    needs: check-changes
+    if: |
+      needs.check-changes.outputs.frontend-changed == 'true' ||
+      needs.check-changes.outputs.docker-changed == 'true'
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Setup Node 20.x
+        uses: actions/setup-node@v3
+        with:
+          node-version: 20.x
+
+      - name: Install frontend dependencies
+        working-directory: frontend
+        run: npm install
+
+      - name: Build frontend
+        working-directory: frontend
+        run: CI= npm run build
+
+      - name: Move frontend build to shared directory
+        run: |
+          mkdir -p /tmp/shared/PROD/${{ github.event.repository.name }}/frontend-build
+          cp -R frontend/build/* /tmp/shared/PROD/${{ github.event.repository.name }}/frontend-build
+
+  deploy-backend:
+    runs-on: [self-hosted, gazmatek]
+    needs: build-backend
+    if: needs.build-backend.result == 'success'
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Create directory for downloaded artifact
+        run: mkdir -p backend-build
+
+      - name: Copy backend build from shared directory
+        run: |
+          REPO_PATH="$HOME/PROD-${{ github.event.repository.name }}"
+          mkdir -p "$REPO_PATH"
+          cp -R /tmp/shared/PROD/${{ github.event.repository.name }}/backend-build/* "$REPO_PATH"
+
+      - name: Restart Docker containers
+        run: |
+          REPO_PATH="$HOME/PROD-${{ github.event.repository.name }}"
+          cd "$REPO_PATH/docker"
+          docker-compose -f docker-compose.prod.yml down
+          docker-compose -f docker-compose.prod.yml up -d
+
+  deploy-frontend:
+    runs-on: [self-hosted, gazmatek]
+    needs: build-frontend
+    if: needs.build-frontend.result == 'success'
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Create directory for downloaded artifact
+        run: mkdir -p frontend-build
+
+      - name: Create build directory in PROD
+        run: |
+          REPO_PATH="$HOME/PROD-${{ github.event.repository.name }}"
+          mkdir -p "$REPO_PATH/build"
+
+      - name: Copy frontend build from shared directory
+        run: |
+          REPO_PATH="$HOME/PROD-${{ github.event.repository.name }}"
+          cp -R /tmp/shared/PROD/${{ github.event.repository.name }}/frontend-build/* "$REPO_PATH/build"
+
+  cleanup:
+    runs-on: [self-hosted, gazmatek]
+    needs:
+      - deploy-backend
+      - deploy-frontend
+    if: always()
+    steps:
+      - name: Cleanup shared directory
+        run: |
+          echo "Cleaning up shared directory..."
+          rm -rf /tmp/shared/PROD/${{ github.event.repository.name }}/*
+          echo "Cleanup complete."

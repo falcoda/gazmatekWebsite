@@ -1,0 +1,314 @@
+.eventDetail {
+  .hero {
+    position: relative;
+    min-height: 56vh;
+    overflow: hidden;
+
+    .heroImageWrap {
+      position: absolute;
+      inset: 0;
+      overflow: hidden;
+    }
+
+    .heroImage {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      opacity: 0.34;
+    }
+
+    .heroOverlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(
+        180deg,
+        rgba($primary-color, 0.18) 0%,
+        rgba($primary-color, 0.92) 100%
+      );
+    }
+
+    .heroContent {
+      position: relative;
+      z-index: 2;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-end;
+      gap: 14px;
+      min-height: 56vh;
+      text-align: center;
+      padding: 140px $padding-lg 72px;
+    }
+
+    .heroBadge {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 7px 16px;
+      border-radius: 999px;
+      border: 1px solid rgba($light-color, 0.12);
+      color: $gray-color;
+      font-size: $font-size-label;
+      font-weight: 700;
+      letter-spacing: $letter-spacing-eyebrow;
+      line-height: $line-height-label;
+      text-transform: uppercase;
+      background: rgba($primary-color, 0.56);
+    }
+
+    .heroName {
+      font-family: $raw-display-font-family;
+      color: $light-color;
+      font-size: $font-size-display-lg;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      line-height: $line-height-display;
+      margin: 0;
+
+      &.fallbackDisplay {
+        font-family: $display-font-family;
+        letter-spacing: 0.06em;
+      }
+    }
+
+    .heroSummary {
+      color: rgba($light-color, 0.78);
+      font-size: $font-size-body-lg;
+      line-height: $line-height-body;
+      margin: 0;
+      max-width: 760px;
+    }
+  }
+
+  .body {
+    max-width: 960px;
+    margin: 0 auto;
+  }
+
+  .content {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+  }
+
+  .backButton {
+    background: none;
+    border: 1px solid rgba($light-color, 0.14);
+    color: $gray-color;
+    font-size: $font-size-button;
+    font-weight: 600;
+    cursor: pointer;
+    padding: 10px 20px;
+    border-radius: $radius-medium;
+    width: fit-content;
+    letter-spacing: $letter-spacing-nav;
+    line-height: $line-height-label;
+    transition:
+      color $medium-animation,
+      border-color $medium-animation,
+      background $medium-animation;
+
+    &:hover {
+      color: $light-color;
+      border-color: rgba($blue-color, 0.5);
+      background: rgba($blue-color, 0.08);
+    }
+  }
+
+  .infoGrid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px;
+
+    @include maxScreen($breakpoint-sm) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .infoItem,
+  .descriptionCard {
+    background: rgba($materials-color, 0.82);
+    border: 1px solid rgba($light-color, 0.08);
+    border-radius: $radius-large;
+  }
+
+  .infoItem {
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+    padding: 22px;
+
+    .infoIcon {
+      color: $blue-color;
+      font-size: 18px;
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+
+    .infoLabel {
+      color: $gray-color;
+      font-size: $font-size-label;
+      font-weight: 700;
+      letter-spacing: $letter-spacing-nav;
+      line-height: $line-height-label;
+      text-transform: uppercase;
+      margin: 0 0 6px;
+    }
+
+    .infoValue {
+      color: $light-color;
+      font-size: $font-size-body-lg;
+      line-height: $line-height-body;
+      margin: 0;
+    }
+  }
+
+  .ticketSection {
+    display: flex;
+  }
+
+  .description {
+    .descriptionCard {
+      position: relative;
+      overflow: hidden;
+      padding: 24px;
+
+      &::before {
+        content: "";
+        position: absolute;
+        inset: 0 auto 0 0;
+        width: 4px;
+        background: linear-gradient(
+          180deg,
+          rgba($blue-color, 0.85) 0%,
+          rgba($accent-color, 0.55) 100%
+        );
+      }
+
+      p {
+        color: $gray-color;
+        font-size: $font-size-body-lg;
+        line-height: $line-height-body;
+        margin: 0;
+        padding-left: 10px;
+      }
+    }
+  }
+
+  .sectionTitle {
+    font-family: $raw-display-font-family;
+    color: $light-color;
+    font-size: clamp(0.92rem, 2vw, 1.12rem);
+    font-weight: 700;
+    margin: 0 0 16px;
+    letter-spacing: $letter-spacing-nav;
+    line-height: $line-height-display;
+  }
+
+  .lineup {
+    .lineupList {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .lineupArtist {
+      display: inline-block;
+      padding: 9px 18px;
+      border-radius: $radius-medium;
+      background: rgba($materials-color, 0.82);
+      border: 1px solid rgba($light-color, 0.08);
+      color: $light-color;
+      font-size: $font-size-body-md;
+      font-weight: 600;
+      line-height: $line-height-label;
+      letter-spacing: $letter-spacing-nav;
+    }
+  }
+
+  .gallery {
+    .galleryGrid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 14px;
+
+      @include maxScreen($breakpoint-sm) {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    .galleryItem {
+      border: none;
+      background: none;
+      padding: 0;
+      cursor: pointer;
+      border-radius: $radius-medium;
+      overflow: hidden;
+      min-height: 0;
+
+      .galleryImage {
+        width: 100%;
+        height: 100%;
+        aspect-ratio: 1;
+        object-fit: cover;
+        display: block;
+        filter: saturate(0.96) contrast(1.02);
+        transition:
+          transform 0.4s ease,
+          filter 0.4s ease;
+      }
+
+      &:hover .galleryImage {
+        transform: scale(1.05);
+        filter: saturate(1.08) contrast(1.05);
+      }
+    }
+  }
+
+  .lightbox {
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+    background: rgba($primary-color, 0.96);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px;
+
+    .lightboxClose {
+      position: absolute;
+      top: 24px;
+      right: 24px;
+      background: none;
+      border: none;
+      color: $light-color;
+      font-size: 28px;
+      cursor: pointer;
+      padding: 8px;
+      transition: color $medium-animation;
+
+      &:hover {
+        color: $blue-color;
+      }
+    }
+
+    .lightboxImage {
+      max-width: 90vw;
+      max-height: 85vh;
+      object-fit: contain;
+      border-radius: $radius-medium;
+    }
+  }
+
+  @include maxScreen($breakpoint-sm) {
+    .hero {
+      min-height: 420px;
+
+      .heroContent {
+        min-height: 420px;
+        padding: 120px 20px 48px;
+      }
+    }
+  }
+}

@@ -1,0 +1,71 @@
+.artistesPage {
+  .hero {
+    position: relative;
+    padding-top: 140px;
+    padding-bottom: 40px;
+    text-align: center;
+
+    .heroContent {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 12px;
+      @include linkPadding;
+    }
+
+    .title {
+      font-family: $raw-display-font-family;
+      color: $light-color;
+      font-size: clamp(2.1rem, 6vw, 4.4rem);
+      font-weight: 700;
+      line-height: $line-height-display;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      margin: 0;
+    }
+
+    .subtitle {
+      color: $gray-color;
+      font-size: clamp(1rem, 1.8vw, 1.25rem);
+      font-weight: 400;
+      letter-spacing: $letter-spacing-nav;
+      line-height: $line-height-body;
+      margin: 0;
+    }
+  }
+
+  .spotlightSection {
+    @include linkMargin;
+  }
+
+  .gridSection {
+    @include linkMargin;
+
+    .sectionLabel {
+      font-family: $raw-display-font-family;
+      color: $gray-color;
+      font-size: clamp(1.05rem, 2.5vw, 1.8rem);
+      font-weight: 600;
+      letter-spacing: 0.05em;
+      line-height: 1.08;
+      text-transform: uppercase;
+      margin: 0 0 28px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 32px;
+
+      @include maxScreen($breakpoint-md) {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 24px;
+      }
+
+      @include maxScreen($breakpoint-sm) {
+        grid-template-columns: 1fr;
+        gap: 20px;
+      }
+    }
+  }
+}
