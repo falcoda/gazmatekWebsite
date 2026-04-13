@@ -87,9 +87,11 @@ const ContactForm = () => {
             aria-label={`${t("contact.emailCta")} — ${SOCIAL_LINKS.email}`}
           >
             <span className="contactEmailLabel">{t("contact.emailCta")}</span>
-            <span className="contactEmailAddress">{SOCIAL_LINKS.email}</span>
-            <span className="contactEmailArrow" aria-hidden="true">
-              ↗
+            <span className="contactEmailLine">
+              <span className="contactEmailAddress">{SOCIAL_LINKS.email}</span>
+              <span className="contactEmailArrow" aria-hidden="true">
+                ↗
+              </span>
             </span>
           </a>
 

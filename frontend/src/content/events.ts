@@ -82,7 +82,7 @@ function getEventImage(path: string): string {
   const image = EVENT_IMAGES[key];
 
   if (!image) {
-    throw new Error(`Missing event image for path: ${path}`);
+    return gazmatekLogo;
   }
 
   return image;

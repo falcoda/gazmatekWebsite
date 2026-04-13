@@ -18,7 +18,7 @@ import heroImg from "../../assets/img/about-hero.jpg";
 const HERO_IMAGE = heroImg;
 
 const AboutUs: React.FC = () => {
-  const { i18n } = useTranslation();
+  const { i18n, t } = useTranslation();
   const language: AppLanguage = i18n.resolvedLanguage === "en" ? "en" : "fr";
   const heroTitle = getLocalizedText(COLLECTIVE_MANIFESTO.title, language);
 
@@ -44,6 +44,7 @@ const AboutUs: React.FC = () => {
       </section>
 
       <Section className="intro">
+        <h2 className="title">{t("aboutUs.heroSubtitle")}</h2>
         <p className="text">
           {getLocalizedText(COLLECTIVE_MANIFESTO.intro, language)}
         </p>

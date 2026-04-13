@@ -68,6 +68,17 @@
     max-width: 900px;
     margin: 0 auto;
 
+    .title {
+      margin: 0 0 14px;
+      font-family: $raw-display-font-family;
+      color: $light-color;
+      font-size: clamp(1.5rem, 3.6vw, 2.5rem);
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      line-height: 1.08;
+      text-transform: uppercase;
+    }
+
     .text {
       color: $gray-color;
       font-size: $font-size-body-lg;

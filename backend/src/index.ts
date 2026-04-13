@@ -49,7 +49,8 @@ app.use(
           "https://nestohm.com/",
           "https://region1.google-analytics.com/",
         ],
-        styleSrc: ["'self'", "'unsafe-inline'"],
+        styleSrc: ["'self'", "'unsafe-inline'", "https://fonts.googleapis.com"],
+        fontSrc: ["'self'", "https://fonts.gstatic.com", "data:"],
         imgSrc: [
           "'self'",
           "data:",
