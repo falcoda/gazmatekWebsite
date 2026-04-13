@@ -1,6 +1,8 @@
 .contactPage {
   .contactHero {
-    padding: 9rem 0 4rem;
+    @include linkPadding;
+    padding-top: 9rem;
+    padding-bottom: 4rem;
     border-bottom: 1px solid $color-border-subtle;
 
     h1 {
@@ -12,6 +14,7 @@
     }
 
     .intro {
+      margin: 1.25rem 0 0;
       max-width: 40rem;
       color: $color-text-secondary;
       line-height: 1.7;
@@ -30,3 +33,4 @@
     padding-top: 0;
   }
 }
+
