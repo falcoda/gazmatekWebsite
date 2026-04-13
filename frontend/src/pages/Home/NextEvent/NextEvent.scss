@@ -137,10 +137,10 @@
     .title {
       font-family: $raw-display-font-family;
       color: $light-color;
-      font-size: $font-size-display-md;
-      font-weight: 700;
-      line-height: $line-height-display;
-      letter-spacing: 0.08em;
+      font-size: clamp(1.35rem, 3.6vw, 2.3rem);
+      font-weight: 600;
+      line-height: 1.05;
+      letter-spacing: 0.06em;
       text-transform: uppercase;
       margin: 0 0 $padding-lg-2;
     }

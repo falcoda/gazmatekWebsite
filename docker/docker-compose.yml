@@ -1,0 +1,18 @@
+version: '3'
+
+services:
+  websiteGazmatek:
+    image: node:20.11.0
+    container_name: websiteGazmatek
+    restart: unless-stopped
+    networks:
+      - mcn-network
+    volumes:
+      - ../:/var/www/backend
+    command: bash -c "cd /var/www/backend && node index.js"
+
+#--------------------
+
+networks:
+  mcn-network:
+    external: true

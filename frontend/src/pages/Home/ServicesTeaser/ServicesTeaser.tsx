@@ -2,6 +2,7 @@ import "./ServicesTeaser.scss";
 
 import { useTranslation } from "react-i18next";
 
+import { PAGES } from "@/config/pages";
 import equipment1 from "../../../assets/img/materiel/equipment-1.jpg";
 import equipment2 from "../../../assets/img/materiel/equipment-2.jpg";
 import equipment3 from "../../../assets/img/materiel/equipment-3.jpg";
@@ -51,7 +52,7 @@ function ServicesTeaser() {
         <button
           className="servicesTeaserCta"
           type="button"
-          onClick={() => animatedNavigate("/location")}
+          onClick={() => animatedNavigate(PAGES.services)}
         >
           {t("servicesTeaser.cta")}
         </button>

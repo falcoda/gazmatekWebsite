@@ -14,6 +14,13 @@ const INTERACTIVE_SELECTOR = [
   "[data-cursor='hover']",
 ].join(",");
 
+const CURSOR_POSITION_KEY = "__gzkCursorPosition";
+
+type CursorPointer = {
+  x: number;
+  y: number;
+};
+
 const CustomCursor = () => {
   const [isEnabled, setIsEnabled] = useState(false);
 
@@ -47,12 +54,17 @@ const CustomCursor = () => {
   useEffect(() => {
     if (!isEnabled) return;
 
-    if (targetPointerRef.current.x === 0 && targetPointerRef.current.y === 0) {
-      targetPointerRef.current = {
+    const windowWithCursorPosition = window as Window & {
+      [CURSOR_POSITION_KEY]?: CursorPointer;
+    };
+
+    const persistedPointer = windowWithCursorPosition[CURSOR_POSITION_KEY];
+
+    targetPointerRef.current =
+      persistedPointer ?? {
         x: Math.round(window.innerWidth / 2),
         y: Math.round(window.innerHeight / 2),
       };
-    }
 
     corePointerRef.current = { ...targetPointerRef.current };
     glyphPointerRef.current = { ...targetPointerRef.current };
@@ -77,6 +89,14 @@ const CustomCursor = () => {
         "gzkCursorInteractive",
         Boolean(interactiveTarget),
       );
+    };
+
+    const setCursorEnabled = (enabled: boolean) => {
+      document.body.classList.toggle("gzkCursorEnabled", enabled);
+    };
+
+    const setCursorVisible = (visible: boolean) => {
+      document.body.classList.toggle("gzkCursorVisible", visible);
     };
 
     const tick = () => {
@@ -116,17 +136,21 @@ const CustomCursor = () => {
       targetPointerRef.current.x,
       targetPointerRef.current.y,
     );
-    document.body.classList.add("gzkCursorEnabled", "gzkCursorVisible");
+    setCursorEnabled(true);
+    setCursorVisible(true);
 
     const onMove = (e: PointerEvent) => {
       targetPointerRef.current = { x: e.clientX, y: e.clientY };
-      document.body.classList.add("gzkCursorEnabled", "gzkCursorVisible");
+      windowWithCursorPosition[CURSOR_POSITION_KEY] = targetPointerRef.current;
+      setCursorEnabled(true);
+      setCursorVisible(true);
       syncInteractiveStateFromPoint(e.clientX, e.clientY);
     };
 
     const onPointerLeave = () => {
+      setCursorEnabled(false);
+      setCursorVisible(false);
       document.body.classList.remove(
-        "gzkCursorVisible",
         "gzkCursorInteractive",
         "gzkCursorDown",
       );
@@ -138,20 +162,24 @@ const CustomCursor = () => {
       glyphPointerRef.current = { ...targetPointerRef.current };
       applyPosition(coreRef.current, e.clientX, e.clientY);
       applyPosition(glyphRef.current, e.clientX, e.clientY);
-      document.body.classList.add("gzkCursorVisible");
+      windowWithCursorPosition[CURSOR_POSITION_KEY] = targetPointerRef.current;
+      setCursorEnabled(true);
+      setCursorVisible(true);
       syncInteractiveStateFromPoint(e.clientX, e.clientY);
     };
 
     const onBlur = () => {
+      setCursorEnabled(false);
+      setCursorVisible(false);
       document.body.classList.remove(
-        "gzkCursorVisible",
         "gzkCursorInteractive",
         "gzkCursorDown",
       );
     };
 
     const onFocus = () => {
-      document.body.classList.add("gzkCursorVisible");
+      setCursorEnabled(true);
+      setCursorVisible(true);
       syncInteractiveStateFromPoint(
         targetPointerRef.current.x,
         targetPointerRef.current.y,
@@ -200,11 +228,11 @@ const CustomCursor = () => {
       window.removeEventListener("focus", onFocus);
       document.removeEventListener("visibilitychange", onVisibilityChange);
       document.body.classList.remove(
-        "gzkCursorEnabled",
-        "gzkCursorVisible",
         "gzkCursorInteractive",
         "gzkCursorDown",
       );
+      setCursorEnabled(false);
+      setCursorVisible(false);
     };
   }, [isEnabled]);
 

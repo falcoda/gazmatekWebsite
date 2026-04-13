@@ -13,10 +13,10 @@
 
   .servicesTeaserSectionTitle {
     font-family: $raw-display-font-family;
-    font-size: $font-size-label;
+    font-size: clamp(1.6rem, 4vw, 2.7rem);
     font-weight: 600;
-    letter-spacing: $letter-spacing-eyebrow;
-    line-height: $line-height-label;
+    letter-spacing: 0.06em;
+    line-height: 1.05;
     text-transform: uppercase;
     color: $accent-color;
     margin: 0;
@@ -25,21 +25,21 @@
 
   .servicesTeaserList {
     display: flex;
-    gap: $padding-lg;
+    gap: $padding-xl;
     width: 100%;
   }
 
   .serviceTeaserItem {
     flex: 1;
     display: flex;
-    gap: $padding-md;
+    gap: $padding-md-2;
     border-left: 2px solid $accent-color;
-    padding-left: $padding-md;
+    padding-left: $padding-md-2;
   }
 
   .serviceTeaserPhoto {
-    width: 64px;
-    height: 64px;
+    width: 92px;
+    height: 92px;
     flex-shrink: 0;
     border-radius: $radius-medium;
     overflow: hidden;
@@ -55,13 +55,13 @@
   .serviceTeaserContent {
     display: flex;
     flex-direction: column;
-    gap: 8px;
+    gap: 10px;
   }
 
   .serviceTeaserName {
     font-family: $raw-display-font-family;
     color: $light-color;
-    font-size: clamp(0.74rem, 1.5vw, 0.88rem);
+    font-size: clamp(0.96rem, 1.9vw, 1.22rem);
     font-weight: 700;
     line-height: $line-height-display;
     letter-spacing: $letter-spacing-nav;
@@ -71,11 +71,12 @@
 
   .serviceTeaserExcerpt {
     color: $gray-color;
-    font-size: $font-size-body-sm;
-    line-height: $line-height-body;
+    font-size: clamp(0.92rem, 1.35vw, 1.02rem);
+    line-height: 1.55;
     margin: 0;
     display: -webkit-box;
-    -webkit-line-clamp: 2;
+    line-clamp: 3;
+    -webkit-line-clamp: 3;
     -webkit-box-orient: vertical;
     overflow: hidden;
   }
@@ -107,7 +108,53 @@
 
     .servicesTeaserList {
       flex-direction: column;
-      gap: $padding-lg;
+      gap: $padding-md-2;
+    }
+
+    .serviceTeaserItem {
+      gap: $padding-md;
+      padding-left: $padding-md;
+    }
+
+    .serviceTeaserPhoto {
+      width: 78px;
+      height: 78px;
+    }
+
+    .serviceTeaserName {
+      font-size: clamp(1rem, 2.6vw, 1.15rem);
+    }
+
+    .serviceTeaserExcerpt {
+      font-size: 0.98rem;
+      line-clamp: 4;
+      -webkit-line-clamp: 4;
+    }
+  }
+
+  @include maxScreen($breakpoint-sm) {
+    .servicesTeaserSectionTitle {
+      font-size: clamp(1.38rem, 8vw, 1.95rem);
+    }
+
+    .serviceTeaserItem {
+      gap: $padding-sm;
+      padding-left: $padding-sm;
+    }
+
+    .serviceTeaserPhoto {
+      width: 72px;
+      height: 72px;
+    }
+
+    .serviceTeaserName {
+      font-size: 1rem;
+      letter-spacing: 0.04em;
+    }
+
+    .serviceTeaserExcerpt {
+      font-size: 0.94rem;
+      line-height: 1.5;
     }
   }
 }
