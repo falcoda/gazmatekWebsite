@@ -60,11 +60,10 @@ const CustomCursor = () => {
 
     const persistedPointer = windowWithCursorPosition[CURSOR_POSITION_KEY];
 
-    targetPointerRef.current =
-      persistedPointer ?? {
-        x: Math.round(window.innerWidth / 2),
-        y: Math.round(window.innerHeight / 2),
-      };
+    targetPointerRef.current = persistedPointer ?? {
+      x: Math.round(window.innerWidth / 2),
+      y: Math.round(window.innerHeight / 2),
+    };
 
     corePointerRef.current = { ...targetPointerRef.current };
     glyphPointerRef.current = { ...targetPointerRef.current };
@@ -150,10 +149,7 @@ const CustomCursor = () => {
     const onPointerLeave = () => {
       setCursorEnabled(false);
       setCursorVisible(false);
-      document.body.classList.remove(
-        "gzkCursorInteractive",
-        "gzkCursorDown",
-      );
+      document.body.classList.remove("gzkCursorInteractive", "gzkCursorDown");
     };
 
     const onPointerEnter = (e: PointerEvent) => {
@@ -171,10 +167,7 @@ const CustomCursor = () => {
     const onBlur = () => {
       setCursorEnabled(false);
       setCursorVisible(false);
-      document.body.classList.remove(
-        "gzkCursorInteractive",
-        "gzkCursorDown",
-      );
+      document.body.classList.remove("gzkCursorInteractive", "gzkCursorDown");
     };
 
     const onFocus = () => {
@@ -227,10 +220,7 @@ const CustomCursor = () => {
       window.removeEventListener("blur", onBlur);
       window.removeEventListener("focus", onFocus);
       document.removeEventListener("visibilitychange", onVisibilityChange);
-      document.body.classList.remove(
-        "gzkCursorInteractive",
-        "gzkCursorDown",
-      );
+      document.body.classList.remove("gzkCursorInteractive", "gzkCursorDown");
       setCursorEnabled(false);
       setCursorVisible(false);
     };
@@ -249,3 +239,4 @@ const CustomCursor = () => {
 };
 
 export default CustomCursor;
+

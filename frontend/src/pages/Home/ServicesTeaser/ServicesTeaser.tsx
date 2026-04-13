@@ -38,9 +38,7 @@ function ServicesTeaser() {
                 />
               </div>
               <div className="serviceTeaserContent">
-                <h3 className="serviceTeaserName">
-                  {service.name}
-                </h3>
+                <h3 className="serviceTeaserName">{service.name}</h3>
                 <p className="serviceTeaserExcerpt">
                   {service.description.slice(0, 90)}
                   {service.description.length > 90 ? "…" : ""}
@@ -62,3 +60,4 @@ function ServicesTeaser() {
 }
 
 export default ServicesTeaser;
+

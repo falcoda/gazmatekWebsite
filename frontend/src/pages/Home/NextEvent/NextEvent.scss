@@ -158,7 +158,9 @@
       border-radius: $radius-large;
       overflow: hidden;
       cursor: pointer;
-      transition: border-color $medium-animation, transform $medium-animation;
+      transition:
+        border-color $medium-animation,
+        transform $medium-animation;
       text-align: left;
 
       &:hover {
@@ -241,3 +243,4 @@
     }
   }
 }
+
