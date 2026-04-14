@@ -162,7 +162,6 @@ Rebuild implication:
 
 Some artist and presentation docs exist only as `.pages` files and were not extracted into text in this pass:
 
-- Geotik
 - Kemical Crow
 - Meven
 - Tekiapy et Mobitekk
