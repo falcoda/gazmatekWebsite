@@ -44,7 +44,7 @@
     .heroName {
       font-family: $raw-display-font-family;
       color: $light-color;
-      font-size: $font-size-display-md;
+      font-size: clamp(2.9rem, 7vw, 5.8rem);
       font-weight: 700;
       line-height: $line-height-display;
       letter-spacing: 0.08em;

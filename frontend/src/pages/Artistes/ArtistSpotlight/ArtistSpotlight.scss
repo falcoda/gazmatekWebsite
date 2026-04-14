@@ -142,7 +142,7 @@
   .spotlightName {
     font-family: $display-font-family;
     color: $light-color;
-    font-size: clamp(0.98rem, 2vw, 1.25rem);
+    font-size: clamp(1.15rem, 2.3vw, 1.6rem);
     font-weight: 700;
     line-height: $line-height-display;
     letter-spacing: $letter-spacing-nav;
@@ -176,4 +176,3 @@
     }
   }
 }
-

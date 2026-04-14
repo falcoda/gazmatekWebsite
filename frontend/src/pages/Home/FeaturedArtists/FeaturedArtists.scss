@@ -91,7 +91,7 @@
     .artistCardName {
       font-family: $display-font-family;
       color: $light-color;
-      font-size: clamp(0.95rem, 1.8vw, 1.2rem);
+      font-size: clamp(1.1rem, 2.1vw, 1.45rem);
       font-weight: 700;
       line-height: $line-height-display;
       letter-spacing: $letter-spacing-nav;
@@ -140,4 +140,3 @@
     }
   }
 }
-

@@ -3,6 +3,8 @@ import "./Services.scss";
 import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
 
+import { buildLocalizedPath } from "@/i18n/routing";
+
 import EquipmentCard from "@/components/EquipmentCard/EquipmentCard";
 import SeoHead from "@/components/SeoHead/SeoHead";
 import type { AppLanguage } from "@/i18n/config";
@@ -79,7 +81,7 @@ const Services = () => {
           <h2 className="quoteTitle">{t("servicesPage.quoteTitle")}</h2>
           <p className="quoteBody">{t("servicesPage.quoteBody")}</p>
           <Link
-            to={`${PAGES.contact}?subject=quote`}
+            to={`${buildLocalizedPath(language, PAGES.contact)}?subject=quote`}
             className="quoteCta"
           >
             {t("servicesPage.quoteCta")}
