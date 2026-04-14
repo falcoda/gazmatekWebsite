@@ -10,7 +10,6 @@ import exil3Photo from "@/assets/img/artists/exil3.jpg";
 import fuzzeyPhoto from "@/assets/img/artists/fuzzey.jpg";
 import gLittlePhoto from "@/assets/img/artists/g-little.jpg";
 import ganjaflexxPhoto from "@/assets/img/artists/ganjaflexx.jpg";
-import geotikPhoto from "@/assets/img/artists/geotik.jpg";
 import kemicalCrowPhoto from "@/assets/img/artists/kemical-crow.jpg";
 import kromozomPhoto from "@/assets/img/artists/kromozom.jpg";
 import lemmaPhoto from "@/assets/img/artists/lemma.jpg";
@@ -457,37 +456,6 @@ export const ARTISTS: ArtistProfile[] = [
     },
     source: "Bio_artistes.pdf",
     status: "needs-cleanup",
-  },
-
-  // ── Geotik ────────────────────────────────────────────────────────────────
-  // Note: additional content in .pages file — not extracted
-  {
-    id: "geotik",
-    slug: "geotik",
-    name: "GEOTIK",
-    isResident: true,
-    styles: ["Hardtek", "Tribecore", "Industrial"],
-    images: { portrait: geotikPhoto },
-    links: { soundcloud: "https://soundcloud.com/geotik" },
-    bio: {
-      short: {
-        fr: "Spécialiste de la deep rave music, Geotik compose ses lives avec du hardware (KORG Electribe). Son style mêle old-school Frenchcore, Industrial Hardcore et Hardtek/Tribecore.",
-        en: "A deep rave music specialist, Geotik builds his live sets with hardware (KORG Electribe). His style blends old-school Frenchcore, Industrial Hardcore and Hardtek/Tribecore.",
-      },
-      full: {
-        fr: "Artiste spécialisé dans la deep rave music, passionné par le hardware spécifique comme le KORG Electribe. Son style mélange l'old-school Frenchcore, l'Industrial Hardcore et le Hardtek/Tribecore. Basé en Belgique, Geotik compose ses lives avec du hardware et est un artiste résident de Gazmatek.",
-        en: "A deep rave music specialist with a passion for specific hardware such as the KORG Electribe. His style blends old-school Frenchcore, Industrial Hardcore and Hardtek/Tribecore. Based in Belgium, Geotik builds his live sets with hardware and is a resident artist at Gazmatek.",
-      },
-    },
-    seo: {
-      title: { fr: "GEOTIK — Gazmatek", en: "GEOTIK — Gazmatek" },
-      description: {
-        fr: "Geotik, live hardware de Hardtek et Tribecore, résident chez Gazmatek.",
-        en: "Geotik, Hardtek and Tribecore hardware live act, resident at Gazmatek.",
-      },
-    },
-    source: "Bio_artistes.pdf",
-    status: "pages-blocked",
   },
 
   // ── G-Little ──────────────────────────────────────────────────────────────

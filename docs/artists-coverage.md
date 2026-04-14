@@ -28,7 +28,6 @@ Updated: 2026-04-12
 | EX!L3 | needs-cleanup | — | — | — | — | — | Bio_artistes.pdf |
 | FUZZEY | needs-cleanup | ✓ | ✓ | ✓ | ✓ | — | Fuzzey Bio + Link.pdf |
 | GANJAFLEXX | needs-cleanup | ✓ | ✓ | ✓ | ✓ | — | Bio_artistes.pdf |
-| GEOTIK | pages-blocked | ✓ | ✓ | ✓ | ✓ | — | Bio_artistes.pdf + .pages |
 | G-LITTLE | needs-cleanup | — | — | — | — | — | Bio_artistes.pdf |
 | KEMIKAL CROW | pages-blocked | ✓ | ✓ | ✓ | ✓ | — | Bio_artistes.pdf + .pages |
 | KROMOZOM | needs-cleanup | — | — | — | — | — | All links and contacts.docx |
@@ -96,7 +95,6 @@ Priority: Albiovix, Ecleptix, Nocid, Shmykblick, Sevenum Six, Ganjaflexx, Terape
 
 These artists have primary source content locked in `.pages` files not yet extracted:
 
-- `Geotik` — partial bio from PDF, more in `.pages`
 - `Kemikal Crow` — partial bio from PDF, more in `.pages`
 - `Meven` — no extracted content, full bio in `.pages`
 - `Tekiapy & Mobitekk` — partial bio available, more in `.pages`
