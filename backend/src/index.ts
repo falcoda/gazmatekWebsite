@@ -58,7 +58,7 @@ app.use(
           "https://storage.googleapis.com/falcohm/",
         ],
         objectSrc: ["'self'", "blob:"],
-        frameSrc: ["'self'", "blob:"],
+        frameSrc: ["'self'", "blob:", "https://w.soundcloud.com"],
       },
     },
     crossOriginOpenerPolicy: false, // Désactive la politique COOP
