@@ -12,6 +12,7 @@
 
   .mobileNavbarHeader {
     position: relative;
+    z-index: 2;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -99,8 +100,13 @@
 
   .mobileMenu {
     position: fixed;
-    inset: 14px;
-    padding: 100px 18px 22px;
+    top: 96px;
+    left: 14px;
+    right: 14px;
+    bottom: 14px;
+    padding: 20px 18px 22px;
+    display: flex;
+    flex-direction: column;
     border: 1px solid rgba($light-color, 0.08);
     border-radius: 20px 10px 20px 10px;
     background:
@@ -123,8 +129,7 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
-      gap: 14px;
-      margin-bottom: 28px;
+      margin-bottom: 16px;
 
       .menuEyebrow {
         font-family: $default-font-family;
@@ -133,12 +138,6 @@
         letter-spacing: 0.24em;
         text-transform: uppercase;
         color: rgba($light-color, 0.38);
-      }
-
-      .languageSwitcher {
-        margin-left: auto;
-        border-color: rgba($light-color, 0.08);
-        background: rgba($materials-color, 0.68);
       }
     }
 
@@ -149,6 +148,7 @@
       margin: 0;
       padding: 0;
       gap: 2px;
+      flex: 1;
 
       .mobileMenuItem {
         opacity: 0;
@@ -211,6 +211,17 @@
         }
       }
     }
+
+    .mobileMenuFooter {
+      padding-top: 22px;
+      border-top: 1px solid rgba($light-color, 0.08);
+      margin-top: 10px;
+
+      .languageSwitcher {
+        border-color: rgba($light-color, 0.08);
+        background: rgba($materials-color, 0.68);
+      }
+    }
   }
 
   @include maxScreen($breakpoint-xs) {
@@ -228,17 +239,12 @@
     }
 
     .mobileMenu {
-      inset: 10px;
-      padding: 96px 14px 18px;
-
-      .mobileMenuTopline {
-        align-items: flex-start;
-        flex-direction: column;
-
-        .languageSwitcher {
-          margin-left: 0;
-        }
-      }
+      top: 90px;
+      left: 10px;
+      right: 10px;
+      bottom: 10px;
+      padding: 18px 14px 18px;
     }
   }
 }
+

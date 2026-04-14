@@ -320,16 +320,19 @@ const AnimatedTimeline = ({
         const card = item.querySelector(".animatedTimelineCard");
         const marker = item.querySelector(".animatedTimelineMarker");
         const offsetX = item.classList.contains("right") ? 72 : -72;
+        const cardFrom = isMobileTimeline
+          ? { y: 28, opacity: 0 }
+          : { x: offsetX, opacity: 0 };
+        const cardTo = isMobileTimeline
+          ? { y: 0, opacity: 1, duration: 0.5, ease: "power2.out" }
+          : { x: 0, opacity: 1, duration: 0.65, ease: "power3.out" };
 
         if (card) {
           gsap.fromTo(
             card,
-            { x: offsetX, opacity: 0 },
+            cardFrom,
             {
-              x: 0,
-              opacity: 1,
-              duration: 0.65,
-              ease: "power3.out",
+              ...cardTo,
               scrollTrigger: {
                 trigger: item,
                 start: "top 84%",

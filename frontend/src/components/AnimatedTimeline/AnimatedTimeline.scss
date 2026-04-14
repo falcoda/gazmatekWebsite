@@ -1,6 +1,6 @@
 .animatedTimeline {
   --timeline-offset: 50%;
-  --timeline-mobile-offset: 28px;
+  --timeline-mobile-offset: 15px;
 
   .animatedTimelineTitle {
     font-family: $raw-display-font-family;
@@ -315,17 +315,23 @@
 
     .animatedTimelineCard {
       padding: 1.2rem 1.15rem;
+    }
 
-      &::after,
-      &::before {
-        left: -28px;
-        right: auto;
-        width: 28px;
-      }
+    .animatedTimelineItem.left,
+    .animatedTimelineItem.right {
+      .animatedTimelineCard {
+        &::after,
+        &::before {
+          left: -28px;
+          right: auto;
+          width: 28px;
+        }
 
-      &::before {
-        transform-origin: left center;
+        &::before {
+          transform-origin: left center;
+        }
       }
     }
   }
 }
+

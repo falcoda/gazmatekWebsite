@@ -210,7 +210,6 @@ const MobileNavbar: React.FC<MobileNavbarProps> = ({ mobileLangSwitcher }) => {
       <div className={`mobileMenu ${isOpen ? "open" : ""}`} ref={menuRef}>
         <div className="mobileMenuTopline">
           <span className="menuEyebrow">Gazmatek</span>
-          {mobileLangSwitcher}
         </div>
 
         <ul className="mobileMenuList">
@@ -243,6 +242,10 @@ const MobileNavbar: React.FC<MobileNavbarProps> = ({ mobileLangSwitcher }) => {
             );
           })}
         </ul>
+
+        {mobileLangSwitcher && (
+          <div className="mobileMenuFooter">{mobileLangSwitcher}</div>
+        )}
       </div>
     </nav>
   );
