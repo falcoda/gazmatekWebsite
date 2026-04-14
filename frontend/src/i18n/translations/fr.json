@@ -81,7 +81,7 @@
   },
   "aboutUs": {
     "heroTitle": "Qui sommes-nous",
-    "heroSubtitle": "Le collectif derrière Gazmatek",
+    "heroSubtitle": "Le collectif derriere Gazmatek",
     "introText": "Gazmatek a été fondé par des passionnés de musique avec pour objectif de mettre en avant les artistes belges désireux de se faire entendre et de créer des expériences uniques pour tous les participants. Notre mission est de faire découvrir et vivre des moments exceptionnels à travers la musique, en offrant une plateforme où les talents locaux peuvent briller et où chacun peut se sentir pleinement immergé dans une ambiance musicale unique.",
     "teamTitle": "Notre equipe"
   },
@@ -151,7 +151,7 @@
   "pillars": {
     "sectionTitle": "Trois univers",
     "events": {
-      "title": "Événements",
+      "title": "Evenements",
       "text": "Des soirées tekno underground à Bruxelles et au-delà. Grandes salles, warehouses, free parties.",
       "cta": "Explorer"
     },
@@ -188,7 +188,7 @@
     "button": "Voir plus",
     "list": [
       {
-        "name": "LOCATION DE SYSTÈME SON",
+        "name": "LOCATION DE SYSTEME SON",
         "title": "Optez pour ambiance sonore irréprochable avec notre service de Location De Système Son",
         "description": "Gazmatek propose différentes solutions de systèmes audio adaptées aux événements de toutes tailles. La large gamme d’équipements audio s’accompagne de l’expertise de nos ingénieurs du son. La qualité de nos prestations est notre priorité. En optant pour ce service, vous garantirez à votre clientèle une expérience acoustique professionnelle et immersive.",
         "image": "son.jpg"
@@ -200,7 +200,7 @@
         "image": "light.jpg"
       },
       {
-        "name": "RÉGLAGE SYSTÈME SON",
+        "name": "REGLAGE SYSTEME SON",
         "title": "Optimisez l'acoustique de votre lieu avec notre service de Réglage Système Son professionnel.",
         "description": "Nos experts en son veillent à créer une expérience auditive exceptionnelle pour les personnes qui profiteront de votre système son. Faites confiance à Gazmatek pour ajuster votre système avec précision, garantissant une qualité sonore incomparable. Nous intervenons autant sur système fixe que système éphémère et vous accompagnons également dans l’utilisation de votre matériel.",
         "image": "reglage-son.jpg"
@@ -257,3 +257,4 @@
     "title": "Contact"
   }
 }
+

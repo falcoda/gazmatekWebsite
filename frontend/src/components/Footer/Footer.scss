@@ -72,11 +72,19 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    text-decoration: none;
+
+    &:hover .socialIcon {
+      color: $accent-color;
+      transform: translateY(-2px) scale(1.08);
+    }
   }
 
   .socialIcon {
     color: $light-color;
-    transition: color $medium-animation;
+    transition:
+      color $medium-animation,
+      transform $medium-animation;
     width: 40px;
     height: 40px;
   }

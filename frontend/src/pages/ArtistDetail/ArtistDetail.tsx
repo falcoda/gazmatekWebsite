@@ -130,12 +130,17 @@ const ArtistDetail: React.FC = () => {
           <div className="heroOverlay" />
         </div>
         <div className="heroContent">
-          <h1
-            className={`heroName${useRawDisplayName ? "" : " fallbackDisplay"}`}
-          >
-            {artist.name}
-          </h1>
-          <span className="heroStyle">{artist.styles.join(" · ")}</span>
+          <div className="heroLeft">
+            <h1
+              className={`heroName${useRawDisplayName ? "" : " fallbackDisplay"}`}
+            >
+              {artist.name}
+            </h1>
+            <span className="heroStyle">{artist.styles.join(" · ")}</span>
+          </div>
+          <div className="heroPortraitWrap">
+            <img src={heroSrc} alt={artist.name} className="heroPortrait" />
+          </div>
         </div>
       </section>
 
