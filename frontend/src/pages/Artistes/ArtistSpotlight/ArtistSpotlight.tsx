@@ -99,6 +99,7 @@ const ArtistSpotlight = ({ artists }: ArtistSpotlightProps) => {
                   alt={artist.name}
                   className="spotlightImg"
                   loading="lazy"
+                  decoding="async"
                 />
                 <div className="spotlightGrad" />
               </div>

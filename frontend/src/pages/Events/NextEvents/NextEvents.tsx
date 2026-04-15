@@ -132,6 +132,7 @@ const NextEvents = () => {
                       alt={event.poster.alt[language]}
                       className="posterImage"
                       loading="lazy"
+                      decoding="async"
                     />
                   </div>
 

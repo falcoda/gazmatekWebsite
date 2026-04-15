@@ -93,7 +93,13 @@ const EventsHub = () => {
         >
           <div className="blockBg">
             {upcomingVisual && (
-              <img src={upcomingVisual.src} alt="" className="blockBgImage" loading="lazy" />
+              <img
+                src={upcomingVisual.src}
+                alt=""
+                className="blockBgImage"
+                loading="lazy"
+                decoding="async"
+              />
             )}
             <div className="blockOverlay" />
           </div>
@@ -130,6 +136,7 @@ const EventsHub = () => {
                 alt=""
                 className="blockBgImage"
                 loading="lazy"
+                decoding="async"
               />
             )}
             <div className="blockOverlayArchive" />

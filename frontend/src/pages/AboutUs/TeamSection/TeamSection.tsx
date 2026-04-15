@@ -46,6 +46,8 @@ const TeamSection: React.FC = () => {
                 src={member.image}
                 alt={member.name}
                 className="image"
+                loading="lazy"
+                decoding="async"
               />
             </div>
             <div className="info">

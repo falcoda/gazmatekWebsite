@@ -60,6 +60,7 @@ const ArtistGallery = ({ images, artistName }: ArtistGalleryProps) => {
                 alt={`${artistName} - ${i + 1}`}
                 className="image"
                 loading="lazy"
+                decoding="async"
               />
             </div>
           ))}

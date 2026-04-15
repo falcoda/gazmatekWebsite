@@ -14,7 +14,13 @@ function SoundCloudSection() {
   return (
     <section className="soundcloudSection">
       <div className="background">
-        <img src={soundcloudBg} alt="" className="backgroundImage" />
+        <img
+          src={soundcloudBg}
+          alt=""
+          className="backgroundImage"
+          loading="lazy"
+          decoding="async"
+        />
         <div className="backgroundOverlay" />
       </div>
       <div className="content">
@@ -25,6 +31,7 @@ function SoundCloudSection() {
             width="100%"
             height="600"
             allow="autoplay"
+            loading="lazy"
             src={SOUNDCLOUD_EMBED_URL}
           />
         </div>

@@ -126,7 +126,14 @@ const ArtistDetail: React.FC = () => {
 
       <section className="hero">
         <div className="heroImageWrap">
-          <img src={heroSrc} alt={artist.name} className="heroImage" />
+          <img
+            src={heroSrc}
+            alt={artist.name}
+            className="heroImage"
+            loading="eager"
+            fetchPriority="high"
+            decoding="async"
+          />
           <div className="heroOverlay" />
         </div>
         <div className="heroContent">
@@ -139,7 +146,13 @@ const ArtistDetail: React.FC = () => {
             <span className="heroStyle">{artist.styles.join(" · ")}</span>
           </div>
           <div className="heroPortraitWrap">
-            <img src={heroSrc} alt={artist.name} className="heroPortrait" />
+            <img
+              src={heroSrc}
+              alt={artist.name}
+              className="heroPortrait"
+              loading="eager"
+              decoding="async"
+            />
           </div>
         </div>
       </section>
@@ -201,12 +214,13 @@ const ArtistDetail: React.FC = () => {
               <iframe
                 title={`${artist.name} on SoundCloud`}
                 width="100%"
-                height="166"
-                scrolling="no"
-                frameBorder="no"
-                allow="autoplay"
-                src={`https://w.soundcloud.com/player/?url=${encodeURIComponent(artist.links.soundcloud)}&color=%2321c37a&auto_play=false&hide_related=true&show_comments=false&show_user=true&show_reposts=false&show_teaser=false`}
-              />
+              height="166"
+              scrolling="no"
+              frameBorder="no"
+              allow="autoplay"
+              loading="lazy"
+              src={`https://w.soundcloud.com/player/?url=${encodeURIComponent(artist.links.soundcloud)}&color=%2321c37a&auto_play=false&hide_related=true&show_comments=false&show_user=true&show_reposts=false&show_teaser=false`}
+            />
             </div>
           )}
         </div>

@@ -50,6 +50,7 @@ const ArtistCard = ({ artist }: ArtistCardProps) => {
           alt={artist.name}
           className="image"
           loading="lazy"
+          decoding="async"
         />
         <div className="overlay">
           <span className="discover">{t("artists.discover")} →</span>

@@ -48,6 +48,9 @@ function Hero() {
             src={heroBg}
             alt="Gazmatek rave ambiance"
             className="heroImage"
+            loading="eager"
+            fetchPriority="high"
+            decoding="async"
           />
           <div className="heroOverlay" />
         </div>

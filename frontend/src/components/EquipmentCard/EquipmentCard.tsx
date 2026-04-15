@@ -30,6 +30,7 @@ const EquipmentCard = ({ item }: EquipmentCardProps) => {
           src={item.image}
           alt={item.name}
           loading="lazy"
+          decoding="async"
         />
       </div>
 

@@ -60,6 +60,8 @@ function FeaturedArtists() {
                 }
                 alt={artist.name}
                 className="artistCardImg"
+                loading="lazy"
+                decoding="async"
               />
             </div>
             <div className="artistCardInfo">

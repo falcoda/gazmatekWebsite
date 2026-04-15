@@ -120,6 +120,9 @@ const EventDetail = () => {
             src={event.poster.src}
             alt={event.poster.alt[language]}
             className="heroImage"
+            loading="eager"
+            fetchPriority="high"
+            decoding="async"
           />
           <div className="heroOverlay" />
         </div>
@@ -228,6 +231,7 @@ const EventDetail = () => {
                       }
                       className="galleryImage"
                       loading="lazy"
+                      decoding="async"
                     />
                   </button>
                 ))}
@@ -257,6 +261,8 @@ const EventDetail = () => {
             src={lightboxImage}
             alt=""
             className="lightboxImage"
+            loading="eager"
+            decoding="async"
             onClick={(mouseEvent) => mouseEvent.stopPropagation()}
           />
         </div>

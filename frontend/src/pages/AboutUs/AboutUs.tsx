@@ -32,7 +32,14 @@ const AboutUs: React.FC = () => {
 
       <section className="hero">
         <div className="imageWrap">
-          <img src={HERO_IMAGE} alt="Gazmatek crew" className="image" />
+          <img
+            src={HERO_IMAGE}
+            alt="Gazmatek crew"
+            className="image"
+            loading="eager"
+            fetchPriority="high"
+            decoding="async"
+          />
           <div className="overlay" />
         </div>
         <div className="content">
@@ -60,4 +67,3 @@ const AboutUs: React.FC = () => {
 };
 
 export default AboutUs;
-

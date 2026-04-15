@@ -35,6 +35,8 @@ function ServicesTeaser() {
                   src={EQUIPMENT_PHOTOS[index]}
                   alt={service.name}
                   className="serviceTeaserImg"
+                  loading="lazy"
+                  decoding="async"
                 />
               </div>
               <div className="serviceTeaserContent">
@@ -60,4 +62,3 @@ function ServicesTeaser() {
 }
 
 export default ServicesTeaser;
-

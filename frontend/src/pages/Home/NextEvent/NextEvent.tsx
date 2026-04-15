@@ -52,6 +52,8 @@ function NextEvent() {
                     src={event.poster.src}
                     alt={event.poster.alt[language]}
                     className="archiveCardImg"
+                    loading="lazy"
+                    decoding="async"
                   />
                 </div>
                 <div className="archiveCardInfo">
@@ -74,7 +76,13 @@ function NextEvent() {
   return (
     <section className="nextEvent">
       <div className="bg">
-        <img src={nextEvent.poster.src} alt="" className="bgImage" />
+        <img
+          src={nextEvent.poster.src}
+          alt=""
+          className="bgImage"
+          loading="lazy"
+          decoding="async"
+        />
         <div className="bgOverlay" />
       </div>
       <div className="content">
@@ -100,6 +108,8 @@ function NextEvent() {
             src={nextEvent.poster.src}
             alt={nextEvent.poster.alt[language]}
             className="flyer"
+            loading="lazy"
+            decoding="async"
           />
         </div>
         <button

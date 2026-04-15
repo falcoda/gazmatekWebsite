@@ -106,6 +106,7 @@ const Archives = () => {
                               alt={event.poster.alt[language]}
                               className="cardImage"
                               loading="lazy"
+                              decoding="async"
                             />
                           </div>
 
