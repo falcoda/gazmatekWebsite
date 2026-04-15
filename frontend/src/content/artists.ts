@@ -1,5 +1,4 @@
 import albiovixPhoto from "@/assets/img/artists/albiovix.jpg";
-import biomysticPhoto from "@/assets/img/artists/biomystic.jpg";
 import briouchKPhoto from "@/assets/img/artists/briouch-k.jpg";
 import cantikPhoto from "@/assets/img/artists/cantik.jpg";
 import ecleptixPhoto from "@/assets/img/artists/ecleptix.jpg";
@@ -87,7 +86,6 @@ export interface ArtistProfile {
 // Normalized artist collection
 // Source: Bio_artistes.pdf (primary) + dedicated PDFs where noted
 // Naming normalized per epic-3 rules:
-//   Biomistic → BIOMYSTIC
 //   RK - Projekt → R.K PROJECT
 //   Shmyblyk / Shmykblick → SHMYKBLICK
 //   Suarez Antonio → SUAREZ
@@ -163,40 +161,6 @@ export const ARTISTS: ArtistProfile[] = [
     },
     source: "Bio_artistes.pdf",
     status: "ready",
-  },
-
-  // ── Biomystic ──────────────────────────────────────────────────────────────
-  // Note: folder named "Biomistic" in old assets — normalized to BIOMYSTIC
-  {
-    id: "biomystic",
-    slug: "biomystic",
-    name: "BIOMYSTIC",
-    isResident: true,
-    styles: ["Hard Tekno"],
-    images: { portrait: biomysticPhoto },
-    links: {
-      soundcloud: "https://soundcloud.com/biomystic",
-      instagram: "https://www.instagram.com/bio_mystic/",
-    },
-    bio: {
-      short: {
-        fr: "Producteur de Hard Tekno originaire de France, résident chez Gazmatek et fondateur d'Onyxiom Events. Ingénieur du son chez UNS Records, il crée des sons puissants et immersifs en combinant passion musicale et expertise technique.",
-        en: "Hard Tekno producer from France, resident at Gazmatek and founder of Onyxiom Events. A sound engineer at UNS Records, he crafts powerful, immersive sounds by combining musical passion with technical expertise.",
-      },
-      full: {
-        fr: "Biomystic est un producteur de Hard Tekno originaire de France, résident chez Gazmatek et fondateur d'Onyxiom Events. Ingénieur du son et artiste chez UNS Records, il combine sa passion pour la production musicale et son expertise technique pour créer des sons puissants et immersifs.",
-        en: "Biomystic is a Hard Tekno producer from France, resident at Gazmatek and founder of Onyxiom Events. A sound engineer and artist at UNS Records, he combines his passion for music production with technical expertise to create powerful, immersive sounds.",
-      },
-    },
-    seo: {
-      title: { fr: "BIOMYSTIC — Gazmatek", en: "BIOMYSTIC — Gazmatek" },
-      description: {
-        fr: "Biomystic, producteur de Hard Tekno et fondateur d'Onyxiom Events, résident Gazmatek.",
-        en: "Biomystic, Hard Tekno producer and founder of Onyxiom Events, Gazmatek resident.",
-      },
-    },
-    source: "Bio_artistes.pdf",
-    status: "needs-cleanup",
   },
 
   // ── Briouch'k ──────────────────────────────────────────────────────────────
@@ -767,27 +731,6 @@ export const ARTISTS: ArtistProfile[] = [
       description: {
         fr: "Raik, DJ et producteur tekno belge, résident chez Gazmatek.",
         en: "Raik, Belgian tekno DJ and producer, resident at Gazmatek.",
-      },
-    },
-    source: "Bio_artistes.pdf",
-    status: "needs-cleanup",
-  },
-
-  // ── Reptile ───────────────────────────────────────────────────────────────
-  {
-    id: "reptile",
-    slug: "reptile",
-    name: "REPTILE",
-    isResident: true,
-    styles: ["Tekno"],
-    images: {},
-    links: {},
-    bio: {},
-    seo: {
-      title: { fr: "REPTILE — Gazmatek", en: "REPTILE — Gazmatek" },
-      description: {
-        fr: "Reptile, artiste résident du collectif Gazmatek.",
-        en: "Reptile, resident artist of the Gazmatek collective.",
       },
     },
     source: "Bio_artistes.pdf",
