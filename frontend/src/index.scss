@@ -14,22 +14,6 @@
 // Raw display fonts — Latin basic only (no accents, no digits).
 // Use exclusively for fixed hardcoded text that is guaranteed accent-free.
 @font-face {
-  font-family: "Bang4YaBuck";
-  font-style: normal;
-  font-weight: 700;
-  font-display: swap;
-  src: url("./assets/fonts/Bang4YaBuck.ttf") format("truetype");
-}
-
-@font-face {
-  font-family: "ABITE";
-  font-style: normal;
-  font-weight: 700;
-  font-display: swap;
-  src: url("./assets/fonts/ABITE.ttf") format("truetype");
-}
-
-@font-face {
   font-family: "DAMAGEPLAN";
   font-style: normal;
   font-weight: 700;
