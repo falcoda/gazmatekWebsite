@@ -1,5 +1,5 @@
 import abyssalImage from "../assets/img/team/abyssal.jpg";
-import aerivImage from "../assets/img/team/aeriv/345225728_1380551409466476_7339819974882436729_n.jpg";
+import aerivImage from "../assets/img/team/aeriv/aeriv-portrait.jpg";
 import alexImage from "../assets/img/team/alex.jpg";
 import flavienImage from "../assets/img/team/flavien.jpg";
 import lsbImage from "../assets/img/team/lsb-visual.jpg";
@@ -275,4 +275,3 @@ export const TEAM_MEMBERS: TeamMember[] = [
     ],
   },
 ];
-
