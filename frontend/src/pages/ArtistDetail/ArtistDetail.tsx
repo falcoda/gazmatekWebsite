@@ -109,7 +109,9 @@ const ArtistDetail: React.FC = () => {
 
   const galleryImages = artist.images.gallery ?? [];
   const bioTitle = t("artists.bioFullLabel");
-  const linksTitle = t("artists.linksTitle");
+  const linksTitle = t(
+    artist.gender === "f" ? "artists.linksTitleFemale" : "artists.linksTitle",
+  );
   const listenTitle = t("artists.listenTitle");
   const useRawDisplayName = canUseRawDisplayFont(artist.name);
 
@@ -208,19 +210,21 @@ const ArtistDetail: React.FC = () => {
             <ArtistGallery images={galleryImages} artistName={artist.name} />
           )}
 
-          {artist.links?.soundcloud && (
+          {(artist.previewTrackUrl ?? artist.links?.soundcloud) && (
             <div className="embed">
               <h2 className="embedTitle">{listenTitle}</h2>
               <iframe
                 title={`${artist.name} on SoundCloud`}
                 width="100%"
-              height="166"
-              scrolling="no"
-              frameBorder="no"
-              allow="autoplay"
-              loading="lazy"
-              src={`https://w.soundcloud.com/player/?url=${encodeURIComponent(artist.links.soundcloud)}&color=%2321c37a&auto_play=false&hide_related=true&show_comments=false&show_user=true&show_reposts=false&show_teaser=false`}
-            />
+                height="166"
+                scrolling="no"
+                frameBorder="no"
+                allow="autoplay"
+                loading="lazy"
+                src={`https://w.soundcloud.com/player/?url=${encodeURIComponent(
+                  (artist.previewTrackUrl ?? artist.links!.soundcloud)!,
+                )}&color=%2321c37a&auto_play=false&hide_related=true&show_comments=false&show_user=true&show_reposts=false&show_teaser=false`}
+              />
             </div>
           )}
         </div>

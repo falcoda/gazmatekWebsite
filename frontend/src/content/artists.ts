@@ -71,10 +71,13 @@ export interface ArtistProfile {
   slug: string;
   name: string;
   isResident: boolean;
+  gender?: "m" | "f";
   /** Genre tags derived from source text */
   styles: string[];
   images: ArtistImages;
   links?: ArtistLinks;
+  /** Optional specific track URL to embed instead of the SoundCloud profile */
+  previewTrackUrl?: string;
   bio: ArtistBio;
   seo: ArtistSeo;
   /** Primary source document used for this profile */
@@ -1034,21 +1037,23 @@ export const ARTISTS: ArtistProfile[] = [
     slug: "toxyblue",
     name: "TOXYBLUE",
     isResident: true,
-    styles: ["Hardpsy", "Acid Tekno"],
+    gender: "f",
+    styles: ["Hardpsy", "Acid Tekno", "Gabber", "Live Instrument"],
     images: { portrait: toxybluePhoto },
     links: {
       soundcloud: "https://soundcloud.com/toxyblue",
       bandcamp: "https://toxyblue.bandcamp.com",
-      instagram: "https://www.instagram.com/toxyblue/",
+      instagram: "https://www.instagram.com/toxyblue.music",
     },
+    previewTrackUrl: "https://soundcloud.com/toxyblue/toxyblue-antifa",
     bio: {
       short: {
-        fr: "Multi-instrumentiste belgo-italienne, TØXYBLUE fusionne percussions live et chant avec l'énergie brute de la scène Rave. Portée par la devise 'NO GENRE, ONLY SOUND', elle co-fonde VAKɅRM en 2021.",
-        en: "Belgian-Italian multi-instrumentalist, TØXYBLUE fuses live percussion and vocals with the raw energy of the rave scene. Guided by 'NO GENRE, ONLY SOUND', she co-founded VAKɅRM in 2021.",
+        fr: "TØXYBLUE est une productrice musicale belgo-italienne issue d'une famille de musiciens et passionnée de musique depuis son enfance.\nMulti-instrumentiste et chanteuse, elle fusionne aujourd'hui son univers avec l'énergie brute de la scène rave pour créer un son hybride innovent. Elle a beaucoup voyagée à la recherche de nouvelles inspirations sonore.",
+        en: "TØXYBLUE is a Belgian-Italian music producer from a family of musicians, passionate about music since childhood. A multi-instrumentalist and singer, she fuses her world with the raw energy of the rave scene to create an innovative hybrid sound, travelling widely in search of new sonic inspirations.",
       },
       full: {
-        fr: "Artiste belgo-italienne passionnée de musique depuis toujours, TØXYBLUE voyage à travers le monde à la recherche de nouvelles inspirations sonores. Multi-instrumentiste, elle fusionne son univers avec l'énergie brute de la scène Rave pour créer un son hybride innovant. Sa passion contagieuse pour la musique se reflète dans ses performances live, portées par les percussions et le chant, marquées par une énergie 'Bouncy' assumée et associées au Hardpsy et à l'Acid Tekno. Bien que sa devise soit 'NO GENRE, ONLY SOUND', sa signature artistique reste reconnaissable : un son puissant et libre. En 2021, elle rejoint le crew Gazmatek System. En 2023, sa carrière décolle avec des performances sur de grandes scènes. Elle est aujourd'hui co-fondatrice du collectif VAKɅRM.",
-        en: "A Belgian-Italian artist passionate about music since forever, TØXYBLUE travels the world in search of new sonic inspirations. A multi-instrumentalist, she fuses her artistic world with the raw energy of the rave scene to create an innovative hybrid sound. Her contagious passion for music shines through her live performances, driven by percussion and voice, marked by an unapologetic 'Bouncy' energy and rooted in Hardpsy and Acid Tekno. While her motto is 'NO GENRE, ONLY SOUND', her artistic signature remains unmistakable: a powerful, free sound. In 2021 she joined the Gazmatek System crew. In 2023 her career took off with performances on major stages. She is today co-founder of the VAKɅRM collective.",
+        fr: "TØXYBLUE est une productrice musicale belgo-italienne issue d'une famille de musiciens et passionnée de musique depuis son enfance.\nMulti-instrumentiste et chanteuse, elle fusionne aujourd'hui son univers avec l'énergie brute de la scène rave pour créer un son hybride innovent. Elle a beaucoup voyagée à la recherche de nouvelles inspirations sonores.\nSa passion contagieuse se reflète dans ses performances — mélange entre mix et live — marquées par une énergie Bouncy assumée et associée à la Hardpsy et à l'Acid Tekno.\nSa signature artistique reste reconnaissable : un son puissant et libre.\nFin 2022, elle rejoint le crew Gazmatek System, se fait connaître en jouant dans des lieux emblématiques tels que La Zinzinerie et l'Accroche, et conquis le public Belge grâce à ses premières productions.\nEn 2024, son style musical s'affine, ses productions se multiplient et décide de se consacrer plainement au développement de sa carrière. Celle-ci prenant un tournant lui permettant de jouer aux côtés d'artistes qui l'ont inspirée.",
+        en: "TØXYBLUE is a Belgian-Italian music producer from a family of musicians, passionate about music since childhood. A multi-instrumentalist and singer, she fuses her world with the raw energy of the rave scene to create an innovative hybrid sound, travelling widely in search of new sonic inspirations. Her contagious passion shines through her performances — a blend of mix and live — marked by an unapologetic Bouncy energy rooted in Hardpsy and Acid Tekno. Her artistic signature remains unmistakable: a powerful, free sound. In late 2022 she joined the Gazmatek System crew, making her name at iconic venues such as La Zinzinerie and l'Accroche, and winning over the Belgian crowd with her first productions. In 2024 her sound sharpened, her output grew, and she committed fully to her career — a turning point that brought her to perform alongside the artists who inspired her.",
       },
     },
     seo: {

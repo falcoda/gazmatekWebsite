@@ -98,19 +98,29 @@ const CustomCursor = () => {
       document.body.classList.toggle("gzkCursorVisible", visible);
     };
 
-    const tick = () => {
+    // Frame-rate independent lerp: factor is normalised to 60 fps
+    const FRAME_DURATION_60 = 1000 / 60;
+    let lastTimestamp = 0;
+
+    const tick = (timestamp: number) => {
+      const dt = lastTimestamp === 0 ? FRAME_DURATION_60 : timestamp - lastTimestamp;
+      lastTimestamp = timestamp;
+
+      const coreAlpha = 1 - Math.pow(1 - 0.42, dt / FRAME_DURATION_60);
+      const glyphAlpha = 1 - Math.pow(1 - 0.24, dt / FRAME_DURATION_60);
+
       const nextCoreX =
         corePointerRef.current.x +
-        (targetPointerRef.current.x - corePointerRef.current.x) * 0.42;
+        (targetPointerRef.current.x - corePointerRef.current.x) * coreAlpha;
       const nextCoreY =
         corePointerRef.current.y +
-        (targetPointerRef.current.y - corePointerRef.current.y) * 0.42;
+        (targetPointerRef.current.y - corePointerRef.current.y) * coreAlpha;
       const nextGlyphX =
         glyphPointerRef.current.x +
-        (targetPointerRef.current.x - glyphPointerRef.current.x) * 0.24;
+        (targetPointerRef.current.x - glyphPointerRef.current.x) * glyphAlpha;
       const nextGlyphY =
         glyphPointerRef.current.y +
-        (targetPointerRef.current.y - glyphPointerRef.current.y) * 0.24;
+        (targetPointerRef.current.y - glyphPointerRef.current.y) * glyphAlpha;
 
       corePointerRef.current = { x: nextCoreX, y: nextCoreY };
       glyphPointerRef.current = { x: nextGlyphX, y: nextGlyphY };
@@ -153,6 +163,7 @@ const CustomCursor = () => {
     };
 
     const onPointerEnter = (e: PointerEvent) => {
+      // Snap position immediately so the cursor doesn't jump from a stale position
       targetPointerRef.current = { x: e.clientX, y: e.clientY };
       corePointerRef.current = { ...targetPointerRef.current };
       glyphPointerRef.current = { ...targetPointerRef.current };
@@ -164,28 +175,17 @@ const CustomCursor = () => {
       syncInteractiveStateFromPoint(e.clientX, e.clientY);
     };
 
-    const onBlur = () => {
-      setCursorEnabled(false);
-      setCursorVisible(false);
-      document.body.classList.remove("gzkCursorInteractive", "gzkCursorDown");
-    };
-
-    const onFocus = () => {
-      setCursorEnabled(true);
-      setCursorVisible(true);
-      syncInteractiveStateFromPoint(
-        targetPointerRef.current.x,
-        targetPointerRef.current.y,
-      );
-    };
-
     const onVisibilityChange = () => {
       if (document.visibilityState === "hidden") {
-        onBlur();
+        setCursorEnabled(false);
+        setCursorVisible(false);
+        document.body.classList.remove("gzkCursorInteractive", "gzkCursorDown");
         return;
       }
-
-      onFocus();
+      // Tab is visible again: re-enable tracking but do NOT show the cursor yet.
+      // It will become visible on the next pointermove / pointerenter so it never
+      // appears at a stale position.
+      setCursorEnabled(true);
     };
 
     const onPointerDown = () => {
@@ -203,8 +203,9 @@ const CustomCursor = () => {
     window.addEventListener("pointerup", onPointerUp);
     window.addEventListener("pointerleave", onPointerLeave);
     window.addEventListener("pointerenter", onPointerEnter);
-    window.addEventListener("blur", onBlur);
-    window.addEventListener("focus", onFocus);
+    // NOTE: window blur/focus intentionally omitted — they fire on iframe clicks
+    // and devtools focus, causing spurious cursor disappearances. visibilitychange
+    // is sufficient for the tab-switch case.
     document.addEventListener("visibilitychange", onVisibilityChange);
 
     return () => {
@@ -217,8 +218,6 @@ const CustomCursor = () => {
       window.removeEventListener("pointerup", onPointerUp);
       window.removeEventListener("pointerleave", onPointerLeave);
       window.removeEventListener("pointerenter", onPointerEnter);
-      window.removeEventListener("blur", onBlur);
-      window.removeEventListener("focus", onFocus);
       document.removeEventListener("visibilitychange", onVisibilityChange);
       document.body.classList.remove("gzkCursorInteractive", "gzkCursorDown");
       setCursorEnabled(false);
