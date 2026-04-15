@@ -4,6 +4,7 @@ import alexImage from "../assets/img/team/alex.jpg";
 import flavienImage from "../assets/img/team/flavien.jpg";
 import lsbImage from "../assets/img/team/lsb-visual.jpg";
 import niPlusNiMoinsImage from "../assets/img/team/ni-plus-ni-moins.jpg";
+import terapeutekImage from "../assets/img/team/terapeutek.jpg";
 import { createLocalizedText, type LocalizedText } from "./types";
 
 export interface TeamMember {
@@ -144,7 +145,7 @@ export const TIMELINE: TimelineEvent[] = [
       "Label and distribution",
     ),
     description: createLocalizedText(
-      "Creation du label Gazmatek pour distribuer les artistes de la crew et capturer l'evolution sonore du collectif.",
+      "Creation du label Gazmatek pour distribuer les artistes du crew et capturer l'evolution sonore du collectif.",
       "Launch of the Gazmatek label to distribute crew artists and capture the collective's sonic evolution.",
     ),
     legacyProof: createLocalizedText(
@@ -254,6 +255,22 @@ export const TEAM_MEMBERS: TeamMember[] = [
       {
         platform: "instagram",
         url: "https://www.instagram.com/niplus.nimoins/",
+      },
+    ],
+  },
+  {
+    id: "terapeutek",
+    name: "Terapeutek",
+    role: createLocalizedText("Co-fondateur", "Co-founder"),
+    summary: createLocalizedText(
+      "Co-fondateur du Gazmatek Sound System et artiste du crew.",
+      "Co-founder of Gazmatek Sound System and crew artist.",
+    ),
+    image: terapeutekImage,
+    socials: [
+      {
+        platform: "instagram",
+        url: "https://www.instagram.com/terapeutek/",
       },
     ],
   },
