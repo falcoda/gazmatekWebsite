@@ -7,20 +7,20 @@ Agents working in `frontend/` must follow everything here.
 
 ## Stack
 
-| Concern | Library | Version |
-|---|---|---|
-| UI | React | 19 |
-| Build | Vite | 8 |
-| Language | TypeScript (strict) | 5 |
-| Routing | React Router DOM | 7 |
-| State | Zustand | 5 |
-| Animations | GSAP + ScrollTrigger | 3 |
-| i18n | i18next + react-i18next | 25 / 16 |
-| Styles | SCSS (no CSS modules) | — |
-| Notifications | react-hot-toast | 2 |
-| Icons | react-icons | 5 |
-| SEO | react-helmet-async | — |
-| UI library | covaltech-react-ui (submodule) | — |
+| Concern       | Library                 | Version |
+| ------------- | ----------------------- | ------- |
+| UI            | React                   | 19      |
+| Build         | Vite                    | 8       |
+| Language      | TypeScript (strict)     | 5       |
+| Routing       | React Router DOM        | 7       |
+| State         | Zustand                 | 5       |
+| Animations    | GSAP + ScrollTrigger    | 3       |
+| i18n          | i18next + react-i18next | 25 / 16 |
+| Styles        | SCSS (no CSS modules)   | —       |
+| Notifications | react-hot-toast         | 2       |
+| Icons         | react-icons             | 5       |
+| SEO           | react-helmet-async      | —       |
+| UI library    | components (folder)     | —       |
 
 ---
 
@@ -110,6 +110,7 @@ export default ComponentName;
 ```
 
 **Rules:**
+
 - SCSS import is always the first line, before all other imports
 - Always `export default`, never named export for components
 - Props interface defined inline in the same file (unless shared)
@@ -123,6 +124,7 @@ export default ComponentName;
 ### Variables are globally available — never import them manually
 
 The following are auto-injected into every SCSS file via `vite.config.mts`:
+
 - `variables.scss` → colors, fonts, spacing, radii, breakpoints
 - `typography.scss` → text mixins (`@include text-t1`, `@include modal-title`, etc.)
 - `mixins.scss` → `@include cardShadow(...)`, `@include maxScreen(...)`
@@ -239,15 +241,19 @@ export const useMyStore = create<MyStoreState>((set) => ({
 Import directly from the submodule — do not copy or re-declare:
 
 ```ts
-import { useThemeStore, useLoadingStore, useHeaderBannerStore } from "@/covaltech-react-ui";
+import {
+  useThemeStore,
+  useLoadingStore,
+  useHeaderBannerStore,
+} from "@/covaltech-react-ui";
 ```
 
-| Store | Hook | Purpose |
-|---|---|---|
-| ThemeStore | `useThemeStore` | Light/dark mode, `init()` called in main.tsx |
-| LoadingStore | `useLoadingStore` | Loading state per key: `setLoading(key, bool)` |
-| HeaderBannerStore | `useHeaderBannerStore` | Global banner visibility/height |
-| PaginationStore | via `usePagination` | Table pagination |
+| Store             | Hook                   | Purpose                                        |
+| ----------------- | ---------------------- | ---------------------------------------------- |
+| ThemeStore        | `useThemeStore`        | Light/dark mode, `init()` called in main.tsx   |
+| LoadingStore      | `useLoadingStore`      | Loading state per key: `setLoading(key, bool)` |
+| HeaderBannerStore | `useHeaderBannerStore` | Global banner visibility/height                |
+| PaginationStore   | via `usePagination`    | Table pagination                               |
 
 ### LogTag values
 
@@ -359,7 +365,8 @@ GSAP is the only animation library. Never use framer-motion or CSS keyframe anim
 
 ```ts
 import useAnimation from "@/hooks/useAnimation";
-const { animateFadeIn, animateFadeInWithMove, scrollToSection } = useAnimation();
+const { animateFadeIn, animateFadeInWithMove, scrollToSection } =
+  useAnimation();
 ```
 
 ### useScrollAnimation hook
@@ -374,7 +381,7 @@ useScrollAnimation();
 
 // With stagger groups:
 useScrollAnimation([
-  { itemsSelector: ".myGrid .myCard", triggerSelector: ".myGrid" }
+  { itemsSelector: ".myGrid .myCard", triggerSelector: ".myGrid" },
 ]);
 ```
 
@@ -433,3 +440,4 @@ Before opening a PR on frontend code, verify:
 - [ ] New routes added to `config/pages.ts` and the relevant router files
 - [ ] No hardcoded app page paths outside `config/pages.ts` except React Router dynamic patterns
 - [ ] `loggerService` used with the correct `LogTag` value
+
