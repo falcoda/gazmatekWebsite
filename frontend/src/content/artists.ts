@@ -447,8 +447,6 @@ export const ARTISTS: ArtistProfile[] = [
   },
 
   // ── Kemikal Crow ──────────────────────────────────────────────────────────
-  // Note: additional content in .pages file — not extracted
-  // Note: folder named "kemical crow" — normalized to KEMIKAL CROW
   {
     id: "kemical-crow",
     slug: "kemical-crow",
@@ -456,26 +454,27 @@ export const ARTISTS: ArtistProfile[] = [
     isResident: true,
     styles: ["Tekno", "Hardware Live"],
     images: { portrait: kemicalCrowPhoto },
-    links: { soundcloud: "https://soundcloud.com/kemikal-crow" },
+    links: { soundcloud: "https://soundcloud.com/gazmatek/kemikal-crow-dissident-9" },
+    previewTrackUrl: "https://soundcloud.com/gazmatek/kemikal-crow-dissident-9",
     bio: {
       short: {
-        fr: "Actif depuis 2005, Kemikal Crow construit ses livesets hardware avec Ableton, Korg Electribe et matériel Behringer. Associé à Gazmatek Sound System, SDD Enterprise, ON et Under Noize.",
-        en: "Active since 2005, Kemikal Crow builds his hardware livesets with Ableton, Korg Electribe and Behringer equipment. Associated with Gazmatek Sound System, SDD Enterprise, ON and Under Noize.",
+        fr: "Le projet Kemikal Crow est un voyage auditif mental qui repousse constamment les limites du politiquement correct ainsi que les normes standards fixées par l'industrie de la musique.",
+        en: "The Kemikal Crow project is a mental auditory journey that constantly pushes the limits of political correctness and the standard norms set by the music industry.",
       },
       full: {
-        fr: "Actif depuis 2005, Kemikal Crow travaille avec des livesets hardware et Ableton. Associé à Gazmatek Sound System, Suicide Dubz Digital (SDD Enterprise), ON (Crack Music) et Under Noize, il utilise du matériel comme le Korg Electribe et des équipements Behringer pour ses performances.",
-        en: "Active since 2005, Kemikal Crow works with hardware livesets and Ableton. Associated with Gazmatek Sound System, Suicide Dubz Digital (SDD Enterprise), ON (Crack Music) and Under Noize, he uses equipment such as the Korg Electribe and Behringer gear for his performances.",
+        fr: "Le projet Kemikal Crow est un voyage auditif mental qui repousse constamment les limites du politiquement correct ainsi que les normes standards fixées par l'industrie de la musique.",
+        en: "The Kemikal Crow project is a mental auditory journey that constantly pushes the limits of political correctness and the standard norms set by the music industry.",
       },
     },
     seo: {
       title: { fr: "KEMIKAL CROW — Gazmatek", en: "KEMIKAL CROW — Gazmatek" },
       description: {
-        fr: "Kemikal Crow, live hardware tekno actif depuis 2005, résident chez Gazmatek.",
-        en: "Kemikal Crow, tekno hardware live artist active since 2005, resident at Gazmatek.",
+        fr: "Kemikal Crow, un voyage auditif mental qui repousse les limites du politiquement correct, résident chez Gazmatek.",
+        en: "Kemikal Crow, a mental auditory journey constantly pushing the limits of political correctness, resident at Gazmatek.",
       },
     },
     source: "Bio_artistes.pdf",
-    status: "pages-blocked",
+    status: "ready",
   },
 
   // ── Kromozom ─────────────────────────────────────────────────────────────
