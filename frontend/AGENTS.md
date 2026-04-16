@@ -188,6 +188,51 @@ Available breakpoints (largest → smallest):
 
 ---
 
+## Artist Images
+
+### File structure
+
+```
+src/assets/img/artists/
+  {slug}.jpg                  ← portrait used in cards / list pages
+  {slug}/                     ← gallery folder (only for artists with multiple photos)
+    {slug}-01.jpg
+    {slug}-02.jpg
+    …
+```
+
+### Naming rules
+
+- Portrait card image: `{artist-slug}.jpg` (flat, in the `artists/` root)
+- Gallery folder name: `{artist-slug}/` (same slug as portrait)
+- Gallery filenames:
+  - `{artist-slug}-portrait.jpg` — close-up / profile photo (always first in the gallery array)
+  - `{artist-slug}-{number:02d}.jpg` — event / live performance photos, numbered from `01`
+  - No spaces or uppercase in filenames
+- All images must be **JPG**, max **1920 px** on the longest side, quality **85**
+- Convert PNG/TIFF source files to JPG via `npx sharp-cli` before committing:
+  ```bash
+  npx sharp-cli -i source.png -o {slug}-01.jpg -f jpg -q 85 resize 1920 1920 --fit inside
+  ```
+- Delete source PNG/TIFF files after conversion — do not commit originals
+
+### artists.ts wiring
+
+```ts
+import slugPhoto    from "@/assets/img/artists/slug.jpg";
+import slugGalleryPortrait from "@/assets/img/artists/slug/slug-portrait.jpg";
+import slugGallery01 from "@/assets/img/artists/slug/slug-01.jpg";
+import slugGallery02 from "@/assets/img/artists/slug/slug-02.jpg";
+
+// In the ArtistProfile entry:
+images: {
+  portrait: slugPhoto,
+  gallery: [slugGalleryPortrait, slugGallery01, slugGallery02],
+},
+```
+
+---
+
 ## Import Order (enforced by ESLint)
 
 `simple-import-sort` is active. Order within a file:

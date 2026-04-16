@@ -1,5 +1,6 @@
 import albiovixPhoto from "@/assets/img/artists/albiovix.jpg";
-import briouchKPhoto from "@/assets/img/artists/briouch-k.jpg";
+import briouchKPortraitPhoto from "@/assets/img/artists/briouch-k/briouch-k-portrait.jpg";
+import briouchKGallery01 from "@/assets/img/artists/briouch-k/briouch-k-01.jpg";
 import cantikPhoto from "@/assets/img/artists/cantik.jpg";
 import ecleptixPhoto from "@/assets/img/artists/ecleptix.jpg";
 import ekwazzPhoto from "@/assets/img/artists/ekwazz.jpg";
@@ -16,7 +17,10 @@ import mevenPhoto from "@/assets/img/artists/meven.jpg";
 import minopolskaPhoto from "@/assets/img/artists/minopolska.jpg";
 import mobykickPhoto from "@/assets/img/artists/mobykick.jpg";
 import moracidPhoto from "@/assets/img/artists/moracid.jpg";
-import nxPhoto from "@/assets/img/artists/n-x.jpg";
+import nxPortraitPhoto from "@/assets/img/artists/n-x/n-x-portrait.jpg";
+import nxGallery02 from "@/assets/img/artists/n-x/n-x-02.jpg";
+import nxGallery03 from "@/assets/img/artists/n-x/n-x-03.jpg";
+import nxGallery04 from "@/assets/img/artists/n-x/n-x-04.jpg";
 import nocidPhoto from "@/assets/img/artists/nocid.jpg";
 import olibriumPhoto from "@/assets/img/artists/olibrius.jpg";
 import raikPhoto from "@/assets/img/artists/raik.jpg";
@@ -173,7 +177,10 @@ export const ARTISTS: ArtistProfile[] = [
     name: "BRIOUCH'K",
     isResident: true,
     styles: ["Mental Tekno", "Dark Tekno"],
-    images: { portrait: briouchKPhoto },
+    images: {
+      portrait: briouchKPortraitPhoto,
+      gallery: [briouchKPortraitPhoto, briouchKGallery01],
+    },
     links: { soundcloud: "https://soundcloud.com/briouch-k" },
     bio: {
       short: {
@@ -675,19 +682,31 @@ export const ARTISTS: ArtistProfile[] = [
     slug: "n-x",
     name: "N X",
     isResident: true,
-    styles: ["Tekno"],
-    images: { portrait: nxPhoto },
-    links: { soundcloud: "https://soundcloud.com/nx" },
-    bio: {},
+    styles: ["Acid-Tek", "Live"],
+    images: {
+      portrait: nxPortraitPhoto,
+      gallery: [nxPortraitPhoto, nxGallery02, nxGallery03, nxGallery04],
+    },
+    links: { soundcloud: "https://soundcloud.com/nx_tekno" },
+    bio: {
+      short: {
+        fr: "N X est un producteur et performeur live d'Acid-Tek. Ses sets intenses et sombres, rythmés par des basses puissantes, plongent le public dans un voyage où l'obscurité se métamorphose en une expérience lumineuse et transcendante.",
+        en: "N X is an Acid-Tek producer and live performer. His intense and dark sets, driven by powerful basslines, take the audience on a journey where darkness transforms into a luminous and transcendent experience.",
+      },
+      full: {
+        fr: "N X est un producteur et performeur live d'Acid-Tek. Ses sets intenses et sombres, rythmés par des basses puissantes, plongent le public dans un voyage où l'obscurité se métamorphose en une expérience lumineuse et transcendante.\nTirant sa force créative de The Prodigy et inspiré par Protokseed et Vortek's, il est cofondateur du soundsystem bruxellois Bankal.\nSa première performance aux Emblematik 10Y ainsi que son passage à Chinastraat pour Gazmatek x Vakarm ont marqué les esprits avec une énergie brute et immersive.",
+        en: "N X is an Acid-Tek producer and live performer. His intense and dark sets, driven by powerful basslines, take the audience on a journey where darkness transforms into a luminous and transcendent experience.\nDrawing his creative strength from The Prodigy and inspired by Protokseed and Vortek's, he is a co-founder of the Brussels-based soundsystem Bankal.\nHis debut performance at Emblematik 10Y, along with his appearance at Chinastraat for Gazmatek x Vakarm, left a lasting impression with raw and immersive energy.",
+      },
+    },
     seo: {
       title: { fr: "N X — Gazmatek", en: "N X — Gazmatek" },
       description: {
-        fr: "N X, artiste résident du collectif Gazmatek.",
-        en: "N X, resident artist of the Gazmatek collective.",
+        fr: "N X, producteur et performeur live d'Acid-Tek, cofondateur du soundsystem Bankal, résident chez Gazmatek.",
+        en: "N X, Acid-Tek producer and live performer, co-founder of the Bankal soundsystem, resident at Gazmatek.",
       },
     },
-    source: "Bio_artistes.pdf",
-    status: "needs-cleanup",
+    source: "Bio NX",
+    status: "ready",
   },
 
   // ── Olibrius ──────────────────────────────────────────────────────────────
