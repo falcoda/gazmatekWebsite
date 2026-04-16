@@ -1,6 +1,6 @@
 import albiovixPhoto from "@/assets/img/artists/albiovix.jpg";
-import briouchKPortraitPhoto from "@/assets/img/artists/briouch-k/briouch-k-portrait.jpg";
 import briouchKGallery01 from "@/assets/img/artists/briouch-k/briouch-k-01.jpg";
+import briouchKPortraitPhoto from "@/assets/img/artists/briouch-k/briouch-k-portrait.jpg";
 import cantikPhoto from "@/assets/img/artists/cantik.jpg";
 import ecleptixPhoto from "@/assets/img/artists/ecleptix.jpg";
 import ekwazzPhoto from "@/assets/img/artists/ekwazz.jpg";
@@ -10,17 +10,17 @@ import exil3Photo from "@/assets/img/artists/exil3.jpg";
 import fuzzeyPhoto from "@/assets/img/artists/fuzzey.jpg";
 import gLittlePhoto from "@/assets/img/artists/g-little.jpg";
 import ganjaflexxPhoto from "@/assets/img/artists/ganjaflexx.jpg";
-import kemicalCrowPhoto from "@/assets/img/artists/kemical-crow.jpg";
+import kemikalCrowPhoto from "@/assets/img/artists/kemical-crow.jpg";
 import kromozomPhoto from "@/assets/img/artists/kromozom.jpg";
 import lemmaPhoto from "@/assets/img/artists/lemma.jpg";
 import mevenPhoto from "@/assets/img/artists/meven.jpg";
 import minopolskaPhoto from "@/assets/img/artists/minopolska.jpg";
 import mobykickPhoto from "@/assets/img/artists/mobykick.jpg";
 import moracidPhoto from "@/assets/img/artists/moracid.jpg";
-import nxPortraitPhoto from "@/assets/img/artists/n-x/n-x-portrait.jpg";
 import nxGallery02 from "@/assets/img/artists/n-x/n-x-02.jpg";
 import nxGallery03 from "@/assets/img/artists/n-x/n-x-03.jpg";
 import nxGallery04 from "@/assets/img/artists/n-x/n-x-04.jpg";
+import nxPortraitPhoto from "@/assets/img/artists/n-x/n-x-portrait.jpg";
 import nocidPhoto from "@/assets/img/artists/nocid.jpg";
 import olibriumPhoto from "@/assets/img/artists/olibrius.jpg";
 import raikPhoto from "@/assets/img/artists/raik.jpg";
@@ -455,31 +455,31 @@ export const ARTISTS: ArtistProfile[] = [
 
   // ── Kemikal Crow ──────────────────────────────────────────────────────────
   // Note: additional content in .pages file — not extracted
-  // Note: folder named "kemical crow" — normalized to KEMIKAL CROW
+  // Note: legacy asset file naming differs from artist slug
   {
-    id: "kemical-crow",
-    slug: "kemical-crow",
+    id: "kemikal-crow",
+    slug: "kemikal-crow",
     name: "KEMIKAL CROW",
     isResident: true,
     styles: ["Tekno", "Hardware Live"],
-    images: { portrait: kemicalCrowPhoto },
+    images: { portrait: kemikalCrowPhoto },
     links: { soundcloud: "https://soundcloud.com/kemikal-crow" },
     previewTrackUrl: "https://soundcloud.com/gazmatek/kemikal-crow-dissident-9",
     bio: {
       short: {
-        fr: "Le projet Kemikal Crow est un voyage auditif mental qui repousse constamment les limites du politiquement correct ainsi que les normes standards fixées par l'industrie de la musique.",
-        en: "The Kemikal Crow project is a mental auditory journey that constantly pushes the limits of political correctness and the standard norms set by the music industry.",
+        fr: "Just doing my shit\nSince 2005\nHardware liveset",
+        en: "Just doing my shit\nSince 2005\nHardware liveset",
       },
       full: {
-        fr: "Actif depuis 2005, Kemikal Crow travaille avec des livesets hardware et Ableton. Associé à Gazmatek Sound System, Suicide Dubz Digital (SDD Enterprise), ON (Crack Music) et Under Noize, il utilise du matériel comme le Korg Electribe et des équipements Behringer pour ses performances.",
-        en: "Active since 2005, Kemikal Crow works with hardware livesets and Ableton. Associated with Gazmatek Sound System, Suicide Dubz Digital (SDD Enterprise), ON (Crack Music) and Under Noize, he uses equipment such as the Korg Electribe and Behringer gear for his performances.",
+        fr: "Le projet Kemikal Crow est un voyage auditif mental qui repoussent constamment les limites du politiquement correct ainsi que les normes standards fixer par l'industrie de la musique.",
+        en: "The Kemikal Crow project is a mental auditory journey that constantly pushes the limits of political correctness as well as the standard norms set by the music industry.",
       },
     },
     seo: {
       title: { fr: "KEMIKAL CROW — Gazmatek", en: "KEMIKAL CROW — Gazmatek" },
       description: {
-        fr: "Kemikal Crow, live hardware tekno actif depuis 2005, résident chez Gazmatek.",
-        en: "Kemikal Crow, tekno hardware live artist active since 2005, resident at Gazmatek.",
+        fr: "Kemikal Crow, liveset hardware tekno depuis 2005, résident chez Gazmatek.",
+        en: "Kemikal Crow, hardware tekno liveset since 2005, resident at Gazmatek.",
       },
     },
     source: "Bio_artistes.pdf",
@@ -690,19 +690,19 @@ export const ARTISTS: ArtistProfile[] = [
     links: { soundcloud: "https://soundcloud.com/nx_tekno" },
     bio: {
       short: {
-        fr: "N X est un producteur et performeur live d'Acid-Tek. Ses sets intenses et sombres, rythmés par des basses puissantes, plongent le public dans un voyage où l'obscurité se métamorphose en une expérience lumineuse et transcendante.",
-        en: "N X is an Acid-Tek producer and live performer. His intense and dark sets, driven by powerful basslines, take the audience on a journey where darkness transforms into a luminous and transcendent experience.",
+        fr: "N X est un producteur et performeur live Tekno. Ses sets intenses et sombres, rythmés par des basses puissantes, plongent le public dans un voyage où l'obscurité se métamorphose en une expérience lumineuse et transcendante.",
+        en: "N X is a Tekno producer and live performer. His intense and dark sets, driven by powerful basslines, take the audience on a journey where darkness transforms into a luminous and transcendent experience.",
       },
       full: {
-        fr: "N X est un producteur et performeur live d'Acid-Tek. Ses sets intenses et sombres, rythmés par des basses puissantes, plongent le public dans un voyage où l'obscurité se métamorphose en une expérience lumineuse et transcendante.\nTirant sa force créative de The Prodigy et inspiré par Protokseed et Vortek's, il est cofondateur du soundsystem bruxellois Bankal.\nSa première performance aux Emblematik 10Y ainsi que son passage à Chinastraat pour Gazmatek x Vakarm ont marqué les esprits avec une énergie brute et immersive.",
-        en: "N X is an Acid-Tek producer and live performer. His intense and dark sets, driven by powerful basslines, take the audience on a journey where darkness transforms into a luminous and transcendent experience.\nDrawing his creative strength from The Prodigy and inspired by Protokseed and Vortek's, he is a co-founder of the Brussels-based soundsystem Bankal.\nHis debut performance at Emblematik 10Y, along with his appearance at Chinastraat for Gazmatek x Vakarm, left a lasting impression with raw and immersive energy.",
+        fr: "N X est un producteur et performeur live Tekno. Ses sets intenses et sombres, rythmés par des basses puissantes, plongent le public dans un voyage où l'obscurité se métamorphose en une expérience lumineuse et transcendante.\nTirant sa force créative de The Prodigy et inspiré par Protokseed et Vortek's, il est cofondateur du soundsystem bruxellois Bankal.\nSa performance à La Fabriek pour Into The Rave 2 ainsi que son passage à Chinastraat pour Gazmatek x Vakarm ont marqué les esprits avec une énergie brute et immersive.",
+        en: "N X is a Tekno producer and live performer. His intense and dark sets, driven by powerful basslines, take the audience on a journey where darkness transforms into a luminous and transcendent experience.\nDrawing his creative strength from The Prodigy and inspired by Protokseed and Vortek's, he is a co-founder of the Brussels-based soundsystem Bankal.\nHis performance at La Fabriek for Into The Rave 2, along with his appearance at Chinastraat for Gazmatek x Vakarm, left a lasting impression with raw and immersive energy.",
       },
     },
     seo: {
       title: { fr: "N X — Gazmatek", en: "N X — Gazmatek" },
       description: {
-        fr: "N X, producteur et performeur live d'Acid-Tek, cofondateur du soundsystem Bankal, résident chez Gazmatek.",
-        en: "N X, Acid-Tek producer and live performer, co-founder of the Bankal soundsystem, resident at Gazmatek.",
+        fr: "N X, producteur et performeur live Tekno, cofondateur du soundsystem Bankal, résident chez Gazmatek.",
+        en: "N X, Tekno producer and live performer, co-founder of the Bankal soundsystem, resident at Gazmatek.",
       },
     },
     source: "Bio NX",
@@ -1155,4 +1155,3 @@ export function getResidentArtists(): ArtistProfile[] {
 export function getFeaturedArtists(): ArtistProfile[] {
   return ARTISTS.filter((a) => a.images.portrait);
 }
-

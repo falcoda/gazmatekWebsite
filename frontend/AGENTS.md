@@ -231,6 +231,12 @@ images: {
 },
 ```
 
+### Artist Content Consistency
+
+- Whenever an artist description is modified in `src/content/artists.ts`, always update both language versions (`fr` and `en`) in the same change.
+- Whenever an artist description is modified, always review and update the related `seo.description.fr` and `seo.description.en` to keep metadata aligned.
+- Never leave artist content partially updated (e.g. FR changed but EN/SEO unchanged).
+
 ---
 
 ## Import Order (enforced by ESLint)
