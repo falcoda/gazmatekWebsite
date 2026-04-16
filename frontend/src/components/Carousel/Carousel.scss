@@ -1,0 +1,107 @@
+.carousel {
+  position: relative;
+  overflow: hidden;
+  border-radius: $radius-large;
+  background: $materials-color;
+
+  .track {
+    display: flex;
+    will-change: transform;
+  }
+
+  .slide {
+    flex: 0 0 100%;
+    min-width: 0;
+  }
+
+  .image {
+    width: 100%;
+    aspect-ratio: 16 / 10;
+    object-fit: contain;
+    display: block;
+  }
+
+  .arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 3;
+    background: rgba($primary-color, 0.6);
+    backdrop-filter: blur(4px);
+    border: 1px solid $border-color;
+    color: $light-color;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 16px;
+    transition:
+      background $medium-animation,
+      border-color $medium-animation;
+
+    &:hover {
+      background: rgba($blue-color, 0.2);
+      border-color: $blue-color;
+    }
+  }
+
+  .arrowPrev {
+    left: 16px;
+  }
+
+  .arrowNext {
+    right: 16px;
+  }
+
+  .dots {
+    position: absolute;
+    bottom: 16px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 8px;
+    z-index: 3;
+  }
+
+  .dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    border: 1px solid rgba($light-color, 0.4);
+    background: $color-transparent;
+    cursor: pointer;
+    padding: 0;
+    transition:
+      background $medium-animation,
+      border-color $medium-animation;
+
+    &:hover:not(.dotActive) {
+      border-color: $light-color;
+      background: rgba($light-color, 0.2);
+    }
+  }
+
+  .dotActive {
+    background: $blue-color;
+    border-color: $blue-color;
+  }
+
+  @include maxScreen($breakpoint-sm) {
+    .arrow {
+      width: 36px;
+      height: 36px;
+      font-size: 13px;
+    }
+
+    .arrowPrev {
+      left: 8px;
+    }
+
+    .arrowNext {
+      right: 8px;
+    }
+  }
+}
