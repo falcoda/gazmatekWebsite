@@ -15,11 +15,23 @@ interface SeoHeadProps {
 const SeoHead = ({ title, description, language, image }: SeoHeadProps) => {
   const location = useLocation();
   const canonicalUrl = new URL(location.pathname, SITE_URL).toString();
-  const shareImage = image ?? SITE_SHARE_IMAGE;
+
+  // Convert image to absolute URL for Facebook sharing
+  const shareImage = image
+    ? image.startsWith("http")
+      ? image
+      : new URL(image, SITE_URL).toString()
+    : SITE_SHARE_IMAGE;
 
   const pagePath = stripLanguagePrefix(location.pathname);
-  const frUrl = new URL(buildLocalizedPath("fr", pagePath), SITE_URL).toString();
-  const enUrl = new URL(buildLocalizedPath("en", pagePath), SITE_URL).toString();
+  const frUrl = new URL(
+    buildLocalizedPath("fr", pagePath),
+    SITE_URL,
+  ).toString();
+  const enUrl = new URL(
+    buildLocalizedPath("en", pagePath),
+    SITE_URL,
+  ).toString();
   const ogLocale = language === "fr" ? "fr_BE" : "en_US";
 
   return (
@@ -48,3 +60,4 @@ const SeoHead = ({ title, description, language, image }: SeoHeadProps) => {
 };
 
 export default SeoHead;
+
