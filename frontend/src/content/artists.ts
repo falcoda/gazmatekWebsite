@@ -174,7 +174,7 @@ export const ARTISTS: ArtistProfile[] = [
     isResident: true,
     styles: ["Mental Tekno", "Dark Tekno"],
     images: { portrait: briouchKPhoto },
-    links: { soundcloud: "https://soundcloud.com/briouchk" },
+    links: { soundcloud: "https://soundcloud.com/briouch-k" },
     bio: {
       short: {
         fr: "Artiste belge issu des cercles underground, Briouch'K produit une Mental Tekno aux atmosphères singulières et sombres.",
@@ -457,10 +457,11 @@ export const ARTISTS: ArtistProfile[] = [
     styles: ["Tekno", "Hardware Live"],
     images: { portrait: kemicalCrowPhoto },
     links: { soundcloud: "https://soundcloud.com/kemikal-crow" },
+    previewTrackUrl: "https://soundcloud.com/gazmatek/kemikal-crow-dissident-9",
     bio: {
       short: {
-        fr: "Actif depuis 2005, Kemikal Crow construit ses livesets hardware avec Ableton, Korg Electribe et matériel Behringer. Associé à Gazmatek Sound System, SDD Enterprise, ON et Under Noize.",
-        en: "Active since 2005, Kemikal Crow builds his hardware livesets with Ableton, Korg Electribe and Behringer equipment. Associated with Gazmatek Sound System, SDD Enterprise, ON and Under Noize.",
+        fr: "Le projet Kemikal Crow est un voyage auditif mental qui repousse constamment les limites du politiquement correct ainsi que les normes standards fixées par l'industrie de la musique.",
+        en: "The Kemikal Crow project is a mental auditory journey that constantly pushes the limits of political correctness and the standard norms set by the music industry.",
       },
       full: {
         fr: "Actif depuis 2005, Kemikal Crow travaille avec des livesets hardware et Ableton. Associé à Gazmatek Sound System, Suicide Dubz Digital (SDD Enterprise), ON (Crack Music) et Under Noize, il utilise du matériel comme le Korg Electribe et des équipements Behringer pour ses performances.",
