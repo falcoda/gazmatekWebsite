@@ -1,6 +1,21 @@
 <!doctype html>
 <html lang="en">
   <head>
+    <!-- Google Consent Mode v2 — default denied before any tag fires -->
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("consent", "default", {
+        ad_storage: "denied",
+        ad_user_data: "denied",
+        ad_personalization: "denied",
+        analytics_storage: "denied",
+        wait_for_update: 500,
+      });
+    </script>
+    <!-- End Google Consent Mode v2 defaults -->
     <!-- Google Tag Manager -->
     <script>
       (function (w, d, s, l, i) {
@@ -56,12 +71,7 @@
       src="https://www.googletagmanager.com/gtag/js?id=G-HTXXZ3PNGM"
     ></script>
     <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag() {
-        dataLayer.push(arguments);
-      }
       gtag("js", new Date());
-
       gtag("config", "G-HTXXZ3PNGM");
     </script>
   </head>

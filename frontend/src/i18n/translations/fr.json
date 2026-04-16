@@ -259,6 +259,18 @@
   },
   "contactPage": {
     "title": "Contact"
+  },
+  "cookieBanner": {
+    "title": "Votre vie privée",
+    "body": "Nous utilisons des cookies pour analyser le trafic et améliorer votre expérience. Certains cookies sont partagés avec Google (Analytics, Ads) conformément au règlement ePrivacy et au RGPD.",
+    "acceptAll": "Tout accepter",
+    "rejectAll": "Tout refuser",
+    "customize": "Personnaliser",
+    "savePreferences": "Enregistrer",
+    "analytics": "Statistiques",
+    "analyticsDesc": "Nous aide à comprendre comment vous utilisez le site (Google Analytics).",
+    "ads": "Publicité",
+    "adsDesc": "Permet de mesurer les performances des campagnes publicitaires (Google Ads)."
   }
 }
 

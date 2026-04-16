@@ -2,6 +2,7 @@ import type { ReactNode } from "react";
 import { Helmet } from "react-helmet-async";
 import { Toaster } from "react-hot-toast";
 
+import CookieBanner from "@/components/CookieBanner/CookieBanner";
 import CustomCursor from "@/components/CustomCursor/CustomCursor";
 import Footer from "@/components/Footer/Footer";
 import LanguageSwitcher from "@/components/LanguageSwitcher/LanguageSwitcher";
@@ -53,6 +54,7 @@ function AppShell({ children, language }: AppShellProps) {
       <main>{children}</main>
       <Footer />
       <Toaster position="bottom-right" reverseOrder={false} />
+      <CookieBanner />
     </div>
   );
 }

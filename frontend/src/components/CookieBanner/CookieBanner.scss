@@ -1,0 +1,152 @@
+.cookieBanner {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+  background: $materials-color;
+  border-top: 1px solid $border-color;
+  @include smoothValue("padding", 16px, 24px, $breakpoint-sm, $breakpoint-lg);
+  animation: slideUpBanner 0.3s ease-out;
+
+  @keyframes slideUpBanner {
+    from {
+      transform: translateY(100%);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+}
+
+.cookieBannerInner {
+  max-width: 960px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.cookieBannerTitle {
+  color: $primary-font;
+  font-size: $font-size-body-md;
+  font-weight: 600;
+  margin: 0;
+  line-height: $line-height-label;
+}
+
+.cookieBannerBody {
+  color: $secondary-font;
+  font-size: $font-size-body-sm;
+  line-height: 1.5;
+  margin: 0;
+}
+
+.cookieBannerOptions {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 12px;
+  background: rgba($border-color, 0.15);
+  border-radius: $radius-small;
+}
+
+.cookieBannerOption {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  cursor: pointer;
+
+  input[type="checkbox"] {
+    margin-top: 2px;
+    flex-shrink: 0;
+    accent-color: $accent-color;
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+  }
+}
+
+.cookieBannerOptionLabel {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+
+  strong {
+    color: $primary-font;
+    font-size: $font-size-body-sm;
+    font-weight: 600;
+  }
+}
+
+.cookieBannerOptionDesc {
+  color: $secondary-font;
+  font-size: $font-size-label;
+  line-height: 1.4;
+}
+
+.cookieBannerActions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  justify-content: flex-end;
+
+  @include maxScreen($breakpoint-sm) {
+    justify-content: stretch;
+
+    .cookieBannerBtn {
+      flex: 1;
+      justify-content: center;
+    }
+  }
+}
+
+.cookieBannerBtn {
+  display: inline-flex;
+  align-items: center;
+  padding: 8px 18px;
+  border-radius: $radius-small;
+  font-size: $font-size-body-sm;
+  font-weight: 500;
+  cursor: pointer;
+  transition: opacity 0.2s ease, background 0.2s ease;
+  border: none;
+  white-space: nowrap;
+
+  &:hover {
+    opacity: 0.85;
+  }
+
+  &.cookieBannerBtnPrimary {
+    background: $accent-color;
+    color: $primary-color;
+  }
+
+  &.cookieBannerBtnSecondary {
+    background: transparent;
+    border: 1px solid $border-color;
+    color: $primary-font;
+
+    &:hover {
+      border-color: $accent-color;
+      color: $accent-color;
+      opacity: 1;
+    }
+  }
+
+  &.cookieBannerBtnGhost {
+    background: transparent;
+    color: $secondary-font;
+    padding-left: 4px;
+    padding-right: 4px;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+
+    &:hover {
+      color: $primary-font;
+      opacity: 1;
+    }
+  }
+}
