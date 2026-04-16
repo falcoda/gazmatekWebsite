@@ -1,5 +1,7 @@
 import albiovixPhoto from "@/assets/img/artists/albiovix.jpg";
 import briouchKGallery01 from "@/assets/img/artists/briouch-k/briouch-k-01.jpg";
+import briouchKGallery02 from "@/assets/img/artists/briouch-k/briouch-k-02.jpg";
+import briouchKGallery03 from "@/assets/img/artists/briouch-k/briouch-k-03.jpg";
 import briouchKPortraitPhoto from "@/assets/img/artists/briouch-k/briouch-k-portrait.jpg";
 import cantikPhoto from "@/assets/img/artists/cantik.jpg";
 import ecleptixPhoto from "@/assets/img/artists/ecleptix.jpg";
@@ -179,7 +181,12 @@ export const ARTISTS: ArtistProfile[] = [
     styles: ["Mental Tekno", "Dark Tekno"],
     images: {
       portrait: briouchKPortraitPhoto,
-      gallery: [briouchKPortraitPhoto, briouchKGallery01],
+      gallery: [
+        briouchKPortraitPhoto,
+        briouchKGallery01,
+        briouchKGallery02,
+        briouchKGallery03,
+      ],
     },
     links: { soundcloud: "https://soundcloud.com/briouch-k" },
     bio: {
