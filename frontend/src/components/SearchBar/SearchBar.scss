@@ -1,0 +1,64 @@
+.searchBar {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  max-width: 480px;
+
+  .searchIcon {
+    position: absolute;
+    left: 14px;
+    color: $gray-color;
+    font-size: 1.1rem;
+    pointer-events: none;
+    flex-shrink: 0;
+  }
+
+  .searchInput {
+    width: 100%;
+    padding: $padding-xs $padding-lg $padding-xs 42px;
+    background: rgba($light-color, 0.05);
+    border: 1px solid rgba($light-color, 0.12);
+    border-radius: $radius-medium;
+    color: $primary-font;
+    font-family: $default-font-family;
+    font-size: 0.95rem;
+    letter-spacing: $letter-spacing-nav;
+    transition: border-color 0.2s ease, background 0.2s ease;
+    outline: none;
+
+    &::placeholder {
+      color: $gray-color;
+    }
+
+    &:focus {
+      border-color: rgba($accent-color, 0.5);
+      background: rgba($light-color, 0.08);
+    }
+
+    // Remove native search clear button (Chrome/Safari)
+    &::-webkit-search-cancel-button {
+      display: none;
+    }
+  }
+
+  .clearBtn {
+    position: absolute;
+    right: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: transparent;
+    border: none;
+    color: $gray-color;
+    cursor: pointer;
+    padding: 4px;
+    border-radius: $radius-extra-small;
+    font-size: 1rem;
+    transition: color 0.15s ease;
+
+    &:hover {
+      color: $primary-font;
+    }
+  }
+}

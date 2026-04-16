@@ -2,9 +2,10 @@ import "./Artistes.scss";
 
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { useEffect, useRef } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import { useTranslation } from "react-i18next";
 
+import SearchBar from "@/components/SearchBar/SearchBar";
 import SeoHead from "@/components/SeoHead/SeoHead";
 import type { AppLanguage } from "@/i18n/config";
 
@@ -23,6 +24,17 @@ const Artistes: React.FC = () => {
   const language = (i18n.resolvedLanguage ?? "fr") as AppLanguage;
   const gridRef = useRef<HTMLDivElement>(null);
   const pageTitle = t("artists.pageTitle");
+  const [searchQuery, setSearchQuery] = useState("");
+
+  const filteredArtists = useMemo(() => {
+    const query = searchQuery.trim().toLowerCase();
+    if (!query) return ARTISTS;
+    return ARTISTS.filter(
+      (artist) =>
+        artist.name.toLowerCase().includes(query) ||
+        artist.styles.some((style) => style.toLowerCase().includes(query)),
+    );
+  }, [searchQuery]);
 
   useEffect(() => {
     if (!gridRef.current) return;
@@ -53,7 +65,7 @@ const Artistes: React.FC = () => {
     return () => {
       ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
     };
-  }, []);
+  }, [filteredArtists]);
 
   return (
     <Container className="artistesPage">
@@ -79,12 +91,19 @@ const Artistes: React.FC = () => {
       )}
 
       <Section className="gridSection">
-        <h2 className="sectionLabel">{t("artists.allTitle")}</h2>
-        <div ref={gridRef} className="grid">
-          {ARTISTS.map((artist) => (
-            <ArtistCard key={artist.id} artist={artist} />
-          ))}
+        <div className="gridHeader">
+          <h2 className="sectionLabel">{t("artists.allTitle")}</h2>
+          <SearchBar value={searchQuery} onChange={setSearchQuery} />
         </div>
+        {filteredArtists.length === 0 ? (
+          <p className="noResults">{t("artists.searchNoResults")}</p>
+        ) : (
+          <div ref={gridRef} className="grid">
+            {filteredArtists.map((artist) => (
+              <ArtistCard key={artist.id} artist={artist} />
+            ))}
+          </div>
+        )}
       </Section>
     </Container>
   );

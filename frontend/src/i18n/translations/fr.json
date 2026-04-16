@@ -100,7 +100,10 @@
     "bioFullLabel": "Biographie",
     "galleryPrev": "Image précédente",
     "galleryNext": "Image suivante",
-    "gallerySlide": "Image {{n}}"
+    "gallerySlide": "Image {{n}}",
+    "searchPlaceholder": "Rechercher un artiste ou un style...",
+    "searchClear": "Effacer la recherche",
+    "searchNoResults": "Aucun artiste trouvé pour cette recherche."
   },
   "events": {
     "seoHubTitle": "Evenements | Gazmatek",
