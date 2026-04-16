@@ -1,6 +1,7 @@
 import "./CustomCursor.scss";
 
 import { useEffect, useRef, useState } from "react";
+import { createPortal } from "react-dom";
 
 const INTERACTIVE_SELECTOR = [
   "a",
@@ -229,11 +230,12 @@ const CustomCursor = () => {
     return null;
   }
 
-  return (
+  return createPortal(
     <>
       <div ref={coreRef} className="customCursorCore" />
       <div ref={glyphRef} className="customCursorGlyph" />
-    </>
+    </>,
+    document.body,
   );
 };
 
