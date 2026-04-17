@@ -102,7 +102,7 @@
 
   .footerCopyright {
     color: $light-color;
-    font-size: $font-size-body-sm;
+    font-size: $font-size-body-md;
     font-weight: 500;
     line-height: $line-height-label;
     margin: 0;
@@ -110,7 +110,7 @@
 
   .footerDesigner {
     color: $gray-color;
-    font-size: $font-size-label;
+    font-size: $font-size-body-sm;
     line-height: $line-height-label;
     margin: 0;
   }
@@ -118,5 +118,11 @@
   .footerDesignerName {
     color: $gray-color;
     font-weight: 500;
+    text-decoration: none;
+    transition: color $medium-animation;
+
+    &:hover {
+      color: $accent-color;
+    }
   }
 }

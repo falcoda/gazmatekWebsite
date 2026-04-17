@@ -65,6 +65,17 @@ const Footer = () => {
 
         <div className="footerCredits">
           <p className="footerCopyright">&copy; Gazmatek Records</p>
+          <p className="footerDesigner">
+            {t("footer.madeBy")}{" "}
+            <a
+              href="https://coval-tech.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="footerDesignerName"
+            >
+              CovalTech
+            </a>
+          </p>
         </div>
       </div>
     </footer>
@@ -72,3 +83,4 @@ const Footer = () => {
 };
 
 export default Footer;
+
