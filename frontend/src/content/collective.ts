@@ -73,8 +73,18 @@ export const MISSION_SECTION = {
     {
       title: createLocalizedText("Excellence sonore", "Sound excellence"),
       description: createLocalizedText(
-        "Chaque soir, le son et la technique sont au plus haut niveau. C'est notre signature et notre engagement envers les artistes.",
-        "Every night, sound and technique are at the highest level. This is our signature and commitment to artists.",
+        "Lors de chaque projet, la technique du son est systematiquement au centre de notre attention. C'est notre signature et engagement envers tout collaborateur.",
+        "On every project, sound engineering is systematically at the center of our attention. This is our signature and our commitment to every collaborator.",
+      ),
+    },
+    {
+      title: createLocalizedText(
+        "Scenographie profonde",
+        "Deep scenography",
+      ),
+      description: createLocalizedText(
+        "Entre decoration unique, prestation artistique live, light show dynamique, notre collectif met l'accent sur l'ambiance de nos evenements.",
+        "Between unique decoration, live artistic performance, and dynamic light shows, our collective puts the emphasis on the atmosphere of our events.",
       ),
     },
   ],
