@@ -468,7 +468,7 @@ export const ARTISTS: ArtistProfile[] = [
     slug: "kemikal-crow",
     name: "KEMIKAL CROW",
     isResident: true,
-    styles: ["Tekno", "Hardware Live"],
+    styles: ["Breakcore", "Tekno", "Hardware Live"],
     images: { portrait: kemikalCrowPhoto },
     links: { soundcloud: "https://soundcloud.com/kemikal-crow" },
     previewTrackUrl: "https://soundcloud.com/gazmatek/kemikal-crow-dissident-9",
