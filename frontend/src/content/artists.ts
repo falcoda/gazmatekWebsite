@@ -590,6 +590,39 @@ export const ARTISTS: ArtistProfile[] = [
     status: "needs-cleanup",
   },
 
+  // ── Mixsaj ─────────────────────────────────────────────────────────────────
+  {
+    id: "mixsaj",
+    slug: "mixsaj",
+    name: "MIXSAJ",
+    isResident: true,
+    gender: "f",
+    styles: ["Techno", "Hard Trance", "Hard Bounce", "Acid"],
+    images: {},
+    links: {
+      soundcloud: "https://soundcloud.com/user-874330690",
+    },
+    bio: {
+      short: {
+        fr: "Basee a Bruxelles avec des racines bosniaques, Mixsaj est une figure montante de la scene electronique independante. Melant techno, hard trance et hard bounce, elle delivre une energie intense pour plonger la foule dans une transe collective. Son univers est un equilibre puissant entre dynamisme et emotion.",
+        en: "Based in Brussels with Bosnian roots, Mixsaj is a rising figure in the independent electronic scene. Blending techno, hard trance and hard bounce, she delivers intense energy designed to keep the crowd in a collective trance. Her sound strikes a powerful balance between momentum and emotion.",
+      },
+      full: {
+        fr: "Basee a Bruxelles avec des racines bosniaques, Mixsaj est une figure montante de la scene electronique independante. Elle defend une vision musicale audacieuse et sans compromis. Melangeant techno, hard trance et hard bounce, son style est tourne vers l'elan et le mouvement. Attendez-vous a une energie intense, des montees massives et une vision artistique precise qui maintient le dancefloor en mouvement. Derriere les platines, Mixsaj capture l'instant avec une intensite rare. Elle dicte le rythme, induit une transe collective et forge un lien profond avec la foule. Son son trouve l'equilibre entre puissance et emotion, concu pour resonner tant avec le corps qu'avec l'esprit.",
+        en: "Based in Brussels with Bosnian roots, Mixsaj is a rising figure in the independent electronic scene with a bold, uncompromising musical vision. Blending techno, hard trance and hard bounce, her sound is built on momentum, with intense energy, massive build-ups and a focused artistic direction that keeps the floor moving. Behind the decks, Mixsaj captures the moment with rare intensity. She dictates the pace, induces a collective trance and forges a deep connection with the crowd. Her sound balances power and emotion, designed to resonate with both body and mind.",
+      },
+    },
+    seo: {
+      title: { fr: "MIXSAJ — Gazmatek", en: "MIXSAJ — Gazmatek" },
+      description: {
+        fr: "Mixsaj, artiste basee a Bruxelles aux racines bosniaques, mele techno, hard trance et hard bounce dans une energie intense, dynamique et hypnotique.",
+        en: "Mixsaj, Brussels-based artist with Bosnian roots, blends techno, hard trance and hard bounce into an intense, hypnotic energy.",
+      },
+    },
+    source: "User-provided bio (2026-04-17)",
+    status: "ready",
+  },
+
   // ── Mobykick ──────────────────────────────────────────────────────────────
   {
     id: "mobykick",
