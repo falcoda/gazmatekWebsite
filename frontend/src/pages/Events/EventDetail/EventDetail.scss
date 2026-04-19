@@ -164,8 +164,36 @@
     }
   }
 
-  .ticketSection {
-    display: flex;
+  .hero {
+    .ticketButton {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 12px 26px;
+      border-radius: $radius-medium;
+      border: 1px solid rgba($blue-color, 0.5);
+      background: rgba($blue-color, 0.1);
+      color: $light-color;
+      font-size: $font-size-body-md;
+      font-weight: 700;
+      letter-spacing: $letter-spacing-nav;
+      text-decoration: none;
+      backdrop-filter: blur(8px);
+      transition:
+        background $medium-animation,
+        border-color $medium-animation;
+
+      &:hover {
+        background: rgba($blue-color, 0.22);
+        border-color: rgba($blue-color, 0.9);
+      }
+
+      .ticketIcon {
+        font-size: 15px;
+        flex-shrink: 0;
+        color: $blue-color;
+      }
+    }
   }
 
   .description {

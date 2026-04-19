@@ -136,6 +136,73 @@ function createEventSeo(
 
 export const EVENTS: GazmatekEvent[] = [
   {
+    id: "gazmatek-invite-alchimyst-infrabass",
+    slug: "gazmatek-invite-alchimyst-infrabass",
+    title: createLocalizedText(
+      "Gazmatek Invite Alchimyst Infrabass",
+      "Gazmatek Invite Alchimyst Infrabass",
+    ),
+    status: "upcoming",
+    date: "2026-07-04T22:00:00",
+    venue: "Buda BXL",
+    city: "Brussels",
+    country: "Belgium",
+    address: "Chaussée de Buda 96, 1130 Bruxelles",
+    poster: createEventMedia(
+      "gazmatek-invite-alchimyst-infrabass/poster.png",
+      "Flyer Gazmatek Invite Alchimyst Infrabass",
+      "Gazmatek Invite Alchimyst Infrabass flyer",
+      "shotgun-alchimyst-infrabass",
+    ),
+    gallery: [],
+    lineup: [
+      "David Green",
+      "Sevenum Six",
+      "Looping",
+      "T-Rence",
+      "Terapeutek",
+      "Olibrius",
+      "Nocid",
+      "Kemikal Crow",
+    ],
+    description: createLocalizedText(
+      "GAZMATEK INVITE — ALCHIMYST INFRABASS\n\nUne rencontre entre deux univers. Deux énergies. Une seule fréquence.\n\nLe 04 juillet 2026, Buda BXL devient le point de convergence d'un son brut, industriel et sans compromis. Attends-toi à une nuit dense, sombre et hypnotique, où la tekno industrielle, les basses lourdes et les textures infrabass vont redéfinir l'espace.\n\nUne immersion totale avec un mapping en 3 dimensions.\n\nLINE UP : David Green, Sevenum Six, Looping, T-Rence, Terapeutek, Olibrius, Nocid, Kemikal Crow\nVJING : Toff (Alchimyst/Infrabass), Panoramix (Gazmatek)\n\nCapacité limitée. Presales 15€ / 18€ / 20€. At doors 20€.",
+      "GAZMATEK INVITE — ALCHIMYST INFRABASS\n\nA meeting between two worlds. Two energies. One single frequency.\n\nOn July 4, 2026, Buda BXL becomes the convergence point of a raw, industrial and uncompromising sound. Expect a dense, dark and hypnotic night where industrial tekno, heavy bass and infrabass textures will redefine space.\n\nTotal immersion with 3D mapping.\n\nLINE UP: David Green, Sevenum Six, Looping, T-Rence, Terapeutek, Olibrius, Nocid, Kemikal Crow\nVJING: Toff (Alchimyst/Infrabass), Panoramix (Gazmatek)\n\nLimited capacity. Presales 15€ / 18€ / 20€. At doors 20€.",
+    ),
+    summary: createLocalizedText(
+      "Gazmatek invite Alchimyst Infrabass au Buda BXL pour une nuit de tekno industrielle et basses lourdes avec mapping 3D.",
+      "Gazmatek invites Alchimyst Infrabass at Buda BXL for a night of industrial tekno and heavy bass with 3D mapping.",
+    ),
+    seo: createEventSeo(
+      "Gazmatek Invite Alchimyst Infrabass | Gazmatek",
+      "Gazmatek Invite Alchimyst Infrabass | Gazmatek",
+      "Le 4 juillet 2026, Gazmatek invite Alchimyst Infrabass au Buda BXL à Bruxelles pour une nuit de tekno industrielle avec David Green, Sevenum Six, Kemikal Crow et plus.",
+      "On July 4, 2026, Gazmatek invites Alchimyst Infrabass at Buda BXL in Brussels for a night of industrial tekno featuring David Green, Sevenum Six, Kemikal Crow and more.",
+    ),
+    contentTier: "documented",
+    ticketUrl:
+      "https://shotgun.live/fr/events/gazmatek-invite-alchimyst-infrabass",
+    hubHighlight: true,
+    legacySources: [
+      {
+        id: "shotgun-alchimyst-infrabass",
+        kind: "facebook-event",
+        label: "Shotgun: Gazmatek Invite Alchimyst Infrabass",
+        path: "https://shotgun.live/fr/events/gazmatek-invite-alchimyst-infrabass",
+        note: "Source officielle de billetterie. Confirme la date, le lieu, le lineup et les tarifs.",
+      },
+    ],
+    sourceMap: {
+      title: ["shotgun-alchimyst-infrabass"],
+      date: ["shotgun-alchimyst-infrabass"],
+      description: ["shotgun-alchimyst-infrabass"],
+      poster: ["shotgun-alchimyst-infrabass"],
+      gallery: [],
+      venue: ["shotgun-alchimyst-infrabass"],
+      lineup: ["shotgun-alchimyst-infrabass"],
+    },
+  },
+  {
     id: "bodies-in-space-2026",
     slug: "bodies-in-space-2026",
     title: createLocalizedText("Insolent x Gazmatek", "Insolent x Gazmatek"),
@@ -3291,14 +3358,21 @@ export function getEventBySlug(slug: string): GazmatekEvent | undefined {
   return EVENTS.find((event) => event.slug === slug);
 }
 
+export function isEventPast(date: string): boolean {
+  const cutoff = new Date(date);
+  cutoff.setDate(cutoff.getDate() + 1);
+  cutoff.setHours(0, 0, 0, 0);
+  return new Date() >= cutoff;
+}
+
 export function getUpcomingEvents(): GazmatekEvent[] {
-  return EVENTS.filter((event) => event.status === "upcoming").sort(
+  return EVENTS.filter((event) => !isEventPast(event.date)).sort(
     (a, b) => new Date(a.date).getTime() - new Date(b.date).getTime(),
   );
 }
 
 export function getPastEvents(): GazmatekEvent[] {
-  return EVENTS.filter((event) => event.status === "past").sort(
+  return EVENTS.filter((event) => isEventPast(event.date)).sort(
     (a, b) => new Date(b.date).getTime() - new Date(a.date).getTime(),
   );
 }

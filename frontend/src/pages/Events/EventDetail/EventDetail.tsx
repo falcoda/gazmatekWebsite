@@ -11,7 +11,6 @@ import {
 } from "react-icons/fa";
 import { Navigate, useParams } from "react-router-dom";
 
-import Button from "@/components/Button/Button";
 import Container from "@/components/Container/Container";
 import Section from "@/components/Section/Section";
 import SeoHead from "@/components/SeoHead/SeoHead";
@@ -20,6 +19,7 @@ import {
   getEventBySlug,
   getEventSummary,
   getEventTitle,
+  isEventPast,
 } from "@/content/events";
 import { getLocalizedText } from "@/content/types";
 import { canUseRawDisplayFont } from "@/Utils/Typography/rawDisplay";
@@ -87,10 +87,10 @@ const EventDetail = () => {
     return <Navigate to=".." relative="path" replace />;
   }
 
-  const backPath =
-    event.status === "upcoming"
-      ? buildPagePath("eventsUpcoming")
-      : buildPagePath("eventsArchive");
+  const isPast = isEventPast(event.date);
+  const backPath = isPast
+    ? buildPagePath("eventsArchive")
+    : buildPagePath("eventsUpcoming");
 
   const locationParts = [
     event.venue,
@@ -128,9 +128,7 @@ const EventDetail = () => {
         </div>
         <div className="heroContent">
           <span className="heroBadge">
-            {event.status === "past"
-              ? t("events.pastBadge")
-              : t("events.upcoming")}
+            {isPast ? t("events.pastBadge") : t("events.upcoming")}
           </span>
           <h1
             className={`heroName${useRawDisplayTitle ? "" : " fallbackDisplay"}`}
@@ -138,6 +136,17 @@ const EventDetail = () => {
             {eventTitle}
           </h1>
           {eventSummary && <p className="heroSummary">{eventSummary}</p>}
+          {event.ticketUrl && !isPast && (
+            <a
+              className="ticketButton"
+              href={event.ticketUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <FaTicketAlt className="ticketIcon" />
+              {t("events.bookTicket")}
+            </a>
+          )}
         </div>
       </section>
 
@@ -174,17 +183,6 @@ const EventDetail = () => {
               </div>
             </div>
           </div>
-
-          {event.ticketUrl && event.status === "upcoming" && (
-            <div className="ticketSection">
-              <Button
-                label={t("events.bookTicket")}
-                icon={<FaTicketAlt />}
-                href={event.ticketUrl}
-                style="big"
-              />
-            </div>
-          )}
 
           {eventDescription && (
             <div className="description">
