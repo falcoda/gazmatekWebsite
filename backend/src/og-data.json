@@ -1,0 +1,598 @@
+{
+  "artists": [
+    {
+      "slug": "cantik",
+      "titleFr": "CANTIK — Gazmatek",
+      "titleEn": "CANTIK — Gazmatek",
+      "descFr": "Cantik, producteur de Hardtek et Frenchcore originaire du nord de la France, résident chez Gazmatek.",
+      "descEn": "Cantik, Hardtek and Frenchcore producer from northern France, resident at Gazmatek.",
+      "imageKey": "src/assets/img/artists/cantik.jpg"
+    },
+    {
+      "slug": "albiovix",
+      "titleFr": "ALBIOVIX — Gazmatek",
+      "titleEn": "ALBIOVIX — Gazmatek",
+      "descFr": "Albiovix, producteur de tekno sombre originaire de Belgique, résident chez Gazmatek Records.",
+      "descEn": "Albiovix, dark tekno producer from Belgium, resident at Gazmatek Records.",
+      "imageKey": "src/assets/img/artists/albiovix.jpg"
+    },
+    {
+      "slug": "briouk",
+      "titleFr": "BRIOUCH'K — Gazmatek",
+      "titleEn": "BRIOUCH'K — Gazmatek",
+      "descFr": "Briouch'K, producteur de Mental Tekno belge, résident chez Gazmatek.",
+      "descEn": "Briouch'K, Belgian Mental Tekno producer, resident at Gazmatek.",
+      "imageKey": "src/assets/img/artists/briouch-k/briouch-k-portrait.jpg"
+    },
+    {
+      "slug": "butternut",
+      "titleFr": "BUTTERNUT — Gazmatek",
+      "titleEn": "BUTTERNUT — Gazmatek",
+      "descFr": "Butternut, producteur de Hardtekno et Psytrance de Nantes, résident chez Gazmatek.",
+      "descEn": "Butternut, Hardtekno and Psytrance producer from Nantes, resident at Gazmatek.",
+      "imageKey": null
+    },
+    {
+      "slug": "ecleptix",
+      "titleFr": "ECLEPTIX — Gazmatek",
+      "titleEn": "ECLEPTIX — Gazmatek",
+      "descFr": "Ecleptix, DJ label belge mêlant Hi-Tech, Hardtek et Frenchcore, résident chez Gazmatek.",
+      "descEn": "Ecleptix, Belgian label DJ blending Hi-Tech, Hardtek and Frenchcore, resident at Gazmatek.",
+      "imageKey": "src/assets/img/artists/ecleptix.jpg"
+    },
+    {
+      "slug": "ekwazz",
+      "titleFr": "EKWAZZ — Gazmatek",
+      "titleEn": "EKWAZZ — Gazmatek",
+      "descFr": "Ekwazz, artiste résident du collectif Gazmatek.",
+      "descEn": "Ekwazz, resident artist of the Gazmatek collective.",
+      "imageKey": "src/assets/img/artists/ekwazz.jpg"
+    },
+    {
+      "slug": "electromancien",
+      "titleFr": "ETAT ZERO — Gazmatek",
+      "titleEn": "ETAT ZERO — Gazmatek",
+      "descFr": "Etat Zero, artiste résident du collectif Gazmatek.",
+      "descEn": "Etat Zero, resident artist of the Gazmatek collective.",
+      "imageKey": "src/assets/img/artists/electromancien.jpg"
+    },
+    {
+      "slug": "etat-zero",
+      "titleFr": "ETAT ZERO — Gazmatek",
+      "titleEn": "ETAT ZERO — Gazmatek",
+      "descFr": "Etat Zero, artiste résident du collectif Gazmatek.",
+      "descEn": "Etat Zero, resident artist of the Gazmatek collective.",
+      "imageKey": "src/assets/img/artists/etat-zero.jpg"
+    },
+    {
+      "slug": "exil3",
+      "titleFr": "EX!L3 — Gazmatek",
+      "titleEn": "EX!L3 — Gazmatek",
+      "descFr": "EX!L3, artiste de la scène tekno underground belge, résident chez Gazmatek.",
+      "descEn": "EX!L3, Belgian underground tekno artist, resident at Gazmatek.",
+      "imageKey": "src/assets/img/artists/exil3.jpg"
+    },
+    {
+      "slug": "fuzzey",
+      "titleFr": "FUZZEY — Gazmatek",
+      "titleEn": "FUZZEY — Gazmatek",
+      "descFr": "Fuzzey, multi-instrumentiste et producteur du groupe GLITCHH, résident chez Gazmatek.",
+      "descEn": "Fuzzey, multi-instrumentalist and producer of the group GLITCHH, resident at Gazmatek.",
+      "imageKey": "src/assets/img/artists/fuzzey.jpg"
+    },
+    {
+      "slug": "ganjaflexx",
+      "titleFr": "GANJAFLEXX — Gazmatek",
+      "titleEn": "GANJAFLEXX — Gazmatek",
+      "descFr": "GanjaFlexx, DJ vinyle résident chez Gazmatek, Atohm et Foorsystem.",
+      "descEn": "GanjaFlexx, vinyl DJ resident at Gazmatek, Atohm and Foorsystem.",
+      "imageKey": "src/assets/img/artists/ganjaflexx.jpg"
+    },
+    {
+      "slug": "g-little",
+      "titleFr": "G-LITTLE — Gazmatek",
+      "titleEn": "G-LITTLE — Gazmatek",
+      "descFr": "G-Little, artiste résident du collectif Gazmatek.",
+      "descEn": "G-Little, resident artist of the Gazmatek collective.",
+      "imageKey": "src/assets/img/artists/g-little.jpg"
+    },
+    {
+      "slug": "kemikal-crow",
+      "titleFr": "KEMIKAL CROW — Gazmatek",
+      "titleEn": "KEMIKAL CROW — Gazmatek",
+      "descFr": "Kemikal Crow, liveset hardware tekno depuis 2005, résident chez Gazmatek.",
+      "descEn": "Kemikal Crow, hardware tekno liveset since 2005, resident at Gazmatek.",
+      "imageKey": "src/assets/img/artists/kemical-crow.jpg"
+    },
+    {
+      "slug": "kromozom",
+      "titleFr": "KROMOZOM — Gazmatek",
+      "titleEn": "KROMOZOM — Gazmatek",
+      "descFr": "Kromozom, artiste résident du collectif Gazmatek.",
+      "descEn": "Kromozom, resident artist of the Gazmatek collective.",
+      "imageKey": "src/assets/img/artists/kromozom.jpg"
+    },
+    {
+      "slug": "lemma",
+      "titleFr": "LEMMA — Gazmatek",
+      "titleEn": "LEMMA — Gazmatek",
+      "descFr": "Lemma, artiste résident du collectif Gazmatek.",
+      "descEn": "Lemma, resident artist of the Gazmatek collective.",
+      "imageKey": "src/assets/img/artists/lemma.jpg"
+    },
+    {
+      "slug": "meven",
+      "titleFr": "MEVEN — Gazmatek",
+      "titleEn": "MEVEN — Gazmatek",
+      "descFr": "Meven, producteur de Hard Techno, résident chez Gazmatek.",
+      "descEn": "Meven, Hard Techno producer, resident at Gazmatek.",
+      "imageKey": "src/assets/img/artists/meven.jpg"
+    },
+    {
+      "slug": "minopolska",
+      "titleFr": "MINOPOLSKA — Gazmatek",
+      "titleEn": "MINOPOLSKA — Gazmatek",
+      "descFr": "Minopolska, DJ et productrice de Hard Techno belge, résidente chez Gazmatek depuis 2009.",
+      "descEn": "Minopolska, Belgian Hard Techno DJ and producer, resident at Gazmatek since 2009.",
+      "imageKey": "src/assets/img/artists/minopolska.jpg"
+    },
+    {
+      "slug": "mixsaj",
+      "titleFr": "MIXSAJ — Gazmatek",
+      "titleEn": "MIXSAJ — Gazmatek",
+      "descFr": "Mixsaj, artiste basee a Bruxelles aux racines bosniaques, mele techno, hard trance et hard bounce dans une energie intense, dynamique et hypnotique.",
+      "descEn": "Mixsaj, Brussels-based artist with Bosnian roots, blends techno, hard trance and hard bounce into an intense, hypnotic energy.",
+      "imageKey": null
+    },
+    {
+      "slug": "mobykick",
+      "titleFr": "MOBYKICK — Gazmatek",
+      "titleEn": "MOBYKICK — Gazmatek",
+      "descFr": "Mobykick, co-fondateur de Gazmatek et producteur d'Acid Tekno mélodie, basé à Bruxelles.",
+      "descEn": "Mobykick, co-founder of Gazmatek and melodic Acid Tekno producer, based in Brussels.",
+      "imageKey": "src/assets/img/artists/mobykick.jpg"
+    },
+    {
+      "slug": "moracid",
+      "titleFr": "MORACID — Gazmatek",
+      "titleEn": "MORACID — Gazmatek",
+      "descFr": "Moracid, producteur tekno belge et membre de Gazmatek Records.",
+      "descEn": "Moracid, Belgian tekno producer and Gazmatek Records member.",
+      "imageKey": "src/assets/img/artists/moracid.jpg"
+    },
+    {
+      "slug": "nocid",
+      "titleFr": "NOCID — Gazmatek",
+      "titleEn": "NOCID — Gazmatek",
+      "descFr": "Nocid, figure majeure de l'Acid Tekno underground belge et fondateur d'Escape to Acid, résident Gazmatek.",
+      "descEn": "Nocid, major figure of the Belgian underground Acid Tekno scene and founder of Escape to Acid, Gazmatek resident.",
+      "imageKey": "src/assets/img/artists/nocid.jpg"
+    },
+    {
+      "slug": "n-x",
+      "titleFr": "N X — Gazmatek",
+      "titleEn": "N X — Gazmatek",
+      "descFr": "N X, producteur et performeur live Tekno, cofondateur du soundsystem Bankal, résident chez Gazmatek.",
+      "descEn": "N X, Tekno producer and live performer, co-founder of the Bankal soundsystem, resident at Gazmatek.",
+      "imageKey": "src/assets/img/artists/n-x/n-x-portrait.jpg"
+    },
+    {
+      "slug": "olibrius",
+      "titleFr": "OLIBRIUS — Gazmatek",
+      "titleEn": "OLIBRIUS — Gazmatek",
+      "descFr": "Olibrius, acteur de la scène tekno underground belge, résident chez Gazmatek.",
+      "descEn": "Olibrius, a key player in the Belgian underground tekno scene, resident at Gazmatek.",
+      "imageKey": "src/assets/img/artists/olibrius.jpg"
+    },
+    {
+      "slug": "raik",
+      "titleFr": "RAIK — Gazmatek",
+      "titleEn": "RAIK — Gazmatek",
+      "descFr": "Raik, DJ et producteur tekno belge, résident chez Gazmatek.",
+      "descEn": "Raik, Belgian tekno DJ and producer, resident at Gazmatek.",
+      "imageKey": "src/assets/img/artists/raik.jpg"
+    },
+    {
+      "slug": "rk-project",
+      "titleFr": "R.K PROJECT — Gazmatek",
+      "titleEn": "R.K PROJECT — Gazmatek",
+      "descFr": "R.K Project, artiste résident de Gazmatek Records.",
+      "descEn": "R.K Project, resident artist at Gazmatek Records.",
+      "imageKey": "src/assets/img/artists/rk-project.jpg"
+    },
+    {
+      "slug": "same",
+      "titleFr": "SAME — Gazmatek",
+      "titleEn": "SAME — Gazmatek",
+      "descFr": "SAME, artiste résident du collectif Gazmatek.",
+      "descEn": "SAME, resident artist of the Gazmatek collective.",
+      "imageKey": "src/assets/img/artists/same.jpg"
+    },
+    {
+      "slug": "sekter4",
+      "titleFr": "SEKTER4 — Gazmatek",
+      "titleEn": "SEKTER4 — Gazmatek",
+      "descFr": "Sekter4, artiste résident du collectif Gazmatek.",
+      "descEn": "Sekter4, resident artist of the Gazmatek collective.",
+      "imageKey": "src/assets/img/artists/sekter4.jpg"
+    },
+    {
+      "slug": "sevenum-six",
+      "titleFr": "SEVENUM SIX — Gazmatek",
+      "titleEn": "SEVENUM SIX — Gazmatek",
+      "descFr": "Sevenum Six, membre du Cult Collective et artiste Acid Tekno, résident chez Gazmatek.",
+      "descEn": "Sevenum Six, Cult Collective member and Acid Tekno artist, resident at Gazmatek.",
+      "imageKey": "src/assets/img/artists/sevenum-six.jpg"
+    },
+    {
+      "slug": "shmykblick",
+      "titleFr": "SHMYKBLICK — Gazmatek",
+      "titleEn": "SHMYKBLICK — Gazmatek",
+      "descFr": "Shmykblick, live analog Elektron du collectif Avotrez, résident chez Gazmatek.",
+      "descEn": "Shmykblick, Elektron analog live act from the Avotrez collective, resident at Gazmatek.",
+      "imageKey": "src/assets/img/artists/shmykblick.jpg"
+    },
+    {
+      "slug": "soul3d",
+      "titleFr": "SOUL3D — Gazmatek",
+      "titleEn": "SOUL3D — Gazmatek",
+      "descFr": "Soul3d, DJ vinyle de la scène tekno bruxelloise, résident chez Gazmatek.",
+      "descEn": "Soul3d, vinyl DJ from the Brussels tekno scene, resident at Gazmatek.",
+      "imageKey": "src/assets/img/artists/soul3d.jpg"
+    },
+    {
+      "slug": "staterak",
+      "titleFr": "STATERAK — Gazmatek",
+      "titleEn": "STATERAK — Gazmatek",
+      "descFr": "Staterak, producteur tekno bruxellois, résident chez Gazmatek.",
+      "descEn": "Staterak, Brussels tekno producer, resident at Gazmatek.",
+      "imageKey": "src/assets/img/artists/staterak.jpg"
+    },
+    {
+      "slug": "suarez",
+      "titleFr": "SUAREZ — Gazmatek",
+      "titleEn": "SUAREZ — Gazmatek",
+      "descFr": "Suarez, artiste résident du collectif Gazmatek.",
+      "descEn": "Suarez, resident artist of the Gazmatek collective.",
+      "imageKey": "src/assets/img/artists/suarez.jpg"
+    },
+    {
+      "slug": "tekiapy-mobitekk",
+      "titleFr": "TERAPEUTEK — Gazmatek",
+      "titleEn": "TERAPEUTEK — Gazmatek",
+      "descFr": "Terapeutek, co-fondateur de Gazmatek Sound System et DJ vinyle de Tribe et Hardtek, actif depuis les années 2000.",
+      "descEn": "Terapeutek, co-founder of Gazmatek Sound System and vinyl DJ of Tribe and Hardtek, active since the early 2000s.",
+      "imageKey": "src/assets/img/artists/tekiapy-mobitekk.jpg"
+    },
+    {
+      "slug": "terapeutek",
+      "titleFr": "TERAPEUTEK — Gazmatek",
+      "titleEn": "TERAPEUTEK — Gazmatek",
+      "descFr": "Terapeutek, co-fondateur de Gazmatek Sound System et DJ vinyle de Tribe et Hardtek, actif depuis les années 2000.",
+      "descEn": "Terapeutek, co-founder of Gazmatek Sound System and vinyl DJ of Tribe and Hardtek, active since the early 2000s.",
+      "imageKey": "src/assets/img/artists/terapeutek.jpg"
+    },
+    {
+      "slug": "toxyblue",
+      "titleFr": "TOXYBLUE — Gazmatek",
+      "titleEn": "TOXYBLUE — Gazmatek",
+      "descFr": "TØXYBLUE, multi-instrumentiste et co-fondatrice de VAKɅRM, évoluant entre Hardpsy et Acid Tekno, résidente chez Gazmatek.",
+      "descEn": "TØXYBLUE, multi-instrumentalist and co-founder of VAKɅRM, moving between Hardpsy and Acid Tekno, resident at Gazmatek.",
+      "imageKey": "src/assets/img/artists/toxyblue.jpg"
+    },
+    {
+      "slug": "vizitor23",
+      "titleFr": "VIZITOR 23 — Gazmatek",
+      "titleEn": "VIZITOR 23 — Gazmatek",
+      "descFr": "Vizitor 23, artiste résident du collectif Gazmatek.",
+      "descEn": "Vizitor 23, resident artist of the Gazmatek collective.",
+      "imageKey": "src/assets/img/artists/vizitor23.jpg"
+    },
+    {
+      "slug": "zetro23",
+      "titleFr": "ZETRO23 — Gazmatek",
+      "titleEn": "ZETRO23 — Gazmatek",
+      "descFr": "Zetro23, DJ/producteur hardware live du nord de la France, résident chez Gazmatek.",
+      "descEn": "Zetro23, hardware live DJ/producer from northern France, resident at Gazmatek.",
+      "imageKey": "src/assets/img/artists/zetro23.jpg"
+    }
+  ],
+  "events": [
+    {
+      "slug": "gazmatek-invite-alchimyst-infrabass",
+      "titleFr": "Gazmatek Invite Alchimyst Infrabass | Gazmatek",
+      "titleEn": "Gazmatek Invite Alchimyst Infrabass | Gazmatek",
+      "descFr": "Le 4 juillet 2026, Gazmatek invite Alchimyst Infrabass au Buda BXL à Bruxelles pour une nuit de tekno industrielle avec David Green, Sevenum Six, Kemikal Crow et plus.",
+      "descEn": "On July 4, 2026, Gazmatek invites Alchimyst Infrabass at Buda BXL in Brussels for a night of industrial tekno featuring David Green, Sevenum Six, Kemikal Crow and more.",
+      "imageKey": "src/assets/img/events/gazmatek-invite-alchimyst-infrabass/poster.png"
+    },
+    {
+      "slug": "bodies-in-space-2026",
+      "titleFr": "Insolent x Gazmatek | Gazmatek",
+      "titleEn": "Insolent x Gazmatek | Gazmatek",
+      "descFr": "Flyer recent Gazmatek au Bodies in Space a Bruxelles, date du 27 mars 2026 et line-up documente.",
+      "descEn": "Recent Gazmatek flyer for Bodies in Space in Brussels, dated March 27, 2026 with a documented lineup.",
+      "imageKey": "src/assets/img/events/bodies-in-space/poster.jpg"
+    },
+    {
+      "slug": "gazmatek-invites-sp23",
+      "titleFr": "Gazmatek invite SP23 | Gazmatek",
+      "titleEn": "Gazmatek Invites SP23 | Gazmatek",
+      "descFr": "Archive photo Gazmatek liee a SP23, date du 13 juillet 2024 confirmee par le dossier legacy.",
+      "descEn": "Gazmatek photo archive tied to SP23, with the July 13, 2024 date confirmed by the legacy folder.",
+      "imageKey": "src/assets/img/events/gazmatek-invites-sp23/poster.jpg"
+    },
+    {
+      "slug": "gazmatek-invites-heretik",
+      "titleFr": "Gazmatek invite Heretik - Molitor B-Day | Gazmatek",
+      "titleEn": "Gazmatek Invites Heretik - Molitor B-Day | Gazmatek",
+      "descFr": "Archive Gazmatek avec flyer Heretik, date du 13 avril 2024 a Buda BXL et galerie photo.",
+      "descEn": "Gazmatek archive with the Heretik flyer, an April 13, 2024 date at Buda BXL, and a photo gallery.",
+      "imageKey": "src/assets/img/events/gazmatek-invites-heretik/poster.png"
+    },
+    {
+      "slug": "buda-temple",
+      "titleFr": "Buda Temple | Gazmatek",
+      "titleEn": "Buda Temple | Gazmatek",
+      "descFr": "Archive Gazmatek Buda Temple, date du 20 janvier 2024 documentee par flyer et photos.",
+      "descEn": "Gazmatek Buda Temple archive, a January 20, 2024 date documented through flyer and photos.",
+      "imageKey": "src/assets/img/events/buda-temple/poster.png"
+    },
+    {
+      "slug": "gazmatek-party-planet-park",
+      "titleFr": "Gazmatek Party - Planet Park Area | Gazmatek",
+      "titleEn": "Gazmatek Party - Planet Park Area | Gazmatek",
+      "descFr": "Archive Gazmatek Planet Park Area a Bruxelles, date du 17 fevrier 2024 avec flyer et galerie photo.",
+      "descEn": "Gazmatek archive for Planet Park Area in Brussels, dated February 17, 2024 with flyer and gallery.",
+      "imageKey": "src/assets/img/events/gazmatek-party-planet-park/poster.png"
+    },
+    {
+      "slug": "into-the-rave",
+      "titleFr": "Into The Rave | Gazmatek",
+      "titleEn": "Into The Rave | Gazmatek",
+      "descFr": "Archive Gazmatek Into The Rave a l'Imprimerie de Bruxelles, date du 24 fevrier 2024.",
+      "descEn": "Gazmatek archive for Into The Rave at Imprimerie in Brussels, dated February 24, 2024.",
+      "imageKey": "src/assets/img/events/into-the-rave/poster.jpg"
+    },
+    {
+      "slug": "escape-invite-gazmatek",
+      "titleFr": "Escape Invite : Gazmatek Crew | Gazmatek",
+      "titleEn": "Escape Invites Gazmatek Crew | Gazmatek",
+      "descFr": "Archive Gazmatek du 9 mars 2024 a l'Escape Club de Liege, documentee par le dossier legacy et l'evenement Facebook.",
+      "descEn": "Gazmatek archive for March 9, 2024 at Escape Club in Liege, documented by the legacy folder and the Facebook event.",
+      "imageKey": "src/assets/img/events/escape-invite-gazmatek/poster.jpg"
+    },
+    {
+      "slug": "smurf-party-gazmatek-and-gs6",
+      "titleFr": "Smurf Party Gazmatek and GS6 | Gazmatek",
+      "titleEn": "Smurf Party Gazmatek and GS6 | Gazmatek",
+      "descFr": "Archive Gazmatek du 23 mars 2024 a Bruxelles, reliee a la Smurf Party et a GS6.",
+      "descEn": "Gazmatek archive for March 23, 2024 in Brussels, tied to the Smurf Party and GS6.",
+      "imageKey": "src/assets/img/events/smurf-party-gazmatek-and-gs6/poster.jpg"
+    },
+    {
+      "slug": "synapse-sonorised-by",
+      "titleFr": "Synapse Sonorised By Gazmatek | Gazmatek",
+      "titleEn": "Synapse Sonorised By Gazmatek | Gazmatek",
+      "descFr": "Archive Gazmatek du 29 mars 2024 issue du dossier legacy Synapse Sonorised By.",
+      "descEn": "Gazmatek archive for March 29, 2024 sourced from the legacy Synapse Sonorised By folder.",
+      "imageKey": "src/assets/img/events/halloween-bday-party/poster.png"
+    },
+    {
+      "slug": "halloween-bday-party",
+      "titleFr": "Halloween B-Day Party | Gazmatek",
+      "titleEn": "Halloween B-Day Party | Gazmatek",
+      "descFr": "Archive Halloween Gazmatek x Falcohm du 31 octobre 2023 au Planet Park Brussels.",
+      "descEn": "Gazmatek x Falcohm Halloween archive from October 31, 2023 at Planet Park Brussels.",
+      "imageKey": "src/assets/img/events/halloween-bday-party/poster.png"
+    },
+    {
+      "slug": "vinyl-rules",
+      "titleFr": "Vinyl Rules | Gazmatek",
+      "titleEn": "Vinyl Rules | Gazmatek",
+      "descFr": "Archive Gazmatek Vinyl Rules du 9 decembre 2023, basee sur le flyer et la galerie legacy.",
+      "descEn": "Gazmatek Vinyl Rules archive from December 9, 2023, based on the flyer and the legacy gallery.",
+      "imageKey": "src/assets/img/events/vinyl-rules/poster.png"
+    },
+    {
+      "slug": "synapse-warehouse-night",
+      "titleFr": "Synapse Warehouse Night | Gazmatek",
+      "titleEn": "Synapse Warehouse Night | Gazmatek",
+      "descFr": "Archive Gazmatek issue du dossier Synapse du 29 septembre 2023, avec galerie photo warehouse.",
+      "descEn": "Gazmatek archive drawn from the September 29, 2023 Synapse folder, with a warehouse-style gallery.",
+      "imageKey": "src/assets/img/events/synapse-warehouse-night/poster.jpeg"
+    },
+    {
+      "slug": "gazmatek-party-2023",
+      "titleFr": "Gazmatek Party | Gazmatek",
+      "titleEn": "Gazmatek Party | Gazmatek",
+      "descFr": "Archive photo Gazmatek Party du 23 septembre 2023, issue du dossier legacy.",
+      "descEn": "Photographic archive of Gazmatek Party from September 23, 2023, drawn from the legacy folder.",
+      "imageKey": "src/assets/img/events/gazmatek-party-2023/poster.jpg"
+    },
+    {
+      "slug": "nocturne-ulb",
+      "titleFr": "Nocturne ULB | Gazmatek",
+      "titleEn": "Nocturne ULB | Gazmatek",
+      "descFr": "Archive Gazmatek de la Nocturne ULB du 27 juin 2023 a Bruxelles.",
+      "descEn": "Gazmatek archive of the Nocturne ULB event held in Brussels on June 27, 2023.",
+      "imageKey": "src/assets/img/events/nocturne-ulb/poster.jpg"
+    },
+    {
+      "slug": "tekno-ravolution",
+      "titleFr": "Tekno Ravolution | Gazmatek",
+      "titleEn": "Tekno Ravolution | Gazmatek",
+      "descFr": "Archive photo Gazmatek Tekno Ravolution du 25 mars 2023.",
+      "descEn": "Gazmatek photo archive for Tekno Ravolution on March 25, 2023.",
+      "imageKey": "src/assets/img/events/tekno-ravolution/poster.jpeg"
+    },
+    {
+      "slug": "manifestive-lille",
+      "titleFr": "Manifestive Lille | Gazmatek",
+      "titleEn": "Manifestive Lille | Gazmatek",
+      "descFr": "Archive Gazmatek Manifestive Lille du 17 decembre 2022.",
+      "descEn": "Gazmatek archive for Manifestive Lille on December 17, 2022.",
+      "imageKey": "src/assets/img/events/manifestive-lille/poster.jpg"
+    },
+    {
+      "slug": "tekwarz-2",
+      "titleFr": "Tekwarz 2 Sound by Gazmatek | Gazmatek",
+      "titleEn": "Tekwarz 2 Sound by Gazmatek | Gazmatek",
+      "descFr": "Archive Tekwarz 2 sonorise par Gazmatek, le 18 novembre 2022 a IKON Antwerp avec ReZet, L'hallucidite et Aku Soundsystems.",
+      "descEn": "Archive for Tekwarz 2 powered by Gazmatek, held on November 18, 2022 at IKON Antwerp with ReZet, L'hallucidite, and Aku Soundsystems.",
+      "imageKey": "src/assets/img/events/tekwarz-2/poster.jpeg"
+    },
+    {
+      "slug": "gazmatek-party-5-years",
+      "titleFr": "Gazmatek Party - 5 Years | Gazmatek",
+      "titleEn": "Gazmatek Party - 5 Years | Gazmatek",
+      "descFr": "Archive Gazmatek 5 Years du 1er novembre 2021 issue des dossiers illegaux.",
+      "descEn": "Gazmatek 5 Years archive from November 1, 2021, sourced from the illegal folders.",
+      "imageKey": "src/assets/img/events/gazmatek-party-5-years/poster.jpeg"
+    },
+    {
+      "slug": "soiree-barlok-2018",
+      "titleFr": "Soiree Barlok 2018 | Gazmatek",
+      "titleEn": "Barlok Night 2018 | Gazmatek",
+      "descFr": "Une des premieres archives evenementielles Gazmatek, datee du 14 juillet 2018 au Barlok.",
+      "descEn": "One of the earliest Gazmatek event archives, dated July 14, 2018 at Le Barlok.",
+      "imageKey": "src/assets/img/events/soiree-barlok-2018/poster.jpeg"
+    },
+    {
+      "slug": "tekwarz-4",
+      "titleFr": "Tek Wars 4 Sound by Gazmatek | Gazmatek",
+      "titleEn": "Tek Wars 4 Sound by Gazmatek | Gazmatek",
+      "descFr": "Archive Tek Wars 4 sonorise par Gazmatek, 30 juin 2023 a Anvers avec Aku, Zouawotek et Kritiek.",
+      "descEn": "Tek Wars 4 archive powered by Gazmatek, June 30, 2023 in Antwerp with Aku, Zouawotek and Kritiek.",
+      "imageKey": "src/assets/img/events/tekwarz-4/poster.jpg"
+    },
+    {
+      "slug": "live-act-party",
+      "titleFr": "Gazmatek Live Act Party | Gazmatek",
+      "titleEn": "Gazmatek Live Act Party | Gazmatek",
+      "descFr": "Archive Gazmatek Live Act Party du 2 decembre 2023 avec R.K Project.",
+      "descEn": "Gazmatek Live Act Party archive from December 2, 2023 featuring R.K Project.",
+      "imageKey": "src/assets/img/events/live-act-party/poster.png"
+    },
+    {
+      "slug": "gazmatek-party-3",
+      "titleFr": "Gazmatek Party 3 | Gazmatek",
+      "titleEn": "Gazmatek Party 3 | Gazmatek",
+      "descFr": "Archive Gazmatek Party 3 du 29 juin 2019 a Bruxelles, documentee par photos et evenement Facebook.",
+      "descEn": "Gazmatek Party 3 archive from June 29, 2019 in Brussels, documented through photos and a Facebook event.",
+      "imageKey": "src/assets/img/events/gazmatek-party-3/poster.jpg"
+    },
+    {
+      "slug": "gazmatek-party-2",
+      "titleFr": "Gazmatek Party 2 | Gazmatek",
+      "titleEn": "Gazmatek Party 2 | Gazmatek",
+      "descFr": "Archive Gazmatek Party 2 du 2 mars 2019 a Bruxelles, documentee par 13 photos legacy et un evenement Facebook.",
+      "descEn": "Gazmatek Party 2 archive from March 2, 2019 in Brussels, documented through 13 legacy photos and a Facebook event.",
+      "imageKey": "src/assets/img/events/gazmatek-party-2/poster.jpg"
+    },
+    {
+      "slug": "gazmatek-be-pulsed-faya",
+      "titleFr": "Gazmatek - Be Pulsed - Faya | Gazmatek",
+      "titleEn": "Gazmatek - Be Pulsed - Faya | Gazmatek",
+      "descFr": "Archive Gazmatek du 24 aout 2019, documentee par les donnees Facebook preservees.",
+      "descEn": "Gazmatek archive dated August 24, 2019, documented through preserved Facebook data.",
+      "imageKey": "src/assets/img/events/gazmatek-be-pulsed-faya/poster.jpg"
+    },
+    {
+      "slug": "gazmatek-aku-conectik-birthday-party",
+      "titleFr": "Gazmatek Aku Conectik Birthday Party | Gazmatek",
+      "titleEn": "Gazmatek Aku Conectik Birthday Party | Gazmatek",
+      "descFr": "Archive Gazmatek du 28 mars 2020 issue des metadonnees Facebook publiques.",
+      "descEn": "Gazmatek archive for March 28, 2020 sourced from public Facebook metadata.",
+      "imageKey": "src/assets/img/events/gazmatek-aku-conectik-birthday-party/poster.jpg"
+    },
+    {
+      "slug": "full-of-gazmatek-system",
+      "titleFr": "Full of Gazmatek System | Gazmatek",
+      "titleEn": "Full of Gazmatek System | Gazmatek",
+      "descFr": "Archive Gazmatek du 10 avril 2021 en format streaming.",
+      "descEn": "Gazmatek archive for April 10, 2021 in a streaming format.",
+      "imageKey": "src/assets/img/events/full-of-gazmatek-system/poster.jpg"
+    },
+    {
+      "slug": "cybertek-odyssey",
+      "titleFr": "Cybertek - Odyssey | Gazmatek",
+      "titleEn": "Cybertek - Odyssey | Gazmatek",
+      "descFr": "Archive Gazmatek du 1er octobre 2022 a Club 26 a Genk.",
+      "descEn": "Gazmatek archive for October 1, 2022 at Club 26 in Genk.",
+      "imageKey": "src/assets/img/events/cybertek-odyssey/poster.jpg"
+    },
+    {
+      "slug": "hedon-invites-gazmatek",
+      "titleFr": "HEDON Invites Gazmatek | Gazmatek",
+      "titleEn": "HEDON Invites Gazmatek | Gazmatek",
+      "descFr": "Archive Gazmatek du 9 mai 2024 a Chinastraat a Gand.",
+      "descEn": "Gazmatek archive for May 9, 2024 at Chinastraat in Ghent.",
+      "imageKey": "src/assets/img/events/hedon-invites-gazmatek/poster.jpg"
+    },
+    {
+      "slug": "halloween-bday-party-2",
+      "titleFr": "Halloween B-Day Party #2 | Gazmatek",
+      "titleEn": "Halloween B-Day Party #2 | Gazmatek",
+      "descFr": "Archive Gazmatek du 31 octobre 2024 au Dark Cube a Liege.",
+      "descEn": "Gazmatek archive for October 31, 2024 at Dark Cube in Liege.",
+      "imageKey": "src/assets/img/events/halloween-bday-party-2/poster.jpg"
+    },
+    {
+      "slug": "speeding-records-ravolution",
+      "titleFr": "Gazmatek & Vakarm Invite Speeding Records | Gazmatek",
+      "titleEn": "Gazmatek & Vakarm Invite Speeding Records | Gazmatek",
+      "descFr": "Archive Gazmatek du 25 janvier 2025 a Chinastraat a Gand.",
+      "descEn": "Gazmatek archive for January 25, 2025 at Chinastraat in Ghent.",
+      "imageKey": "src/assets/img/events/speeding-records-ravolution/poster.jpg"
+    },
+    {
+      "slug": "vinyls-rules-2",
+      "titleFr": "Vinyls Rules 2 | Gazmatek",
+      "titleEn": "Vinyls Rules 2 | Gazmatek",
+      "descFr": "Archive Gazmatek du 5 avril 2025 a Buda BXL.",
+      "descEn": "Gazmatek archive for April 5, 2025 at Buda BXL.",
+      "imageKey": "src/assets/img/events/vinyls-rules-2/poster.jpg"
+    },
+    {
+      "slug": "into-the-rave-2",
+      "titleFr": "Into The Rave 2 | Gazmatek",
+      "titleEn": "Into The Rave 2 | Gazmatek",
+      "descFr": "Archive Gazmatek du 17 mai 2025 a La Fabriek.",
+      "descEn": "Gazmatek archive for May 17, 2025 at La Fabriek.",
+      "imageKey": "src/assets/img/events/into-the-rave-2/poster.jpg"
+    },
+    {
+      "slug": "festival-gazmatek-2025",
+      "titleFr": "Gazmatek Festival | Gazmatek",
+      "titleEn": "Gazmatek Festival | Gazmatek",
+      "descFr": "Archive Gazmatek du 5 juillet 2025 a Buda BXL.",
+      "descEn": "Gazmatek archive for July 5, 2025 at Buda BXL.",
+      "imageKey": "src/assets/img/events/festival-gazmatek-2025/poster.jpg"
+    },
+    {
+      "slug": "teknoise-gs6-taktik-plt",
+      "titleFr": "Gazmatek Invites Teknoise, GS6, Taktik and PLT | Gazmatek",
+      "titleEn": "Gazmatek Invites Teknoise, GS6, Taktik and PLT | Gazmatek",
+      "descFr": "Archive Gazmatek du 18 octobre 2025 a Chinastraat a Gand.",
+      "descEn": "Gazmatek archive for October 18, 2025 at Chinastraat in Ghent.",
+      "imageKey": "src/assets/img/events/teknoise-gs6-taktik-plt/poster.jpg"
+    },
+    {
+      "slug": "shadow-halloween-2025",
+      "titleFr": "Shadow Halloween 2025 | Gazmatek",
+      "titleEn": "Shadow Halloween 2025 | Gazmatek",
+      "descFr": "Archive Gazmatek du 31 octobre 2025 a Studio Citygate.",
+      "descEn": "Gazmatek archive for October 31, 2025 at Studio Citygate.",
+      "imageKey": "src/assets/img/events/shadow-halloween-2025/poster.jpg"
+    },
+    {
+      "slug": "into-the-rave-iii",
+      "titleFr": "Into The Rave III | Gazmatek",
+      "titleEn": "Into The Rave III | Gazmatek",
+      "descFr": "Archive Gazmatek du 6 decembre 2025 a La Fabriek.",
+      "descEn": "Gazmatek archive for December 6, 2025 at La Fabriek.",
+      "imageKey": "src/assets/img/events/into-the-rave-iii/poster.jpg"
+    }
+  ]
+}

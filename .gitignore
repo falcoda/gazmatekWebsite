@@ -1,5 +1,8 @@
 node_modules
 
+# Syncthing conflict files
+*.sync-conflict-*
+
 frontend/build
 frontend/.env.sentry-build-plugin
 frontend/.env

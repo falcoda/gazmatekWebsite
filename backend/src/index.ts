@@ -9,6 +9,8 @@ import express, { Express, NextFunction, Request, Response } from "express";
 import helmet from "helmet";
 import path from "path";
 
+import { botMiddleware } from "./middleware/botMiddleware";
+
 const expressStaticGzip = require("express-static-gzip");
 
 // Creating the express app
@@ -65,6 +67,9 @@ app.use(
     // referrerPolicy: { policy: "same-origin" },
   }),
 );
+
+// Bot middleware: serves OG meta tags to social media crawlers
+app.use(botMiddleware);
 
 // Serve the admin frontend for admin.falcohmsystem.com
 app.use("/", (req: Request, res: Response, next: Function) => {

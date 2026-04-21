@@ -11,6 +11,7 @@ jobs:
       backend-changed: ${{ steps.detect-backend.outputs.changed }}
       frontend-changed: ${{ steps.detect-frontend.outputs.changed }}
       docker-changed: ${{ steps.detect-docker.outputs.changed }}
+      og-changed: ${{ steps.detect-og.outputs.changed }}
     steps:
       - uses: actions/checkout@v3
         with:
@@ -49,12 +50,24 @@ jobs:
             echo "changed=false" >> $GITHUB_OUTPUT
           fi
 
+      - name: Detect OG content changes
+        id: detect-og
+        run: |
+          if [ $(git rev-list --count HEAD) -eq 1 ]; then
+            echo "changed=true" >> $GITHUB_OUTPUT
+          elif git diff --name-only HEAD~1 | grep -E '^frontend/src/content/(artists|events)\.ts$'; then
+            echo "changed=true" >> $GITHUB_OUTPUT
+          else
+            echo "changed=false" >> $GITHUB_OUTPUT
+          fi
+
   build-backend:
     runs-on: [self-hosted, gazmatek]
     needs: check-changes
     if: |
       needs.check-changes.outputs.backend-changed == 'true' ||
-      needs.check-changes.outputs.docker-changed == 'true'
+      needs.check-changes.outputs.docker-changed == 'true' ||
+      needs.check-changes.outputs.og-changed == 'true'
     steps:
       - uses: actions/checkout@v3
 
