@@ -1,11 +1,13 @@
 import {
+  type AppLanguage,
   DEFAULT_LANGUAGE,
   LANGUAGE_STORAGE_KEY,
   SUPPORTED_LANGUAGES,
-  type AppLanguage,
 } from "./config";
 
-export function isSupportedLanguage(value: string | null | undefined): value is AppLanguage {
+export function isSupportedLanguage(
+  value: string | null | undefined,
+): value is AppLanguage {
   return Boolean(value && SUPPORTED_LANGUAGES.includes(value as AppLanguage));
 }
 
@@ -14,7 +16,9 @@ export function getStoredLanguage(): AppLanguage | null {
     return null;
   }
 
-  const stored = window.localStorage.getItem(LANGUAGE_STORAGE_KEY)?.toLowerCase();
+  const stored = window.localStorage
+    .getItem(LANGUAGE_STORAGE_KEY)
+    ?.toLowerCase();
 
   return isSupportedLanguage(stored) ? stored : null;
 }
@@ -50,7 +54,10 @@ export function stripLanguagePrefix(pathname: string): string {
   return remaining ? `/${remaining}` : "/";
 }
 
-export function buildLocalizedPath(language: AppLanguage, pathname: string = "/"): string {
+export function buildLocalizedPath(
+  language: AppLanguage,
+  pathname: string = "/",
+): string {
   const normalized = stripLanguagePrefix(pathname);
 
   return normalized === "/" ? `/${language}/` : `/${language}${normalized}`;

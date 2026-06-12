@@ -2,7 +2,7 @@ import { gsap } from "gsap";
 import { useCallback } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 
-import { DEFAULT_LANGUAGE, type AppLanguage } from "@/i18n/config";
+import { type AppLanguage, DEFAULT_LANGUAGE } from "@/i18n/config";
 import { buildLocalizedPath, isSupportedLanguage } from "@/i18n/routing";
 
 interface AnimatedNavigateOptions {
@@ -99,4 +99,3 @@ const useAnimatedNavigate = () => {
 };
 
 export default useAnimatedNavigate;
-

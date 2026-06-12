@@ -27,7 +27,6 @@ Updated: 2026-04-12
 | ETAT ZERO          | needs-cleanup | —        | —       | —        | —       | —        | Bio_artistes.pdf            |
 | EX!L3              | needs-cleanup | —        | —       | —        | —       | —        | Bio_artistes.pdf            |
 | FUZZEY             | needs-cleanup | ✓        | ✓       | ✓        | ✓       | —        | Fuzzey Bio + Link.pdf       |
-| GANJAFLEXX         | needs-cleanup | ✓        | ✓       | ✓        | ✓       | —        | Bio_artistes.pdf            |
 | G-LITTLE           | needs-cleanup | —        | —       | —        | —       | —        | Bio_artistes.pdf            |
 | KEMIKAL CROW       | pages-blocked | ✓        | ✓       | ✓        | ✓       | —        | Bio_artistes.pdf + .pages   |
 | KROMOZOM           | needs-cleanup | —        | —       | —        | —       | —        | All links and contacts.docx |
@@ -86,7 +85,7 @@ Updated: 2026-04-12
 Artists without a portrait image need a photo sourced from their asset folder under:
 `old-website-assets/Assets Gazma Site/Artiste/Artiste/`
 
-Priority: Albiovix, Ecleptix, Nocid, Shmykblick, Sevenum Six, Ganjaflexx, Terapeutek (has portrait already).
+Priority: Albiovix, Ecleptix, Nocid, Shmykblick, Sevenum Six, Terapeutek (has portrait already).
 
 ---
 
@@ -107,7 +106,6 @@ Resolution: open `.pages` files in Pages/LibreOffice and extract plain text into
 
 The following artists have no EN bio yet and are prominent enough to warrant translation before launch:
 
-- GANJAFLEXX — has FR content, EN pending
 - MINOPOLSKA — has FR content, EN pending
 - MORACID — has FR content, EN pending
 - SOUL3D — has FR content, EN pending

@@ -1,9 +1,6 @@
 import type { PageKey } from "@/config/pages";
 
-import {
-  createLocalizedText,
-  type LocalizedText,
-} from "./types";
+import { createLocalizedText, type LocalizedText } from "./types";
 
 export interface SiteNavigationItem {
   id: string;

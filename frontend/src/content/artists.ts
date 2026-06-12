@@ -11,7 +11,6 @@ import etatZeroPhoto from "@/assets/img/artists/etat-zero.jpg";
 import exil3Photo from "@/assets/img/artists/exil3.jpg";
 import fuzzeyPhoto from "@/assets/img/artists/fuzzey.jpg";
 import gLittlePhoto from "@/assets/img/artists/g-little.jpg";
-import ganjaflexxPhoto from "@/assets/img/artists/ganjaflexx.jpg";
 import kemikalCrowPhoto from "@/assets/img/artists/kemical-crow.jpg";
 import kromozomPhoto from "@/assets/img/artists/kromozom.jpg";
 import lemmaPhoto from "@/assets/img/artists/lemma.jpg";
@@ -406,36 +405,6 @@ export const ARTISTS: ArtistProfile[] = [
       },
     },
     source: "Fuzzey Bio + Link.pdf",
-    status: "needs-cleanup",
-  },
-
-  // ── Ganjaflexx ────────────────────────────────────────────────────────────
-  {
-    id: "ganjaflexx",
-    slug: "ganjaflexx",
-    name: "GANJAFLEXX",
-    isResident: true,
-    styles: ["Tekno", "Techno"],
-    images: { portrait: ganjaflexxPhoto },
-    links: { soundcloud: "https://soundcloud.com/ganjaflexx" },
-    bio: {
-      short: {
-        fr: "DJ résident chez Gazmatek, Atohm et Foorsystem, GanjaFlexx travaille au vinyle et aux timecodes Traktor. Son style allie basslines pulsantes et mélodies éthérées pour des compositions énergiques.",
-        en: "Resident DJ at Gazmatek, Atohm and Foorsystem, GanjaFlexx works with vinyl and Traktor timecodes. His style combines pulsing basslines with ethereal melodies for energetic compositions.",
-      },
-      full: {
-        fr: "DJ résident chez Gazmatek, Atohm et Foorsystem, GanjaFlexx travaille avec du vinyle et les timecodes Traktor. Ses morceaux se distinguent par leur énergie contagieuse, leurs rythmes complexes et leurs couches épaisses de synthétiseurs, combinant des basslines pulsantes et des mélodies éthérées pour créer des compositions énergétiques et engageantes.",
-        en: "Resident DJ at Gazmatek, Atohm and Foorsystem, GanjaFlexx works with vinyl and Traktor timecodes. His tracks are distinguished by their contagious energy, complex rhythms and thick layers of synthesizers, combining pulsing basslines with ethereal melodies to create energetic, engaging compositions.",
-      },
-    },
-    seo: {
-      title: { fr: "GANJAFLEXX — Gazmatek", en: "GANJAFLEXX — Gazmatek" },
-      description: {
-        fr: "GanjaFlexx, DJ vinyle résident chez Gazmatek, Atohm et Foorsystem.",
-        en: "GanjaFlexx, vinyl DJ resident at Gazmatek, Atohm and Foorsystem.",
-      },
-    },
-    source: "Bio_artistes.pdf",
     status: "needs-cleanup",
   },
 

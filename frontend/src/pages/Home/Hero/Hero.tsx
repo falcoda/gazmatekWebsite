@@ -57,11 +57,7 @@ function Hero() {
 
         <div className="heroContent" ref={heroContentRef}>
           <Logo className="heroLogo" />
-          <h1
-            className="heroWelcome"
-          >
-            {welcome}
-          </h1>
+          <h1 className="heroWelcome">{welcome}</h1>
           <p className="heroBaseline">{t("hero.baseline")}</p>
           <div className="heroCtas">
             <button

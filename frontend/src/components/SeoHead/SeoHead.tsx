@@ -60,4 +60,3 @@ const SeoHead = ({ title, description, language, image }: SeoHeadProps) => {
 };
 
 export default SeoHead;
-

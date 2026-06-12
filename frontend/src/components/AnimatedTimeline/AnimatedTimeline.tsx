@@ -2,8 +2,8 @@ import "./AnimatedTimeline.scss";
 
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { useEffect, useRef } from "react";
 import type { ReactNode } from "react";
+import { useEffect, useRef } from "react";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -152,7 +152,9 @@ const AnimatedTimeline = ({
 
     if (reduceMotion) {
       const markers = Array.from(
-        timelineElement.querySelectorAll<HTMLElement>(".animatedTimelineMarker"),
+        timelineElement.querySelectorAll<HTMLElement>(
+          ".animatedTimelineMarker",
+        ),
       );
 
       updateRailBounds(markers);
@@ -177,7 +179,9 @@ const AnimatedTimeline = ({
         .forEach((card) => {
           const item = card.closest<HTMLElement>(".animatedTimelineItem");
           const svg = card.querySelector<SVGSVGElement>(".timelineBorderSvg");
-          const base = card.querySelector<SVGRectElement>(".timelineBorderBase");
+          const base = card.querySelector<SVGRectElement>(
+            ".timelineBorderBase",
+          );
           const topPath = card.querySelector<SVGPathElement>(
             ".timelineBorderActiveTop",
           );
@@ -210,11 +214,15 @@ const AnimatedTimeline = ({
       );
       const items = gsap.utils.toArray<HTMLElement>(".animatedTimelineItem");
       const markers = items
-        .map((item) => item.querySelector<HTMLElement>(".animatedTimelineMarker"))
+        .map((item) =>
+          item.querySelector<HTMLElement>(".animatedTimelineMarker"),
+        )
         .filter((marker): marker is HTMLElement => Boolean(marker));
       const itemEffects = items.map((item) => {
         const card = item.querySelector<HTMLElement>(".animatedTimelineCard");
-        const marker = item.querySelector<HTMLElement>(".animatedTimelineMarker");
+        const marker = item.querySelector<HTMLElement>(
+          ".animatedTimelineMarker",
+        );
         const svg = item.querySelector<SVGSVGElement>(".timelineBorderSvg");
         const base = item.querySelector<SVGRectElement>(".timelineBorderBase");
         const topPath = item.querySelector<SVGPathElement>(
@@ -328,18 +336,14 @@ const AnimatedTimeline = ({
           : { x: 0, opacity: 1, duration: 0.65, ease: "power3.out" };
 
         if (card) {
-          gsap.fromTo(
-            card,
-            cardFrom,
-            {
-              ...cardTo,
-              scrollTrigger: {
-                trigger: item,
-                start: "top 84%",
-                once: true,
-              },
+          gsap.fromTo(card, cardFrom, {
+            ...cardTo,
+            scrollTrigger: {
+              trigger: item,
+              start: "top 84%",
+              once: true,
             },
-          );
+          });
         }
 
         if (marker) {
@@ -424,9 +428,7 @@ const AnimatedTimeline = ({
       {title ? <h2 className="animatedTimelineTitle">{title}</h2> : null}
 
       <div className="animatedTimelineFrame" ref={timelineRef}>
-        {eyebrow ? (
-          <p className="animatedTimelineEyebrow">{eyebrow}</p>
-        ) : null}
+        {eyebrow ? <p className="animatedTimelineEyebrow">{eyebrow}</p> : null}
 
         <div className="animatedTimelineRail" aria-hidden="true" ref={railRef}>
           <span ref={railBaseRef} className="animatedTimelineRailBase" />
@@ -446,9 +448,7 @@ export const AnimatedTimelineItem = ({
   className,
   children,
 }: AnimatedTimelineItemProps) => (
-  <article
-    className={joinClassNames("animatedTimelineItem", side, className)}
-  >
+  <article className={joinClassNames("animatedTimelineItem", side, className)}>
     <div className="animatedTimelineMarker" aria-hidden="true" />
     {children}
   </article>

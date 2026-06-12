@@ -5,9 +5,9 @@ import "./i18n/i18n";
 
 import { useEffect } from "react";
 import {
+  BrowserRouter as Router,
   Navigate,
   Route,
-  BrowserRouter as Router,
   Routes,
   useParams,
 } from "react-router-dom";
@@ -193,4 +193,3 @@ const AppWrapper = () => (
 );
 
 export default AppWrapper;
-

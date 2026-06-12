@@ -96,7 +96,9 @@ const Archives = () => {
                           className="timelineCard"
                           onClick={() =>
                             animatedNavigate(
-                              buildPagePath("eventDetail", { slug: event.slug }),
+                              buildPagePath("eventDetail", {
+                                slug: event.slug,
+                              }),
                             )
                           }
                         >
@@ -114,7 +116,9 @@ const Archives = () => {
                             <span className="cardDate">
                               {formatArchiveDate(event.date, language)}
                             </span>
-                            <h3 className="cardName">{getEventTitle(event, language)}</h3>
+                            <h3 className="cardName">
+                              {getEventTitle(event, language)}
+                            </h3>
                             <p className="cardLocation">
                               {getEventLocation(
                                 event,

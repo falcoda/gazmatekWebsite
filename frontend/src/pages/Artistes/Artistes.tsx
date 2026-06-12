@@ -39,7 +39,9 @@ const Artistes: React.FC = () => {
   useEffect(() => {
     if (!gridRef.current) return;
 
-    const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    const reduceMotion = window.matchMedia(
+      "(prefers-reduced-motion: reduce)",
+    ).matches;
 
     if (reduceMotion) return;
 
@@ -77,9 +79,7 @@ const Artistes: React.FC = () => {
 
       <section className="hero">
         <div className="heroContent">
-          <h1 className="title">
-            {pageTitle}
-          </h1>
+          <h1 className="title">{pageTitle}</h1>
           <p className="subtitle">{t("artists.pageSubtitle")}</p>
         </div>
       </section>

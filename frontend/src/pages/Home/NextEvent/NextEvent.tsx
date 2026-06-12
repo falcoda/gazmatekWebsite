@@ -57,7 +57,9 @@ function NextEvent() {
                   />
                 </div>
                 <div className="archiveCardInfo">
-                  <h3 className="archiveCardName">{getEventTitle(event, language)}</h3>
+                  <h3 className="archiveCardName">
+                    {getEventTitle(event, language)}
+                  </h3>
                   <p className="archiveCardDate">
                     {formatDate(event.date, i18n.language)}
                   </p>

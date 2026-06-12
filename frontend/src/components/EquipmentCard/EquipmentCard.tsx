@@ -26,12 +26,7 @@ const EquipmentCard = ({ item }: EquipmentCardProps) => {
       aria-expanded={expanded}
     >
       <div className="image">
-        <img
-          src={item.image}
-          alt={item.name}
-          loading="lazy"
-          decoding="async"
-        />
+        <img src={item.image} alt={item.name} loading="lazy" decoding="async" />
       </div>
 
       <div className="body">
@@ -39,9 +34,7 @@ const EquipmentCard = ({ item }: EquipmentCardProps) => {
           {getLocalizedText(item.category, lang)}
         </span>
         <h3 className="name">{item.name}</h3>
-        <p className="summary">
-          {getLocalizedText(item.summary, lang)}
-        </p>
+        <p className="summary">{getLocalizedText(item.summary, lang)}</p>
       </div>
 
       {expanded && (
@@ -53,9 +46,7 @@ const EquipmentCard = ({ item }: EquipmentCardProps) => {
           )}
           {item.specs && item.specs.length > 0 ? (
             <dl className="specs">
-              <dt className="specsTitle">
-                {t("servicesPage.specsLabel")}
-              </dt>
+              <dt className="specsTitle">{t("servicesPage.specsLabel")}</dt>
               {item.specs.map((spec, idx) => (
                 <div key={idx} className="specRow">
                   <dt>{getLocalizedText(spec.label, lang)}</dt>
@@ -65,9 +56,7 @@ const EquipmentCard = ({ item }: EquipmentCardProps) => {
             </dl>
           ) : (
             !item.description && (
-              <p className="noSpecs">
-                {t("servicesPage.noSpecs")}
-              </p>
+              <p className="noSpecs">{t("servicesPage.noSpecs")}</p>
             )
           )}
         </div>

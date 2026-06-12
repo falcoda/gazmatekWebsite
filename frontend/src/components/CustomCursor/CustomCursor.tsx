@@ -104,7 +104,8 @@ const CustomCursor = () => {
     let lastTimestamp = 0;
 
     const tick = (timestamp: number) => {
-      const dt = lastTimestamp === 0 ? FRAME_DURATION_60 : timestamp - lastTimestamp;
+      const dt =
+        lastTimestamp === 0 ? FRAME_DURATION_60 : timestamp - lastTimestamp;
       lastTimestamp = timestamp;
 
       const coreAlpha = 1 - Math.pow(1 - 0.42, dt / FRAME_DURATION_60);
@@ -240,4 +241,3 @@ const CustomCursor = () => {
 };
 
 export default CustomCursor;
-

@@ -1,7 +1,7 @@
 import "./SearchBar.scss";
 
-import { FiSearch, FiX } from "react-icons/fi";
 import { useTranslation } from "react-i18next";
+import { FiSearch, FiX } from "react-icons/fi";
 
 interface SearchBarProps {
   value: string;

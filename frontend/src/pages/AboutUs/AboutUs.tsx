@@ -5,6 +5,7 @@ import { useTranslation } from "react-i18next";
 import SeoHead from "@/components/SeoHead/SeoHead";
 import { type AppLanguage } from "@/i18n/config";
 
+import heroImg from "../../assets/img/about-hero.jpg";
 import Container from "../../components/Container/Container";
 import Section from "../../components/Section/Section";
 import { ABOUT_SEO, COLLECTIVE_MANIFESTO } from "../../content/collective";
@@ -12,8 +13,6 @@ import { getLocalizedText } from "../../content/types";
 import MissionSection from "./MissionSection/MissionSection";
 import TeamSection from "./TeamSection/TeamSection";
 import TimelineSection from "./TimelineSection/TimelineSection";
-
-import heroImg from "../../assets/img/about-hero.jpg";
 
 const HERO_IMAGE = heroImg;
 

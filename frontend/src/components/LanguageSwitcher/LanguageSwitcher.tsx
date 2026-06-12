@@ -4,10 +4,11 @@ import { useTranslation } from "react-i18next";
 import { useLocation } from "react-router-dom";
 
 import useAnimatedNavigate from "@/hooks/useAnimatedNavigate";
+
 import {
+  type AppLanguage,
   DEFAULT_LANGUAGE,
   SUPPORTED_LANGUAGES,
-  type AppLanguage,
 } from "../../i18n/config";
 import { buildLocalizedPath, stripLanguagePrefix } from "../../i18n/routing";
 
@@ -61,4 +62,3 @@ const LanguageSwitcher = ({
 };
 
 export default LanguageSwitcher;
-

@@ -10,7 +10,10 @@ interface NavbarProps {
   mobileLangSwitcher?: ReactNode;
 }
 
-const Navbar: React.FC<NavbarProps> = ({ langSwitcher, mobileLangSwitcher }) => {
+const Navbar: React.FC<NavbarProps> = ({
+  langSwitcher,
+  mobileLangSwitcher,
+}) => {
   const { windowWidth } = useWindowWidth();
 
   return (

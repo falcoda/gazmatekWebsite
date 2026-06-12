@@ -43,7 +43,29 @@
       "WebFetch(domain:fonts.google.com)",
       "WebFetch(domain:gwfh.mranftl.com)",
       "Bash(curl -L \"https://fonts.gstatic.com/s/anton/v27/1Ptgg87LROyAm3Kz-C8.woff2\" -o frontend/src/assets/fonts/Anton-Regular.woff2)",
-      "Bash(curl -L \"https://fonts.gstatic.com/l/font?kit=1Ptgg87LROyAm3Kz-Ck&skey=3e16a04254d4c9b3&v=v27\" -o frontend/src/assets/fonts/Anton-Regular.woff)"
+      "Bash(curl -L \"https://fonts.gstatic.com/l/font?kit=1Ptgg87LROyAm3Kz-Ck&skey=3e16a04254d4c9b3&v=v27\" -o frontend/src/assets/fonts/Anton-Regular.woff)",
+      "Bash(grep -n \"^  {$\" /c/Users/mcnde/work/personal/gazmatekWebsite/frontend/src/content/events.ts)",
+      "WebFetch(domain:shotgun.live)",
+      "Bash(grep -n \"^  {$\\\\|slug:\" \"c:/Users/mcnde/work/personal/gazmatekWebsite/frontend/src/content/events.ts\")",
+      "Bash(node backend/scripts/generate-og-data.mjs)",
+      "Bash(npx ts-node:*)",
+      "Bash(curl -s -o /dev/null -w \"Status normal UA: %{http_code}\\\\n\" http://localhost:4001/fr/artists/cantik)",
+      "Bash(curl -s -A \"facebookexternalhit/1.1\" http://localhost:4001/fr/artists/cantik)",
+      "Bash(curl -s -A \"facebookexternalhit/1.1\" http://localhost:4001/fr/events/gazmatek-invite-alchimyst-infrabass)",
+      "Bash(curl -s -A \"Twitterbot/1.0\" http://localhost:4001/en/events/bodies-in-space-2026)",
+      "Bash(node_modules/.bin/ts-node --transpile-only src/index.ts)",
+      "Bash(curl -s -o /dev/null -w \"HTTP %{http_code}\\\\n\" http://localhost:4001/fr/artists/cantik)",
+      "Bash(curl -s -A \"Twitterbot/1.0\" http://localhost:4001/fr/events/gazmatek-invite-alchimyst-infrabass)",
+      "Bash(curl -s -A \"WhatsApp/2.0\" http://localhost:4001/en/events/bodies-in-space-2026)",
+      "Bash(node -e \"const d=JSON.parse\\(require\\('fs'\\).readFileSync\\('/dev/stdin','utf8'\\)\\); console.log\\('Artists:', d.artists.length, '| First:', d.artists[0]?.slug\\); console.log\\('Events:', d.events.length, '| First:', d.events[0]?.slug\\);\")",
+      "Bash(node -e \"const d=JSON.parse\\(require\\('fs'\\).readFileSync\\('c:/Users/mcnde/work/personal/gazmatekWebsite/backend/src/og-data.json','utf8'\\)\\); console.log\\('Artists:', d.artists.length, '| First slug:', d.artists[0]?.slug\\); console.log\\('Events:', d.events.length, '| First slug:', d.events[0]?.slug\\);\")",
+      "Bash(pkill -f \"ts-node.*index.ts\")",
+      "Read(//tmp/**)",
+      "Bash(netstat -ano)",
+      "Bash(taskkill //F //PID 11320)",
+      "Bash(curl -s -A \"Twitterbot/1.0\" http://localhost:4001/en/artists/albiovix)",
+      "Bash(curl -s -A \"WhatsApp/2.0\" http://localhost:4001/fr/events/gazmatek-invite-alchimyst-infrabass)",
+      "Bash(curl -s -A \"Discordbot/1.0\" http://localhost:4001/en/events/bodies-in-space-2026)"
     ]
   }
 }

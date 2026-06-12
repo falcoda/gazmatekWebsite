@@ -4,6 +4,7 @@ import { useTranslation } from "react-i18next";
 
 import { buildPagePath } from "@/config/pages";
 import type { ArtistProfile } from "@/content/artists";
+
 import useAnimatedNavigate from "../../../hooks/useAnimatedNavigate";
 
 interface ArtistCardProps {
@@ -57,9 +58,7 @@ const ArtistCard = ({ artist }: ArtistCardProps) => {
         </div>
       </div>
       <div className="info">
-        <h3 className="name">
-          {artist.name}
-        </h3>
+        <h3 className="name">{artist.name}</h3>
         <span className="style">{artist.styles.join(" / ")}</span>
         {shortBio && <p className="bio">{shortBio}</p>}
       </div>

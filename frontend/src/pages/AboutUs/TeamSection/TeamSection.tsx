@@ -33,11 +33,7 @@ const TeamSection: React.FC = () => {
 
   return (
     <Section className="teamSection">
-      <h2
-        className="sectionTitle"
-      >
-        {t("aboutUs.teamTitle")}
-      </h2>
+      <h2 className="sectionTitle">{t("aboutUs.teamTitle")}</h2>
       <div className="grid" ref={sectionRef}>
         {TEAM_MEMBERS.map((member) => (
           <div className="card" key={member.id}>
@@ -51,12 +47,8 @@ const TeamSection: React.FC = () => {
               />
             </div>
             <div className="info">
-              <h3 className="name">
-                {member.name}
-              </h3>
-              <p className="role">
-                {getLocalizedText(member.role, language)}
-              </p>
+              <h3 className="name">{member.name}</h3>
+              <p className="role">{getLocalizedText(member.role, language)}</p>
               {member.socials.length > 0 && (
                 <div className="socials">
                   {member.socials.map((social) => {

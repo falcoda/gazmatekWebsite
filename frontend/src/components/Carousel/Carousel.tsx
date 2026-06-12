@@ -83,7 +83,11 @@ const Carousel = ({ images, altPrefix, autoPlayMs = 5000 }: CarouselProps) => {
             <FaChevronRight />
           </button>
 
-          <div className="dots" role="tablist" aria-label={t("artists.galleryTitle")}>
+          <div
+            className="dots"
+            role="tablist"
+            aria-label={t("artists.galleryTitle")}
+          >
             {images.map((_, i) => (
               <button
                 key={i}

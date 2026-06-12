@@ -22,7 +22,9 @@ const STAGGER_GROUPS: StaggerGroup[] = [];
 const useScrollAnimation = (extraGroups: StaggerGroup[] = []) => {
   useEffect(() => {
     const fadeItems = gsap.utils.toArray<HTMLElement>(".fi");
-    const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    const prefersReducedMotion = window.matchMedia(
+      "(prefers-reduced-motion: reduce)",
+    ).matches;
 
     if (prefersReducedMotion) {
       fadeItems.forEach((el) => el.classList.add("vis"));
@@ -50,7 +52,13 @@ const useScrollAnimation = (extraGroups: StaggerGroup[] = []) => {
       });
 
       [...STAGGER_GROUPS, ...extraGroups].forEach(
-        ({ itemsSelector, triggerSelector, offsetY = 10, duration = 0.22, stagger = 0.03 }) => {
+        ({
+          itemsSelector,
+          triggerSelector,
+          offsetY = 10,
+          duration = 0.22,
+          stagger = 0.03,
+        }) => {
           const items = gsap.utils.toArray<HTMLElement>(itemsSelector);
           if (!items.length) return;
 

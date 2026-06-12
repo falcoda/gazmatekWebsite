@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import { useTranslation } from "react-i18next";
 
-import { LANGUAGE_STORAGE_KEY, type AppLanguage } from "./config";
+import { type AppLanguage, LANGUAGE_STORAGE_KEY } from "./config";
 
 function useSyncLanguage(language: AppLanguage | null) {
   const { i18n } = useTranslation();

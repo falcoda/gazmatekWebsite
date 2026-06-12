@@ -15,8 +15,8 @@ import {
   getEventTitle,
   getUpcomingEvents,
 } from "@/content/events";
-import { canUseRawDisplayFont } from "@/Utils/Typography/rawDisplay";
 import useAnimatedNavigate from "@/hooks/useAnimatedNavigate";
+import { canUseRawDisplayFont } from "@/Utils/Typography/rawDisplay";
 
 gsap.registerPlugin(ScrollTrigger);
 

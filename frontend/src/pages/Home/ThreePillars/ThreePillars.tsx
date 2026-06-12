@@ -36,16 +36,14 @@ function ThreePillars() {
   return (
     <section className="threePillars">
       <div className="threePillarsInner">
-        <h2 className="threePillarsSectionTitle">{t("pillars.sectionTitle")}</h2>
+        <h2 className="threePillarsSectionTitle">
+          {t("pillars.sectionTitle")}
+        </h2>
         <div className="threePillarsGrid">
           {pillars.map((pillar) => (
             <div key={pillar.path} className="pillarCard">
               <span className="pillarIcon">{pillar.icon}</span>
-              <h3
-                className="pillarTitle"
-              >
-                {t(pillar.titleKey)}
-              </h3>
+              <h3 className="pillarTitle">{t(pillar.titleKey)}</h3>
               <p className="pillarText">{t(pillar.textKey)}</p>
               <button
                 className="pillarCta"

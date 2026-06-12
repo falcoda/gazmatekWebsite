@@ -7,4 +7,3 @@ export const SITE_SHARE_IMAGE = `${SITE_URL}/shared-thumbnail.jpg`;
  * Set to false for a single-language app — standard routing is used instead.
  */
 export const I18N_ROUTING = true;
-

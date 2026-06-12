@@ -1,11 +1,12 @@
 import "./ArtistSpotlight.scss";
 
 import { useCallback, useRef, useState } from "react";
-import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 import { useTranslation } from "react-i18next";
+import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 
 import { buildPagePath } from "@/config/pages";
 import type { ArtistProfile } from "@/content/artists";
+
 import useAnimatedNavigate from "../../../hooks/useAnimatedNavigate";
 
 interface ArtistSpotlightProps {
@@ -42,9 +43,7 @@ const ArtistSpotlight = ({ artists }: ArtistSpotlightProps) => {
   return (
     <div className="artistSpotlight">
       <div className="spotlightHeader">
-        <h2 className="spotlightTitle">
-          {spotlightTitle}
-        </h2>
+        <h2 className="spotlightTitle">{spotlightTitle}</h2>
         <div className="spotlightArrows">
           <button
             className={`arrowBtn ${canScrollLeft ? "" : "arrowDisabled"}`}
@@ -107,12 +106,8 @@ const ArtistSpotlight = ({ artists }: ArtistSpotlightProps) => {
                 <span className="spotlightStyles">
                   {artist.styles.join(" · ")}
                 </span>
-                <h3 className="spotlightName">
-                  {artist.name}
-                </h3>
-                {shortBio && (
-                  <p className="spotlightBio">{shortBio}</p>
-                )}
+                <h3 className="spotlightName">{artist.name}</h3>
+                {shortBio && <p className="spotlightBio">{shortBio}</p>}
                 <span className="spotlightCta">{t("artists.discover")} →</span>
               </div>
             </button>

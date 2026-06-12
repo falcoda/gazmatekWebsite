@@ -3,16 +3,15 @@ import "./Services.scss";
 import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
 
-import { buildLocalizedPath } from "@/i18n/routing";
-
 import EquipmentCard from "@/components/EquipmentCard/EquipmentCard";
 import SeoHead from "@/components/SeoHead/SeoHead";
-import type { AppLanguage } from "@/i18n/config";
 import { PAGES } from "@/config/pages";
 import { EQUIPMENT_ITEMS, SERVICE_OFFERS } from "@/content/equipment";
 import { SERVICES_INTRO } from "@/content/site";
 import { getLocalizedText } from "@/content/types";
 import useScrollAnimation from "@/hooks/useScrollAnimation";
+import type { AppLanguage } from "@/i18n/config";
+import { buildLocalizedPath } from "@/i18n/routing";
 
 const Services = () => {
   const { i18n, t } = useTranslation();
@@ -65,7 +64,9 @@ const Services = () => {
         <div className="sectionHead">
           <p className="eyebrow">{t("servicesPage.equipmentEyebrow")}</p>
           <h2 className="sectionTitle">{t("servicesPage.equipmentTitle")}</h2>
-          <p className="sectionSubtitle">{t("servicesPage.equipmentSubtitle")}</p>
+          <p className="sectionSubtitle">
+            {t("servicesPage.equipmentSubtitle")}
+          </p>
         </div>
         <div className="equipmentGrid">
           {EQUIPMENT_ITEMS.map((item) => (

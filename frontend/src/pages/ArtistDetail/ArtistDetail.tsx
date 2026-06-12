@@ -14,10 +14,9 @@ import {
 } from "react-icons/fa";
 import { Navigate, useParams } from "react-router-dom";
 
-import { buildPagePath } from "@/config/pages";
-import { getArtistBySlug, type ArtistLinks } from "@/content/artists";
-
 import SeoHead from "@/components/SeoHead/SeoHead";
+import { buildPagePath } from "@/config/pages";
+import { type ArtistLinks, getArtistBySlug } from "@/content/artists";
 import type { AppLanguage } from "@/i18n/config";
 import { canUseRawDisplayFont } from "@/Utils/Typography/rawDisplay";
 

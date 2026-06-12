@@ -22,8 +22,8 @@ import {
   isEventPast,
 } from "@/content/events";
 import { getLocalizedText } from "@/content/types";
-import { canUseRawDisplayFont } from "@/Utils/Typography/rawDisplay";
 import useAnimatedNavigate from "@/hooks/useAnimatedNavigate";
+import { canUseRawDisplayFont } from "@/Utils/Typography/rawDisplay";
 
 const formatFullDate = (dateStr: string, locale: string): string => {
   const date = new Date(dateStr);

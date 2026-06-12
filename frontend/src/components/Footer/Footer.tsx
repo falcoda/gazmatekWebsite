@@ -4,6 +4,7 @@ import { useTranslation } from "react-i18next";
 import { FaSoundcloud, FaYoutube } from "react-icons/fa";
 
 import { buildPagePath } from "@/config/pages";
+
 import { Facebook, Instagram, Logo } from "../../assets/svg/svgIcons";
 import { SOCIAL_LINKS } from "../../config/socials";
 import useAnimatedNavigate from "../../hooks/useAnimatedNavigate";
@@ -83,4 +84,3 @@ const Footer = () => {
 };
 
 export default Footer;
-

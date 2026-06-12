@@ -3,6 +3,7 @@ import "./SoundCloudSection.scss";
 import { useTranslation } from "react-i18next";
 
 import { SOCIAL_LINKS } from "@/config/socials";
+
 import soundcloudBg from "../../../assets/img/soundcloud-bg.jpg";
 
 const SOUNDCLOUD_EMBED_URL = `https://w.soundcloud.com/player/?url=${encodeURIComponent(SOCIAL_LINKS.soundcloud)}&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=false`;

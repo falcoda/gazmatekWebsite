@@ -13,7 +13,8 @@ interface ConsentPreferences {
 }
 
 function pushConsentUpdate(prefs: ConsentPreferences) {
-  if (typeof window === "undefined" || typeof window.gtag !== "function") return;
+  if (typeof window === "undefined" || typeof window.gtag !== "function")
+    return;
   window.gtag("consent", "update", {
     analytics_storage: prefs.analytics,
     ad_storage: prefs.ads,
@@ -76,7 +77,12 @@ const CookieBanner = () => {
   if (!visible) return null;
 
   return (
-    <div className="cookieBanner" role="dialog" aria-modal="true" aria-label={t("cookieBanner.title")}>
+    <div
+      className="cookieBanner"
+      role="dialog"
+      aria-modal="true"
+      aria-label={t("cookieBanner.title")}
+    >
       <div className="cookieBannerInner">
         <h3 className="cookieBannerTitle">{t("cookieBanner.title")}</h3>
         <p className="cookieBannerBody">{t("cookieBanner.body")}</p>
@@ -91,7 +97,9 @@ const CookieBanner = () => {
               />
               <span className="cookieBannerOptionLabel">
                 <strong>{t("cookieBanner.analytics")}</strong>
-                <span className="cookieBannerOptionDesc">{t("cookieBanner.analyticsDesc")}</span>
+                <span className="cookieBannerOptionDesc">
+                  {t("cookieBanner.analyticsDesc")}
+                </span>
               </span>
             </label>
 
@@ -103,7 +111,9 @@ const CookieBanner = () => {
               />
               <span className="cookieBannerOptionLabel">
                 <strong>{t("cookieBanner.ads")}</strong>
-                <span className="cookieBannerOptionDesc">{t("cookieBanner.adsDesc")}</span>
+                <span className="cookieBannerOptionDesc">
+                  {t("cookieBanner.adsDesc")}
+                </span>
               </span>
             </label>
           </div>
@@ -112,10 +122,16 @@ const CookieBanner = () => {
         <div className="cookieBannerActions">
           {customizing ? (
             <>
-              <button className="cookieBannerBtn cookieBannerBtnSecondary" onClick={handleRejectAll}>
+              <button
+                className="cookieBannerBtn cookieBannerBtnSecondary"
+                onClick={handleRejectAll}
+              >
                 {t("cookieBanner.rejectAll")}
               </button>
-              <button className="cookieBannerBtn cookieBannerBtnPrimary" onClick={handleSaveCustom}>
+              <button
+                className="cookieBannerBtn cookieBannerBtnPrimary"
+                onClick={handleSaveCustom}
+              >
                 {t("cookieBanner.savePreferences")}
               </button>
             </>
@@ -127,10 +143,16 @@ const CookieBanner = () => {
               >
                 {t("cookieBanner.customize")}
               </button>
-              <button className="cookieBannerBtn cookieBannerBtnSecondary" onClick={handleRejectAll}>
+              <button
+                className="cookieBannerBtn cookieBannerBtnSecondary"
+                onClick={handleRejectAll}
+              >
                 {t("cookieBanner.rejectAll")}
               </button>
-              <button className="cookieBannerBtn cookieBannerBtnPrimary" onClick={handleAcceptAll}>
+              <button
+                className="cookieBannerBtn cookieBannerBtnPrimary"
+                onClick={handleAcceptAll}
+              >
                 {t("cookieBanner.acceptAll")}
               </button>
             </>

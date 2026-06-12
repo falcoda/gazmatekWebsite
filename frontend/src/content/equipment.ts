@@ -6,6 +6,7 @@ import nexoAlphaB115Image from "@/assets/img/equipment/nexo-alpha-b1-15.jpg";
 import nuq122AnImage from "@/assets/img/equipment/nuq122-an.jpg";
 import plm20000qImage from "@/assets/img/equipment/plm20000q.jpg";
 import turbosoundTpx122mImage from "@/assets/img/equipment/turbosound-tpx122m.jpg";
+
 import { createLocalizedText, type LocalizedText } from "./types";
 
 export interface ServiceOffer {
@@ -227,4 +228,3 @@ export const EQUIPMENT_ITEMS: EquipmentItem[] = [
     ),
   },
 ];
-

@@ -49,7 +49,9 @@ const EventsHub = () => {
       return;
     }
 
-    const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    const reduceMotion = window.matchMedia(
+      "(prefers-reduced-motion: reduce)",
+    ).matches;
 
     if (reduceMotion) return;
 

@@ -78,10 +78,7 @@ export const MISSION_SECTION = {
       ),
     },
     {
-      title: createLocalizedText(
-        "Scenographie profonde",
-        "Deep scenography",
-      ),
+      title: createLocalizedText("Scenographie profonde", "Deep scenography"),
       description: createLocalizedText(
         "Entre decoration unique, prestation artistique live, light show dynamique, notre collectif met l'accent sur l'ambiance de nos evenements.",
         "Between unique decoration, live artistic performance, and dynamic light shows, our collective puts the emphasis on the atmosphere of our events.",

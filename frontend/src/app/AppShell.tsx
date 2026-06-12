@@ -60,4 +60,3 @@ function AppShell({ children, language }: AppShellProps) {
 }
 
 export default AppShell;
-

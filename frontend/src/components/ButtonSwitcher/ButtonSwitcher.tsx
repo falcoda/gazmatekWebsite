@@ -6,7 +6,7 @@ type AcceptableTypes = ButtonSwitcherValue;
 
 interface ButtonSwitcherProps {
   value: AcceptableTypes;
-  setValue: React.Dispatch<React.SetStateAction<any>>;
+  setValue: React.Dispatch<React.SetStateAction<ButtonSwitcherValue>>;
   datas: AcceptableTypes[];
   className?: string;
   localStorageKey?: string;

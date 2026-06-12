@@ -65,9 +65,7 @@ function FeaturedArtists() {
               />
             </div>
             <div className="artistCardInfo">
-              <h3 className="artistCardName">
-                {artist.name}
-              </h3>
+              <h3 className="artistCardName">{artist.name}</h3>
               <p className="artistCardStyle">{artist.styles.join(" / ")}</p>
             </div>
           </button>

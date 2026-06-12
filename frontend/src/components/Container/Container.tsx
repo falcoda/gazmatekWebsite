@@ -1,6 +1,6 @@
-import './Container.scss';
+import "./Container.scss";
 
-import React, {forwardRef} from 'react';
+import React, { forwardRef } from "react";
 
 export interface ContainerProps {
   className?: string;
@@ -9,14 +9,14 @@ export interface ContainerProps {
 }
 
 const Container = forwardRef<HTMLDivElement, ContainerProps>(
-  ({className, children, style}, ref) => {
+  ({ className, children, style }, ref) => {
     return (
-      <div ref={ref} className={`container ${className ?? ''}`} style={style}>
+      <div ref={ref} className={`container ${className ?? ""}`} style={style}>
         {children}
       </div>
     );
   },
 );
 
-Container.displayName = 'Container';
+Container.displayName = "Container";
 export default Container;

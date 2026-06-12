@@ -15,7 +15,12 @@ function formatMessage(tag: LogTag, message: string): string {
   return `[${tag}] ${message}`;
 }
 
-function log(level: LogLevel, tag: LogTag, message: string, ...args: unknown[]) {
+function log(
+  level: LogLevel,
+  tag: LogTag,
+  message: string,
+  ...args: unknown[]
+) {
   if (!isDev && level === "debug") return;
 
   const formatted = formatMessage(tag, message);
