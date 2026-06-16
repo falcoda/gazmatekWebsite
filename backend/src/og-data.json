@@ -81,14 +81,6 @@
       "imageKey": "src/assets/img/artists/fuzzey.jpg"
     },
     {
-      "slug": "g-little",
-      "titleFr": "G-LITTLE — Gazmatek",
-      "titleEn": "G-LITTLE — Gazmatek",
-      "descFr": "G-Little, artiste résident du collectif Gazmatek.",
-      "descEn": "G-Little, resident artist of the Gazmatek collective.",
-      "imageKey": "src/assets/img/artists/g-little.jpg"
-    },
-    {
       "slug": "kemikal-crow",
       "titleFr": "KEMIKAL CROW — Gazmatek",
       "titleEn": "KEMIKAL CROW — Gazmatek",
@@ -588,3 +580,4 @@
     }
   ]
 }
+

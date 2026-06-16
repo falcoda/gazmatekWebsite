@@ -10,7 +10,6 @@ import electromancienPhoto from "@/assets/img/artists/electromancien.jpg";
 import etatZeroPhoto from "@/assets/img/artists/etat-zero.jpg";
 import exil3Photo from "@/assets/img/artists/exil3.jpg";
 import fuzzeyPhoto from "@/assets/img/artists/fuzzey.jpg";
-import gLittlePhoto from "@/assets/img/artists/g-little.jpg";
 import kemikalCrowPhoto from "@/assets/img/artists/kemical-crow.jpg";
 import kromozomPhoto from "@/assets/img/artists/kromozom.jpg";
 import lemmaPhoto from "@/assets/img/artists/lemma.jpg";
@@ -405,27 +404,6 @@ export const ARTISTS: ArtistProfile[] = [
       },
     },
     source: "Fuzzey Bio + Link.pdf",
-    status: "needs-cleanup",
-  },
-
-  // ── G-Little ──────────────────────────────────────────────────────────────
-  {
-    id: "g-little",
-    slug: "g-little",
-    name: "G-LITTLE",
-    isResident: true,
-    styles: ["Tekno"],
-    images: { portrait: gLittlePhoto },
-    links: { soundcloud: "https://soundcloud.com/g-little" },
-    bio: {},
-    seo: {
-      title: { fr: "G-LITTLE — Gazmatek", en: "G-LITTLE — Gazmatek" },
-      description: {
-        fr: "G-Little, artiste résident du collectif Gazmatek.",
-        en: "G-Little, resident artist of the Gazmatek collective.",
-      },
-    },
-    source: "Bio_artistes.pdf",
     status: "needs-cleanup",
   },
 

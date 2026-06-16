@@ -27,7 +27,6 @@ Updated: 2026-04-12
 | ETAT ZERO          | needs-cleanup | —        | —       | —        | —       | —        | Bio_artistes.pdf            |
 | EX!L3              | needs-cleanup | —        | —       | —        | —       | —        | Bio_artistes.pdf            |
 | FUZZEY             | needs-cleanup | ✓        | ✓       | ✓        | ✓       | —        | Fuzzey Bio + Link.pdf       |
-| G-LITTLE           | needs-cleanup | —        | —       | —        | —       | —        | Bio_artistes.pdf            |
 | KEMIKAL CROW       | pages-blocked | ✓        | ✓       | ✓        | ✓       | —        | Bio_artistes.pdf + .pages   |
 | KROMOZOM           | needs-cleanup | —        | —       | —        | —       | —        | All links and contacts.docx |
 | LEMMA              | needs-cleanup | —        | —       | —        | —       | —        | Bio_artistes.pdf            |

@@ -136,7 +136,6 @@ Artist folders currently present:
 - `Ex!l3`
 - `Fuzzey`
 - `Ganjaflexx`
-- `G-little`
 - `kemical crow`
 - `Kromozom`
 - `Lemma`
