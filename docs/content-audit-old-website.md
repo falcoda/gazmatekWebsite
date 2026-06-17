@@ -103,7 +103,6 @@ Visible member/collaborator assets include:
 - Abyssal production
 - Flavier Derville
 - LSB Visual
-- Ni plus ni moins
 - Aeriv
 
 ### Events

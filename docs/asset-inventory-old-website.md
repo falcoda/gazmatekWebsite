@@ -193,7 +193,6 @@ Detected items:
 - `Flavier_derville_vidéaste.jpg`
 - `logo quedal photo.png`
 - `lsb_visual_vidéaste.JPG`
-- `Ni_plus_ni_moins.jpg`
 
 Recommended use:
 

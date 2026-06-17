@@ -3,7 +3,6 @@ import aerivImage from "../assets/img/team/aeriv/aeriv-portrait.jpg";
 import alexImage from "../assets/img/team/alex.jpg";
 import flavienImage from "../assets/img/team/flavien.jpg";
 import lsbImage from "../assets/img/team/lsb-visual.jpg";
-import niPlusNiMoinsImage from "../assets/img/team/ni-plus-ni-moins.jpg";
 import terapeutekImage from "../assets/img/team/terapeutek.jpg";
 import { createLocalizedText, type LocalizedText } from "./types";
 
@@ -246,22 +245,6 @@ export const TEAM_MEMBERS: TeamMember[] = [
       {
         platform: "instagram",
         url: "https://www.instagram.com/lsb_visual/",
-      },
-    ],
-  },
-  {
-    id: "ni-plus-ni-moins",
-    name: "Ni Plus Ni Moins",
-    role: createLocalizedText("Peintre live", "Live painter"),
-    summary: createLocalizedText(
-      "Interventions visuelles live pendant les soirees.",
-      "Live visual interventions during events.",
-    ),
-    image: niPlusNiMoinsImage,
-    socials: [
-      {
-        platform: "instagram",
-        url: "https://www.instagram.com/niplus.nimoins/",
       },
     ],
   },
