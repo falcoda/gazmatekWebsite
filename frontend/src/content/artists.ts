@@ -7,6 +7,9 @@ import cantikPhoto from "@/assets/img/artists/cantik.jpg";
 import ecleptixPhoto from "@/assets/img/artists/ecleptix.jpg";
 import ekwazzPhoto from "@/assets/img/artists/ekwazz.jpg";
 import electromancienPhoto from "@/assets/img/artists/electromancien.jpg";
+import epidemieGallery01 from "@/assets/img/artists/epidemie/epidemie-01.jpg";
+import epidemieGallery02 from "@/assets/img/artists/epidemie/epidemie-02.jpg";
+import epidemiePortraitPhoto from "@/assets/img/artists/epidemie/epidemie-portrait.jpg";
 import etatZeroPhoto from "@/assets/img/artists/etat-zero.jpg";
 import exil3Photo from "@/assets/img/artists/exil3.jpg";
 import fuzzeyPhoto from "@/assets/img/artists/fuzzey.jpg";
@@ -326,6 +329,39 @@ export const ARTISTS: ArtistProfile[] = [
     },
     source: "Bio_artistes.pdf",
     status: "needs-cleanup",
+  },
+
+  // ── Epidemie ──────────────────────────────────────────────────────────────
+  {
+    id: "epidemie",
+    slug: "epidemie",
+    name: "EPIDEMIE",
+    isResident: true,
+    styles: ["Acidcore", "Hard Trance", "Acid"],
+    images: {
+      portrait: epidemiePortraitPhoto,
+      gallery: [epidemiePortraitPhoto, epidemieGallery01, epidemieGallery02],
+    },
+    links: {},
+    bio: {
+      short: {
+        fr: "Producteur et DJ belge originaire de la région de Gand, Epidemie est une figure emblématique de la scène underground européenne. Plongé dans le virus de l'acid, il s'est fait connaître par un usage virtuose et puissant de la TB-303, fusionnant acidcore et hard-trance. Signé sur le label OBS.CUR, il forme aussi le projet Subway Shamans avec Mr Gasmask.",
+        en: "A Belgian producer and DJ from the Ghent area, Epidemie is a leading figure of the European underground scene. Caught by the acid virus, he made his name through a virtuosic, powerful use of the TB-303, fusing acidcore and hard-trance. Signed to the OBS.CUR label, he also forms the Subway Shamans project with Mr Gasmask.",
+      },
+      full: {
+        fr: "Producteur et DJ belge, Epidemie est une figure emblématique de la scène underground européenne. Plongé dans le virus de l'acid à Gand, il s'est fait connaître grâce à une utilisation virtuose et puissante de la célèbre machine TB-303, fusionnant habilement l'acidcore et la hard-trance.\nNatif de la région de Gand, Epidemie (parfois typographié @Epidemie303) compose et produit sa musique depuis 2009. Son style, qualifié d'acidcore hybride, se distingue par une énergie débordante, des lignes de basse lourdes et des mélodies psychédéliques.\nIl intègre rapidement le prestigieux label OBS.CUR, qui regroupe les figures de proue du genre. Il s'associe également au célèbre producteur belge Mr Gasmask pour former Subway Shamans, un projet hybride très populaire. Fort de son talent, il enchaîne les prestations et les sets explosifs lors de grands événements et de free parties à travers l'Europe.",
+        en: "A Belgian producer and DJ, Epidemie is an iconic figure of the European underground scene. Caught by the acid virus in Ghent, he made his name through a virtuosic, powerful use of the famous TB-303 machine, skilfully fusing acidcore and hard-trance.\nA native of the Ghent region, Epidemie (sometimes styled @Epidemie303) has been writing and producing his music since 2009. His sound, described as hybrid acidcore, stands out for its overflowing energy, heavy basslines and psychedelic melodies.\nHe quickly joined the prestigious OBS.CUR label, home to the genre's leading figures. He also teamed up with renowned Belgian producer Mr Gasmask to form Subway Shamans, a hugely popular hybrid project. Driven by his talent, he strings together explosive performances and sets at major events and free parties across Europe.",
+      },
+    },
+    seo: {
+      title: { fr: "EPIDEMIE — Gazmatek", en: "EPIDEMIE — Gazmatek" },
+      description: {
+        fr: "Epidemie, producteur et DJ belge d'acidcore et de hard-trance, virtuose de la TB-303 et membre du label OBS.CUR.",
+        en: "Epidemie, Belgian acidcore and hard-trance producer and DJ, a TB-303 virtuoso and OBS.CUR label member.",
+      },
+    },
+    source: "User-provided bio (2026-06-30)",
+    status: "ready",
   },
 
   // ── Etat Zero ─────────────────────────────────────────────────────────────
