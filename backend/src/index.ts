@@ -10,6 +10,7 @@ import helmet from "helmet";
 import path from "path";
 
 import { botMiddleware } from "./middleware/botMiddleware";
+import { redirectMiddleware } from "./middleware/redirectMiddleware";
 
 const expressStaticGzip = require("express-static-gzip");
 
@@ -67,6 +68,9 @@ app.use(
     // referrerPolicy: { policy: "same-origin" },
   }),
 );
+
+// Canonical redirects: legacy aliases, missing lang prefix, trailing slashes
+app.use(redirectMiddleware);
 
 // Bot middleware: serves OG meta tags to social media crawlers
 app.use(botMiddleware);

@@ -7,7 +7,8 @@
   "author": "Dallenogare Corentin",
   "scripts": {
     "dev": "vite --host",
-    "build": "tsc && vite build",
+    "build": "node scripts/generate-sitemap.mjs && tsc && vite build",
+    "generate-sitemap": "node scripts/generate-sitemap.mjs",
     "preview": "vite preview",
     "test": "npx cypress run",
     "lint": "eslint --fix **/*.{ts,tsx}"

@@ -14,7 +14,14 @@ interface SeoHeadProps {
 
 const SeoHead = ({ title, description, language, image }: SeoHeadProps) => {
   const location = useLocation();
-  const canonicalUrl = new URL(location.pathname, SITE_URL).toString();
+  const rawPagePath = stripLanguagePrefix(location.pathname);
+  // Strip trailing slashes so URL variants declare the same canonical
+  const pagePath =
+    rawPagePath === "/" ? rawPagePath : rawPagePath.replace(/\/+$/, "");
+  const canonicalUrl = new URL(
+    buildLocalizedPath(language, pagePath),
+    SITE_URL,
+  ).toString();
 
   // Convert image to absolute URL for Facebook sharing
   const shareImage = image
@@ -23,7 +30,6 @@ const SeoHead = ({ title, description, language, image }: SeoHeadProps) => {
       : new URL(image, SITE_URL).toString()
     : SITE_SHARE_IMAGE;
 
-  const pagePath = stripLanguagePrefix(location.pathname);
   const frUrl = new URL(
     buildLocalizedPath("fr", pagePath),
     SITE_URL,

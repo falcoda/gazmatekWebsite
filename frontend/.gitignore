@@ -23,3 +23,6 @@ dist-ssr
 *.sln
 *.sw?
 build-frontend
+
+# Generated at build time by scripts/generate-sitemap.mjs
+public/sitemap.xml
