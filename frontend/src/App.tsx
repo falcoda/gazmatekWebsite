@@ -161,6 +161,15 @@ function LocalizedApp() {
           element={<LegacyEventDetailRedirect language={currentLanguage} />}
         />
         <Route
+          path={LEGACY_ROUTE_ALIASES.services}
+          element={
+            <Navigate
+              to={buildLocalizedPath(currentLanguage, PAGES.services)}
+              replace
+            />
+          }
+        />
+        <Route
           path={LEGACY_ROUTE_ALIASES.terms}
           element={
             <Navigate

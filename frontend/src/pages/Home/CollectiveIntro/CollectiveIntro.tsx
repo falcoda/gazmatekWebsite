@@ -2,7 +2,8 @@ import "./CollectiveIntro.scss";
 
 import { useTranslation } from "react-i18next";
 
-import useAnimatedNavigate from "../../../hooks/useAnimatedNavigate";
+import { PAGES } from "@/config/pages";
+import useAnimatedNavigate from "@/hooks/useAnimatedNavigate";
 
 function CollectiveIntro() {
   const { t } = useTranslation();
@@ -17,7 +18,7 @@ function CollectiveIntro() {
         <button
           className="collectiveIntroCta"
           type="button"
-          onClick={() => animatedNavigate("/qui-sommes-nous")}
+          onClick={() => animatedNavigate(PAGES.about)}
         >
           {t("collectiveIntro.cta")}
         </button>

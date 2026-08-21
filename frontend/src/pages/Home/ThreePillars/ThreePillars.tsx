@@ -3,7 +3,8 @@ import "./ThreePillars.scss";
 import { useTranslation } from "react-i18next";
 import { FaCalendarAlt, FaHeadphones, FaSlidersH } from "react-icons/fa";
 
-import useAnimatedNavigate from "../../../hooks/useAnimatedNavigate";
+import { PAGES } from "@/config/pages";
+import useAnimatedNavigate from "@/hooks/useAnimatedNavigate";
 
 function ThreePillars() {
   const { t } = useTranslation();
@@ -15,21 +16,21 @@ function ThreePillars() {
       titleKey: "pillars.events.title",
       textKey: "pillars.events.text",
       ctaKey: "pillars.events.cta",
-      path: "/evenements",
+      path: PAGES.events,
     },
     {
       icon: <FaHeadphones />,
       titleKey: "pillars.artists.title",
       textKey: "pillars.artists.text",
       ctaKey: "pillars.artists.cta",
-      path: "/artistes",
+      path: PAGES.artists,
     },
     {
       icon: <FaSlidersH />,
       titleKey: "pillars.services.title",
       textKey: "pillars.services.text",
       ctaKey: "pillars.services.cta",
-      path: "/location",
+      path: PAGES.services,
     },
   ];
 

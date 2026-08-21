@@ -90,6 +90,7 @@ export const LEGACY_ROUTE_ALIASES = {
   eventUpcoming: "next-events",
   eventArchive: "archives",
   eventDetail: "evenement/:slug",
+  services: "location",
   terms: "termes-dutilisation",
 } as const;
 

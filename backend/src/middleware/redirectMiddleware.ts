@@ -12,6 +12,7 @@ const LEGACY_SEGMENT_MAP: Record<string, string> = {
   "qui-sommes-nous": "about",
   artistes: "artists",
   evenements: "events",
+  location: "services",
   "next-events": "events/upcoming",
   archives: "events/archive",
 };

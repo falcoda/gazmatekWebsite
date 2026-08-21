@@ -5,6 +5,8 @@ import { useEffect, useRef } from "react";
 import { useTranslation } from "react-i18next";
 import { FaChevronDown } from "react-icons/fa";
 
+import { PAGES } from "@/config/pages";
+
 import heroBg from "../../../assets/img/hero/hero-bg.jpg";
 import { Logo } from "../../../assets/svg/svgIcons";
 import useAnimatedNavigate from "../../../hooks/useAnimatedNavigate";
@@ -63,7 +65,7 @@ function Hero() {
             <button
               className="heroCta primary"
               type="button"
-              onClick={() => animatedNavigate("/evenements")}
+              onClick={() => animatedNavigate(PAGES.events)}
             >
               {t("hero.ctaPrimary")}
             </button>
