@@ -50,10 +50,10 @@
     },
     {
       "slug": "electromancien",
-      "titleFr": "EPIDEMIE — Gazmatek",
-      "titleEn": "EPIDEMIE — Gazmatek",
-      "descFr": "Epidemie, producteur et DJ belge d'acidcore et de hard-trance, virtuose de la TB-303 et membre du label OBS.CUR.",
-      "descEn": "Epidemie, Belgian acidcore and hard-trance producer and DJ, a TB-303 virtuoso and OBS.CUR label member.",
+      "titleFr": "L'ELECTROMANCIEN — Gazmatek",
+      "titleEn": "L'ELECTROMANCIEN — Gazmatek",
+      "descFr": "L'Electromancien, artiste bruxellois de tekno, frenchcore et IDM, résident chez Gazmatek.",
+      "descEn": "L'Electromancien, Brussels tekno, frenchcore and IDM artist, resident at Gazmatek.",
       "imageKey": "src/assets/img/artists/electromancien.jpg"
     },
     {
@@ -250,10 +250,10 @@
     },
     {
       "slug": "tekiapy-mobitekk",
-      "titleFr": "TERAPEUTEK — Gazmatek",
-      "titleEn": "TERAPEUTEK — Gazmatek",
-      "descFr": "Terapeutek, co-fondateur de Gazmatek Sound System et DJ vinyle de Tribe et Hardtek, actif depuis les années 2000.",
-      "descEn": "Terapeutek, co-founder of Gazmatek Sound System and vinyl DJ of Tribe and Hardtek, active since the early 2000s.",
+      "titleFr": "TEKIAPY & MOBITEKK — Gazmatek",
+      "titleEn": "TEKIAPY & MOBITEKK — Gazmatek",
+      "descFr": "Tekiapy & Mobitekk, duo de la scène tekno underground, résidents chez Gazmatek.",
+      "descEn": "Tekiapy & Mobitekk, underground tekno duo, residents at Gazmatek.",
       "imageKey": "src/assets/img/artists/tekiapy-mobitekk.jpg"
     },
     {
@@ -368,7 +368,7 @@
       "titleEn": "Synapse Sonorised By Gazmatek | Gazmatek",
       "descFr": "Archive Gazmatek du 29 mars 2024 issue du dossier legacy Synapse Sonorised By.",
       "descEn": "Gazmatek archive for March 29, 2024 sourced from the legacy Synapse Sonorised By folder.",
-      "imageKey": "src/assets/img/events/halloween-bday-party/poster.png"
+      "imageKey": null
     },
     {
       "slug": "halloween-bday-party",

@@ -54,6 +54,32 @@ function buildImportMap(content: string): Map<string, string> {
   return map;
 }
 
+/**
+ * Splits file content into one block per entry, each running from its own
+ * `slug:` declaration up to the start of the next one.
+ *
+ * Scanning a fixed-size window instead lets a lazy `[\s\S]*?` run past the
+ * end of the current entry: if a field does not match inside its own block
+ * the regex silently continues into the following entry and returns *its*
+ * values. That is how several artists ended up publishing another artist's
+ * name and description in their OG tags. Bounding each block makes that
+ * class of bug impossible rather than unlikely.
+ */
+function blocksBySlug(content: string): { slug: string; block: string }[] {
+  const slugPattern = /slug:\s*"([^"]+)"/g;
+  const found: { slug: string; index: number }[] = [];
+  let m: RegExpExecArray | null;
+
+  while ((m = slugPattern.exec(content)) !== null) {
+    found.push({ slug: m[1], index: m.index });
+  }
+
+  return found.map(({ slug, index }, i) => ({
+    slug,
+    block: content.slice(index, found[i + 1]?.index ?? content.length),
+  }));
+}
+
 // ---------------------------------------------------------------------------
 // Artists
 // ---------------------------------------------------------------------------
@@ -61,34 +87,28 @@ function buildImportMap(content: string): Map<string, string> {
 function parseArtists(content: string): OgEntry[] {
   const importMap = buildImportMap(content);
   const artists: OgEntry[] = [];
-  const slugPattern = /slug:\s*"([^"]+)"/g;
-  let slugMatch: RegExpExecArray | null;
+  const unparsed: string[] = [];
 
-  while ((slugMatch = slugPattern.exec(content)) !== null) {
-    const slug = slugMatch[1];
-    const window = content.slice(slugMatch.index, slugMatch.index + 6000);
-
+  for (const { slug, block } of blocksBySlug(content)) {
     // seo: { title: { fr: "...", en: "..." }, description: { fr: "...", en: "..." } }
+    // Prettier keeps the title inline when it is short but wraps it across
+    // lines once it grows, which adds a trailing comma after the `en` value —
+    // hence the optional comma before the closing brace.
     const seoPattern =
-      /seo:\s*\{[\s\S]*?title:\s*\{\s*fr:\s*"([^"]*)",\s*en:\s*"([^"]*)"\s*\}[\s\S]*?description:\s*\{[\s\S]*?fr:\s*"([^"]*)",[\s\S]*?en:\s*"([^"]*)"/;
-    const seoMatch = seoPattern.exec(window);
+      /seo:\s*\{[\s\S]*?title:\s*\{\s*fr:\s*"([^"]*)",\s*en:\s*"([^"]*)",?\s*\}[\s\S]*?description:\s*\{[\s\S]*?fr:\s*"([^"]*)",[\s\S]*?en:\s*"([^"]*)"/;
+    const seoMatch = seoPattern.exec(block);
 
-    if (!seoMatch) continue;
+    if (!seoMatch) {
+      unparsed.push(slug);
+      continue;
+    }
 
-    // images: { portrait: someVarName } — search only within the first 500
-    // chars after the slug (stays inside the current artist's block)
+    // images: { portrait: someVarName }
     let imageKey: string | null = null;
-    const nearWindow = window.slice(0, 500);
-    const imagesStart = nearWindow.indexOf("images:");
+    const portraitVarMatch = /images:\s*\{[\s\S]*?portrait:\s*(\w+)/.exec(block);
 
-    if (imagesStart !== -1) {
-      const imagesSection = window.slice(imagesStart, imagesStart + 300);
-      const portraitVarMatch = /portrait:\s*(\w+)/.exec(imagesSection);
-
-      if (portraitVarMatch) {
-        const varName = portraitVarMatch[1];
-        imageKey = importMap.get(varName) ?? null;
-      }
+    if (portraitVarMatch) {
+      imageKey = importMap.get(portraitVarMatch[1]) ?? null;
     }
 
     artists.push({
@@ -101,6 +121,13 @@ function parseArtists(content: string): OgEntry[] {
     });
   }
 
+  if (unparsed.length > 0) {
+    throw new Error(
+      `Could not parse seo block for ${unparsed.length} artist(s): ${unparsed.join(", ")}. ` +
+        `Fix the parser or the entry — skipping them silently would publish missing or wrong OG metadata.`
+    );
+  }
+
   return artists;
 }
 
@@ -110,24 +137,23 @@ function parseArtists(content: string): OgEntry[] {
 
 function parseEvents(content: string): OgEntry[] {
   const events: OgEntry[] = [];
-  const slugPattern = /slug:\s*"([^"]+)"/g;
-  let slugMatch: RegExpExecArray | null;
+  const unparsed: string[] = [];
 
-  while ((slugMatch = slugPattern.exec(content)) !== null) {
-    const slug = slugMatch[1];
-    const window = content.slice(slugMatch.index, slugMatch.index + 8000);
-
+  for (const { slug, block } of blocksBySlug(content)) {
     // seo: createEventSeo("titleFr", "titleEn", "descFr", "descEn")
     const seoPattern =
       /seo:\s*createEventSeo\(\s*"([^"]*)"\s*,\s*"([^"]*)"\s*,\s*"([^"]*)"\s*,\s*"([^"]*)"/;
-    const seoMatch = seoPattern.exec(window);
+    const seoMatch = seoPattern.exec(block);
 
-    if (!seoMatch) continue;
+    if (!seoMatch) {
+      unparsed.push(slug);
+      continue;
+    }
 
     // poster: createEventMedia("events-relative-path/poster.ext", ...)
     // The path in createEventMedia is relative inside assets/img/events/
     const posterPattern = /poster:\s*createEventMedia\(\s*"([^"]+)"/;
-    const posterMatch = posterPattern.exec(window);
+    const posterMatch = posterPattern.exec(block);
     const imageKey = posterMatch
       ? `src/assets/img/events/${posterMatch[1]}`
       : null;
@@ -140,6 +166,13 @@ function parseEvents(content: string): OgEntry[] {
       descEn: seoMatch[4],
       imageKey,
     });
+  }
+
+  if (unparsed.length > 0) {
+    throw new Error(
+      `Could not parse seo block for ${unparsed.length} event(s): ${unparsed.join(", ")}. ` +
+        `Fix the parser or the entry — skipping them silently would publish missing or wrong OG metadata.`
+    );
   }
 
   return events;
@@ -174,4 +207,26 @@ console.log(`✓ og-data.json: ${artists.length} artists, ${events.length} event
 const noImage = artists.filter((a) => !a.imageKey);
 if (noImage.length > 0) {
   console.log(`  ℹ ${noImage.length} artists without portrait (will use default image): ${noImage.map((a) => a.slug).join(", ")}`);
+}
+
+// An artist's OG title must name that artist. This is the symptom that a
+// parser bug leaked another entry's fields into this one — previously
+// /electromancien and /tekiapy-mobitekk shipped a different artist's name and
+// bio to every social crawler. Warn rather than throw: a deliberately
+// reworded title is legitimate, a borrowed one never is.
+const namesBySlug = new Map(
+  blocksBySlug(artistsContent).map(({ slug, block }) => [
+    slug,
+    /name:\s*"([^"]*)"/.exec(block)?.[1],
+  ])
+);
+const borrowedName = artists.filter((a) => {
+  const name = namesBySlug.get(a.slug);
+
+  return name ? !a.titleFr.startsWith(name) : false;
+});
+if (borrowedName.length > 0) {
+  console.warn(
+    `  ⚠ ${borrowedName.length} artist(s) whose OG title does not start with their own name — check for cross-entry leakage: ${borrowedName.map((a) => `${a.slug} → "${a.titleFr}"`).join(", ")}`
+  );
 }
