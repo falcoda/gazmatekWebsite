@@ -3,6 +3,8 @@ on:
   push:
     branches:
       - main
+  # Manual run: rebuilds and redeploys everything, regardless of what changed.
+  workflow_dispatch:
 
 jobs:
   check-changes:
@@ -15,14 +17,47 @@ jobs:
     steps:
       - uses: actions/checkout@v3
         with:
-          fetch-depth: 2
+          # Full history: the diff base can be several commits back when a
+          # push carries more than one commit.
+          fetch-depth: 0
+
+      - name: Resolve diff base
+        id: diff-base
+        run: |
+          # A push can contain several commits, so the deploy has to look at
+          # the whole pushed range. Diffing HEAD~1 only sees the last commit:
+          # a frontend commit followed by a backend-only commit reported the
+          # frontend as unchanged and skipped its deploy entirely, leaving the
+          # pushed frontend changes off production.
+          #
+          # "all" means "build everything" — used for manual runs, the first
+          # commit of a branch, and any case where the base is unavailable
+          # (force-push, deleted history) so we redeploy rather than skip.
+          before="${{ github.event.before }}"
+          if [ "${{ github.event_name }}" != "push" ]; then
+            echo "base=all" >> $GITHUB_OUTPUT
+          elif [ -z "$before" ] || [ "$before" = "0000000000000000000000000000000000000000" ]; then
+            echo "base=all" >> $GITHUB_OUTPUT
+          elif ! git cat-file -e "$before^{commit}" 2>/dev/null; then
+            echo "base=all" >> $GITHUB_OUTPUT
+          else
+            echo "base=$before" >> $GITHUB_OUTPUT
+          fi
+
+      - name: Show changed files
+        run: |
+          if [ "${{ steps.diff-base.outputs.base }}" = "all" ]; then
+            echo "Building everything (no usable diff base)."
+          else
+            git diff --name-only ${{ steps.diff-base.outputs.base }} ${{ github.sha }}
+          fi
 
       - name: Detect backend changes
         id: detect-backend
         run: |
-          if [ $(git rev-list --count HEAD) -eq 1 ]; then
+          if [ "${{ steps.diff-base.outputs.base }}" = "all" ]; then
             echo "changed=true" >> $GITHUB_OUTPUT
-          elif git diff --name-only HEAD~1 | grep '^backend/'; then
+          elif git diff --name-only ${{ steps.diff-base.outputs.base }} ${{ github.sha }} | grep '^backend/'; then
             echo "changed=true" >> $GITHUB_OUTPUT
           else
             echo "changed=false" >> $GITHUB_OUTPUT
@@ -31,9 +66,9 @@ jobs:
       - name: Detect frontend changes
         id: detect-frontend
         run: |
-          if [ $(git rev-list --count HEAD) -eq 1 ]; then
+          if [ "${{ steps.diff-base.outputs.base }}" = "all" ]; then
             echo "changed=true" >> $GITHUB_OUTPUT
-          elif git diff --name-only HEAD~1 | grep '^frontend/'; then
+          elif git diff --name-only ${{ steps.diff-base.outputs.base }} ${{ github.sha }} | grep '^frontend/'; then
             echo "changed=true" >> $GITHUB_OUTPUT
           else
             echo "changed=false" >> $GITHUB_OUTPUT
@@ -42,9 +77,9 @@ jobs:
       - name: Detect docker changes
         id: detect-docker
         run: |
-          if [ $(git rev-list --count HEAD) -eq 1 ]; then
+          if [ "${{ steps.diff-base.outputs.base }}" = "all" ]; then
             echo "changed=true" >> $GITHUB_OUTPUT
-          elif git diff --name-only HEAD~1 | grep '^docker/'; then
+          elif git diff --name-only ${{ steps.diff-base.outputs.base }} ${{ github.sha }} | grep '^docker/'; then
             echo "changed=true" >> $GITHUB_OUTPUT
           else
             echo "changed=false" >> $GITHUB_OUTPUT
@@ -53,9 +88,9 @@ jobs:
       - name: Detect OG content changes
         id: detect-og
         run: |
-          if [ $(git rev-list --count HEAD) -eq 1 ]; then
+          if [ "${{ steps.diff-base.outputs.base }}" = "all" ]; then
             echo "changed=true" >> $GITHUB_OUTPUT
-          elif git diff --name-only HEAD~1 | grep -E '^frontend/src/content/(artists|events)\.ts$'; then
+          elif git diff --name-only ${{ steps.diff-base.outputs.base }} ${{ github.sha }} | grep -E '^frontend/src/content/(artists|events)\.ts$'; then
             echo "changed=true" >> $GITHUB_OUTPUT
           else
             echo "changed=false" >> $GITHUB_OUTPUT
