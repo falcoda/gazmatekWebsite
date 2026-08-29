@@ -50,11 +50,19 @@
     },
     {
       "slug": "electromancien",
-      "titleFr": "ETAT ZERO — Gazmatek",
-      "titleEn": "ETAT ZERO — Gazmatek",
-      "descFr": "Etat Zero, artiste résident du collectif Gazmatek.",
-      "descEn": "Etat Zero, resident artist of the Gazmatek collective.",
+      "titleFr": "EPIDEMIE — Gazmatek",
+      "titleEn": "EPIDEMIE — Gazmatek",
+      "descFr": "Epidemie, producteur et DJ belge d'acidcore et de hard-trance, virtuose de la TB-303 et membre du label OBS.CUR.",
+      "descEn": "Epidemie, Belgian acidcore and hard-trance producer and DJ, a TB-303 virtuoso and OBS.CUR label member.",
       "imageKey": "src/assets/img/artists/electromancien.jpg"
+    },
+    {
+      "slug": "epidemie",
+      "titleFr": "EPIDEMIE — Gazmatek",
+      "titleEn": "EPIDEMIE — Gazmatek",
+      "descFr": "Epidemie, producteur et DJ belge d'acidcore et de hard-trance, virtuose de la TB-303 et membre du label OBS.CUR.",
+      "descEn": "Epidemie, Belgian acidcore and hard-trance producer and DJ, a TB-303 virtuoso and OBS.CUR label member.",
+      "imageKey": "src/assets/img/artists/epidemie/epidemie-portrait.jpg"
     },
     {
       "slug": "etat-zero",
@@ -126,7 +134,7 @@
       "titleEn": "MIXSAJ — Gazmatek",
       "descFr": "Mixsaj, artiste basee a Bruxelles aux racines bosniaques, mele techno, hard trance et hard bounce dans une energie intense, dynamique et hypnotique.",
       "descEn": "Mixsaj, Brussels-based artist with Bosnian roots, blends techno, hard trance and hard bounce into an intense, hypnotic energy.",
-      "imageKey": null
+      "imageKey": "src/assets/img/artists/mixsaj.jpg"
     },
     {
       "slug": "mobykick",
@@ -580,4 +588,3 @@
     }
   ]
 }
-

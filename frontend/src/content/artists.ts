@@ -18,6 +18,9 @@ import kromozomPhoto from "@/assets/img/artists/kromozom.jpg";
 import lemmaPhoto from "@/assets/img/artists/lemma.jpg";
 import mevenPhoto from "@/assets/img/artists/meven.jpg";
 import minopolskaPhoto from "@/assets/img/artists/minopolska.jpg";
+import mixsajPhoto from "@/assets/img/artists/mixsaj.jpg";
+import mixsajGallery01 from "@/assets/img/artists/mixsaj/mixsaj-01.jpg";
+import mixsajPortraitPhoto from "@/assets/img/artists/mixsaj/mixsaj-portrait.jpg";
 import mobykickPhoto from "@/assets/img/artists/mobykick.jpg";
 import moracidPhoto from "@/assets/img/artists/moracid.jpg";
 import nxGallery02 from "@/assets/img/artists/n-x/n-x-02.jpg";
@@ -581,7 +584,10 @@ export const ARTISTS: ArtistProfile[] = [
     isResident: true,
     gender: "f",
     styles: ["Techno", "Hard Trance", "Hard Bounce", "Acid"],
-    images: {},
+    images: {
+      portrait: mixsajPhoto,
+      gallery: [mixsajPhoto, mixsajPortraitPhoto, mixsajGallery01],
+    },
     links: {
       soundcloud: "https://soundcloud.com/user-874330690",
     },
