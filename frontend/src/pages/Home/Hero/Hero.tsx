@@ -5,12 +5,11 @@ import { useEffect, useRef } from "react";
 import { useTranslation } from "react-i18next";
 import { FaChevronDown } from "react-icons/fa";
 
+import heroBg from "@/assets/img/hero/hero-bg.jpg";
+import { Logo } from "@/assets/svg/svgIcons";
 import { PAGES } from "@/config/pages";
-
-import heroBg from "../../../assets/img/hero/hero-bg.jpg";
-import { Logo } from "../../../assets/svg/svgIcons";
-import useAnimatedNavigate from "../../../hooks/useAnimatedNavigate";
-import useAnimation from "../../../hooks/useAnimation";
+import useAnimatedNavigate from "@/hooks/useAnimatedNavigate";
+import useAnimation from "@/hooks/useAnimation";
 
 function Hero() {
   const { t } = useTranslation();
