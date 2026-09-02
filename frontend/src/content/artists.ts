@@ -459,6 +459,7 @@ export const ARTISTS: ArtistProfile[] = [
       soundcloud: "https://soundcloud.com/fuzzeysound",
       instagram: "https://www.instagram.com/fuzzey_303/",
       facebook: "https://www.facebook.com/FUZZEYsound",
+      website: "https://lnk.bio/Fuzzey",
     },
     bio: {
       short: {
