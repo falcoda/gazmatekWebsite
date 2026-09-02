@@ -7,12 +7,16 @@ import cantikPhoto from "@/assets/img/artists/cantik.jpg";
 import ecleptixPhoto from "@/assets/img/artists/ecleptix.jpg";
 import ekwazzPhoto from "@/assets/img/artists/ekwazz.jpg";
 import electromancienPhoto from "@/assets/img/artists/electromancien.jpg";
+import emergencyGallery01 from "@/assets/img/artists/emergency/emergency-01.jpg";
+import emergencyPortraitPhoto from "@/assets/img/artists/emergency/emergency-portrait.jpg";
 import epidemieGallery01 from "@/assets/img/artists/epidemie/epidemie-01.jpg";
 import epidemieGallery02 from "@/assets/img/artists/epidemie/epidemie-02.jpg";
 import epidemiePortraitPhoto from "@/assets/img/artists/epidemie/epidemie-portrait.jpg";
 import etatZeroPhoto from "@/assets/img/artists/etat-zero.jpg";
 import exil3Photo from "@/assets/img/artists/exil3.jpg";
-import fuzzeyPhoto from "@/assets/img/artists/fuzzey.jpg";
+import fuzzeyGallery01 from "@/assets/img/artists/fuzzey/fuzzey-01.jpg";
+import fuzzeyGallery02 from "@/assets/img/artists/fuzzey/fuzzey-02.jpg";
+import fuzzeyPortraitPhoto from "@/assets/img/artists/fuzzey/fuzzey-portrait.jpg";
 import kemikalCrowPhoto from "@/assets/img/artists/kemical-crow.jpg";
 import kromozomPhoto from "@/assets/img/artists/kromozom.jpg";
 import lemmaPhoto from "@/assets/img/artists/lemma.jpg";
@@ -334,6 +338,34 @@ export const ARTISTS: ArtistProfile[] = [
     status: "needs-cleanup",
   },
 
+  // ── Emergency ─────────────────────────────────────────────────────────────
+  // TODO: bio (fr/en) to be provided by the client — update seo.description too
+  {
+    id: "emergency",
+    slug: "emergency",
+    name: "EMERGENCY",
+    isResident: true,
+    gender: "f",
+    styles: ["Hard Bounce"],
+    images: {
+      portrait: emergencyPortraitPhoto,
+      gallery: [emergencyPortraitPhoto, emergencyGallery01],
+    },
+    links: {
+      instagram: "https://www.instagram.com/emergency_bounce",
+    },
+    bio: {},
+    seo: {
+      title: { fr: "EMERGENCY — Gazmatek", en: "EMERGENCY — Gazmatek" },
+      description: {
+        fr: "Emergency, artiste résidente du collectif Gazmatek.",
+        en: "Emergency, resident artist of the Gazmatek collective.",
+      },
+    },
+    source: "User-provided photos (2026-09-02)",
+    status: "needs-cleanup",
+  },
+
   // ── Epidemie ──────────────────────────────────────────────────────────────
   {
     id: "epidemie",
@@ -418,32 +450,35 @@ export const ARTISTS: ArtistProfile[] = [
     slug: "fuzzey",
     name: "FUZZEY",
     isResident: true,
-    styles: ["Multi-genre"],
-    images: { portrait: fuzzeyPhoto },
+    styles: ["Acidcore", "Hardcore"],
+    images: {
+      portrait: fuzzeyPortraitPhoto,
+      gallery: [fuzzeyPortraitPhoto, fuzzeyGallery01, fuzzeyGallery02],
+    },
     links: {
       soundcloud: "https://soundcloud.com/fuzzeysound",
-      instagram: "https://www.instagram.com/fuzzey_studio",
+      instagram: "https://www.instagram.com/fuzzey_303/",
       facebook: "https://www.facebook.com/FUZZEYsound",
     },
     bio: {
       short: {
-        fr: "Artiste indépendant multi-instrumentiste, Fuzzey compose dans plusieurs styles différents. Il est également leader, compositeur et producteur du groupe GLITCHH.",
-        en: "An independent multi-instrumentalist, Fuzzey composes across several different styles. He is also the leader, composer and producer of the group GLITCHH.",
+        fr: "Artiste multi-instrumentiste issu du milieu rock et metal, Fuzzey compose ses propres morceaux dans plusieurs styles différents. Il découvre l'acidcore à 19 ans lors de sa première free party et en fait l'un de ses styles de prédilection. Il est aussi leader, compositeur et producteur du groupe de metal GLITCHH.",
+        en: "A multi-instrumentalist artist from a rock and metal background, Fuzzey writes his own tracks across several different styles, rooted in the raw, intense energy of acidcore — a genre he discovered at 19 during his first free party. He is also the leader, composer and producer of the metal band GLITCHH.",
       },
       full: {
-        fr: "Artiste indépendant multi-instrumentiste qui compose des compositions originales dans plusieurs styles différents. Fuzzey est également le leader, compositeur et producteur du groupe GLITCHH.",
-        en: "An independent multi-instrumentalist who composes original compositions across several different styles. Fuzzey is also the leader, composer and producer of the group GLITCHH.",
+        fr: "Fuzzey est un artiste multi-instrumentiste qui compose ses propres morceaux dans plusieurs styles différents. Issu du milieu rock et metal, il est également leader, compositeur et producteur du groupe de metal GLITCHH.\nÀ l'âge de 19 ans, il découvre, lors de sa première free party, l'un de ses styles de prédilection : l'acidcore.",
+        en: "Fuzzey is a multi-instrumentalist artist, composer and producer whose music is deeply rooted in the raw and intense energy of acidcore. Drawing from his background in rock and metal, he blends different influences and styles to create his own distinctive sound.\nHe is also the leader, composer and producer of the metal band GLITCHH.\nAt the age of 19, during his first free party, Fuzzey discovered acidcore — a genre that quickly became one of his main artistic influences and a defining part of his musical identity.",
       },
     },
     seo: {
       title: { fr: "FUZZEY — Gazmatek", en: "FUZZEY — Gazmatek" },
       description: {
-        fr: "Fuzzey, multi-instrumentiste et producteur du groupe GLITCHH, résident chez Gazmatek.",
-        en: "Fuzzey, multi-instrumentalist and producer of the group GLITCHH, resident at Gazmatek.",
+        fr: "Fuzzey, multi-instrumentiste acidcore et hardcore issu du rock et du metal, leader et producteur du groupe GLITCHH, résident chez Gazmatek.",
+        en: "Fuzzey, acidcore and hardcore multi-instrumentalist from a rock and metal background, leader and producer of the band GLITCHH, resident at Gazmatek.",
       },
     },
-    source: "Fuzzey Bio + Link.pdf",
-    status: "needs-cleanup",
+    source: "User-provided bio (2026-09-02)",
+    status: "ready",
   },
 
   // ── Kemikal Crow ──────────────────────────────────────────────────────────

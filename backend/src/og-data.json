@@ -57,6 +57,14 @@
       "imageKey": "src/assets/img/artists/electromancien.jpg"
     },
     {
+      "slug": "emergency",
+      "titleFr": "EMERGENCY — Gazmatek",
+      "titleEn": "EMERGENCY — Gazmatek",
+      "descFr": "Emergency, artiste résidente du collectif Gazmatek.",
+      "descEn": "Emergency, resident artist of the Gazmatek collective.",
+      "imageKey": "src/assets/img/artists/emergency/emergency-portrait.jpg"
+    },
+    {
       "slug": "epidemie",
       "titleFr": "EPIDEMIE — Gazmatek",
       "titleEn": "EPIDEMIE — Gazmatek",
@@ -84,9 +92,9 @@
       "slug": "fuzzey",
       "titleFr": "FUZZEY — Gazmatek",
       "titleEn": "FUZZEY — Gazmatek",
-      "descFr": "Fuzzey, multi-instrumentiste et producteur du groupe GLITCHH, résident chez Gazmatek.",
-      "descEn": "Fuzzey, multi-instrumentalist and producer of the group GLITCHH, resident at Gazmatek.",
-      "imageKey": "src/assets/img/artists/fuzzey.jpg"
+      "descFr": "Fuzzey, multi-instrumentiste acidcore et hardcore issu du rock et du metal, leader et producteur du groupe GLITCHH, résident chez Gazmatek.",
+      "descEn": "Fuzzey, acidcore and hardcore multi-instrumentalist from a rock and metal background, leader and producer of the band GLITCHH, resident at Gazmatek.",
+      "imageKey": "src/assets/img/artists/fuzzey/fuzzey-portrait.jpg"
     },
     {
       "slug": "kemikal-crow",
