@@ -37,7 +37,9 @@ const Artistes: React.FC = () => {
   }, [searchQuery]);
 
   useEffect(() => {
-    if (!gridRef.current) return;
+    const grid = gridRef.current;
+
+    if (!grid) return;
 
     const reduceMotion = window.matchMedia(
       "(prefers-reduced-motion: reduce)",
@@ -45,28 +47,30 @@ const Artistes: React.FC = () => {
 
     if (reduceMotion) return;
 
-    const cards = gridRef.current.querySelectorAll(".artistCard");
-
-    gsap.fromTo(
-      cards,
-      { y: 60, opacity: 0 },
-      {
-        y: 0,
-        opacity: 1,
-        duration: 0.6,
-        stagger: 0.08,
-        ease: "power2.out",
-        scrollTrigger: {
-          trigger: gridRef.current,
-          start: "top 85%",
-          once: true,
+    // Scoped to this grid on purpose: the cleanup used to call
+    // ScrollTrigger.getAll().kill(), which also killed the triggers owned by
+    // other components, so every keystroke in the search field silently
+    // disabled the rest of the page's scroll animations.
+    const context = gsap.context(() => {
+      gsap.fromTo(
+        ".artistCard",
+        { y: 60, opacity: 0 },
+        {
+          y: 0,
+          opacity: 1,
+          duration: 0.6,
+          stagger: 0.08,
+          ease: "power2.out",
+          scrollTrigger: {
+            trigger: grid,
+            start: "top 85%",
+            once: true,
+          },
         },
-      },
-    );
+      );
+    }, grid);
 
-    return () => {
-      ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
-    };
+    return () => context.revert();
   }, [filteredArtists]);
 
   return (
