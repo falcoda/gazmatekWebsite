@@ -339,7 +339,6 @@ export const ARTISTS: ArtistProfile[] = [
   },
 
   // ── Emergency ─────────────────────────────────────────────────────────────
-  // TODO: bio (fr/en) to be provided by the client — update seo.description too
   {
     id: "emergency",
     slug: "emergency",
@@ -354,16 +353,25 @@ export const ARTISTS: ArtistProfile[] = [
     links: {
       instagram: "https://www.instagram.com/emergency_bounce",
     },
-    bio: {},
+    bio: {
+      short: {
+        fr: "Jeune artiste bruxelloise active dans l'événementiel, co-organisatrice de La Cambre By Night depuis 2022 et fondatrice du collectif VAKɅRM en 2024. Musicienne depuis l'adolescence, elle se retrouve dans le Bounce et la Hard House, des styles lumineux et pleins d'énergie.",
+        en: "Young Brussels artist active in the events scene, co-organiser of La Cambre By Night since 2022 and founder of the VAKɅRM collective in 2024. A musician since her teenage years, she found her place in Bounce and Hard House, bright and high-energy styles.",
+      },
+      full: {
+        fr: "EMERGENCY est une jeune artiste bruxelloise active dans le monde de l'événementiel. Depuis 2022, elle est co-organisatrice de La Cambre By Night et, en 2024, elle a fondé le collectif VAKɅRM. Passionnée de musique depuis l'adolescence, elle joue du piano, de divers instruments, et utilise sa voix comme un instrument à part entière. Sa découverte du monde de la rave l'a profondément marquée et, au fil du temps, elle s'est reconnue dans le Bounce et la Hard House, des styles lumineux et pleins d'énergie qui incarnent sa vision artistique.",
+        en: "EMERGENCY is a young Brussels artist active in the world of events. Since 2022, she has been co-organiser of La Cambre By Night and in 2024 she founded the VAKɅRM collective. Passionate about music since her teenage years, she plays the piano, various instruments, and uses her voice as an instrument in its own right. Her discovery of the rave world left a deep impression on her, and over time she connected with Bounce and Hard House, bright and high-energy styles that embody her artistic vision.",
+      },
+    },
     seo: {
       title: { fr: "EMERGENCY — Gazmatek", en: "EMERGENCY — Gazmatek" },
       description: {
-        fr: "Emergency, artiste résidente du collectif Gazmatek.",
-        en: "Emergency, resident artist of the Gazmatek collective.",
+        fr: "Emergency, jeune artiste bruxelloise de Bounce et Hard House, fondatrice du collectif VAKɅRM et résidente chez Gazmatek.",
+        en: "Emergency, young Brussels Bounce and Hard House artist, founder of the VAKɅRM collective and resident at Gazmatek.",
       },
     },
-    source: "User-provided photos (2026-09-02)",
-    status: "needs-cleanup",
+    source: "User-provided bio and photos (2026-09-03)",
+    status: "ready",
   },
 
   // ── Epidemie ──────────────────────────────────────────────────────────────
