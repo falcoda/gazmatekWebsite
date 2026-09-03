@@ -59,8 +59,20 @@
     display: flex;
     gap: 20px;
     overflow-x: auto;
-    overflow-y: visible;
-    scroll-snap-type: x mandatory;
+    // Not "visible": next to overflow-x: auto the spec computes it to auto,
+    // which turned the strip into a nested vertical scroller that swallowed
+    // touch gestures. hidden keeps a single scroll axis; the 8px padding
+    // above still leaves room for the card's -4px hover lift.
+    overflow-y: hidden;
+    // "proximity", never "mandatory": the cards load their images lazily, so
+    // mandatory snapping kept force-scrolling the strip onto a card as each
+    // image arrived. Those forced scrolls ate the first taps anywhere on the
+    // page — a touch starting during an active scroll never becomes a click —
+    // which is why the search field below needed several tries right after a
+    // page load, then behaved once the images had settled.
+    scroll-snap-type: x proximity;
+    // Keep the strip's own scrolling from chaining to the page
+    overscroll-behavior-x: contain;
     scrollbar-width: none;
     margin-top: -8px;
     padding-top: 8px;

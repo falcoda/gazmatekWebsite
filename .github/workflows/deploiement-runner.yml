@@ -156,7 +156,11 @@ jobs:
       - name: Move frontend build to shared directory
         run: |
           mkdir -p /tmp/shared/PROD/${{ github.event.repository.name }}/frontend-build
-          cp -R frontend/build/* /tmp/shared/PROD/${{ github.event.repository.name }}/frontend-build
+          # "dir/." and not "dir/*": the glob skips dotfiles, which silently
+          # dropped build/.vite/manifest.json. botMiddleware needs that manifest
+          # to resolve artist/event images to their hashed filenames, so without
+          # it every social share fell back to the generic thumbnail.
+          cp -R frontend/build/. /tmp/shared/PROD/${{ github.event.repository.name }}/frontend-build
 
   deploy-backend:
     runs-on: [self-hosted, gazmatek]
@@ -199,7 +203,8 @@ jobs:
       - name: Copy frontend build from shared directory
         run: |
           REPO_PATH="$HOME/PROD-${{ github.event.repository.name }}"
-          cp -R /tmp/shared/PROD/${{ github.event.repository.name }}/frontend-build/* "$REPO_PATH/build"
+          # "dir/." so .vite/manifest.json is carried over (see build-frontend)
+          cp -R /tmp/shared/PROD/${{ github.event.repository.name }}/frontend-build/. "$REPO_PATH/build"
 
   cleanup:
     runs-on: [self-hosted, gazmatek]
