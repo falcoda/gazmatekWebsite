@@ -4,6 +4,7 @@ import { useCallback, useRef, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 
+import { ARTIST_FALLBACK_IMAGE } from "@/config/artistFallback";
 import { buildPagePath } from "@/config/pages";
 import type { ArtistProfile } from "@/content/artists";
 
@@ -12,8 +13,6 @@ import useAnimatedNavigate from "../../../hooks/useAnimatedNavigate";
 interface ArtistSpotlightProps {
   artists: ArtistProfile[];
 }
-
-const PLACEHOLDER = "https://placehold.co/480x560/141416/8b8b8b?text=";
 
 const ArtistSpotlight = ({ artists }: ArtistSpotlightProps) => {
   const { t, i18n } = useTranslation();
@@ -91,12 +90,11 @@ const ArtistSpotlight = ({ artists }: ArtistSpotlightProps) => {
             >
               <div className="spotlightImgWrap">
                 <img
-                  src={
-                    artist.images.portrait ??
-                    `${PLACEHOLDER}${encodeURIComponent(artist.name)}`
-                  }
+                  src={artist.images.portrait ?? ARTIST_FALLBACK_IMAGE}
                   alt={artist.name}
-                  className="spotlightImg"
+                  className={`spotlightImg${
+                    artist.images.portrait ? "" : " spotlightImgFallback"
+                  }`}
                   loading="lazy"
                   decoding="async"
                 />

@@ -18,6 +18,13 @@
       opacity: 0.18;
       filter: blur(2px) scale(1.04);
       transform-origin: center;
+
+      // See ArtistCard.scss: the logo fallback is contained, not cropped —
+      // covering here would blow one glyph up across the whole backdrop.
+      &.heroImageFallback {
+        object-fit: contain;
+        padding: 6%;
+      }
     }
 
     .heroOverlay {
@@ -107,6 +114,15 @@
       height: 100%;
       object-fit: cover;
       object-position: top center;
+
+      // See ArtistCard.scss: the logo fallback is contained, not cropped.
+      &.heroPortraitFallback {
+        object-fit: contain;
+        object-position: center;
+        padding: 22%;
+        background: $materials-color;
+        opacity: 0.4;
+      }
     }
   }
 

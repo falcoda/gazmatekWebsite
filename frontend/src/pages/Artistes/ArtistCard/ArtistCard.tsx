@@ -2,6 +2,7 @@ import "./ArtistCard.scss";
 
 import { useTranslation } from "react-i18next";
 
+import { ARTIST_FALLBACK_IMAGE } from "@/config/artistFallback";
 import { buildPagePath } from "@/config/pages";
 import type { ArtistProfile } from "@/content/artists";
 
@@ -11,16 +12,13 @@ interface ArtistCardProps {
   artist: ArtistProfile;
 }
 
-const PLACEHOLDER_PHOTO = "https://placehold.co/400x400/141416/8b8b8b?text=";
-
 const ArtistCard = ({ artist }: ArtistCardProps) => {
   const { t, i18n } = useTranslation();
   const animatedNavigate = useAnimatedNavigate();
   const lang = i18n.resolvedLanguage ?? "fr";
 
-  const photoSrc =
-    artist.images.portrait ||
-    `${PLACEHOLDER_PHOTO}${encodeURIComponent(artist.name)}`;
+  const photoSrc = artist.images.portrait || ARTIST_FALLBACK_IMAGE;
+  const isFallbackPhoto = !artist.images.portrait;
 
   const shortBio = artist.bio.short
     ? lang === "en"
@@ -49,7 +47,7 @@ const ArtistCard = ({ artist }: ArtistCardProps) => {
         <img
           src={photoSrc}
           alt={artist.name}
-          className="image"
+          className={`image${isFallbackPhoto ? " imageFallback" : ""}`}
           loading="lazy"
           decoding="async"
         />

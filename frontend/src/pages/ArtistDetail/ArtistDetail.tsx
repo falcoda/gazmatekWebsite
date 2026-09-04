@@ -15,6 +15,7 @@ import {
 import { Navigate, useParams } from "react-router-dom";
 
 import SeoHead from "@/components/SeoHead/SeoHead";
+import { ARTIST_FALLBACK_IMAGE } from "@/config/artistFallback";
 import { buildPagePath } from "@/config/pages";
 import { type ArtistLinks, getArtistBySlug } from "@/content/artists";
 import type { AppLanguage } from "@/i18n/config";
@@ -24,8 +25,6 @@ import Container from "../../components/Container/Container";
 import Section from "../../components/Section/Section";
 import useAnimatedNavigate from "../../hooks/useAnimatedNavigate";
 import ArtistGallery from "./ArtistGallery/ArtistGallery";
-
-const PLACEHOLDER_HERO = "https://placehold.co/1920x800/141416/8b8b8b?text=";
 
 const LINK_ICONS: Record<keyof ArtistLinks, React.ReactNode> = {
   soundcloud: <FaSoundcloud />,
@@ -84,9 +83,8 @@ const ArtistDetail: React.FC = () => {
     return <Navigate to=".." relative="path" replace />;
   }
 
-  const heroSrc =
-    artist.images.portrait ||
-    `${PLACEHOLDER_HERO}${encodeURIComponent(artist.name)}`;
+  const heroSrc = artist.images.portrait || ARTIST_FALLBACK_IMAGE;
+  const isFallbackHero = !artist.images.portrait;
 
   const linkEntries = artist.links
     ? (Object.entries(artist.links) as [keyof ArtistLinks, string][]).filter(
@@ -130,7 +128,7 @@ const ArtistDetail: React.FC = () => {
           <img
             src={heroSrc}
             alt={artist.name}
-            className="heroImage"
+            className={`heroImage${isFallbackHero ? " heroImageFallback" : ""}`}
             loading="eager"
             fetchPriority="high"
             decoding="async"
@@ -150,7 +148,9 @@ const ArtistDetail: React.FC = () => {
             <img
               src={heroSrc}
               alt={artist.name}
-              className="heroPortrait"
+              className={`heroPortrait${
+                isFallbackHero ? " heroPortraitFallback" : ""
+              }`}
               loading="eager"
               decoding="async"
             />

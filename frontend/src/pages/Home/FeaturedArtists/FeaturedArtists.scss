@@ -82,6 +82,14 @@
       transition:
         filter $medium-animation,
         transform $medium-animation;
+
+      // See ArtistCard.scss: the logo fallback is contained, not cropped.
+      &.artistCardImgFallback {
+        object-fit: contain;
+        padding: 22%;
+        background: $materials-color;
+        opacity: 0.4;
+      }
     }
   }
 

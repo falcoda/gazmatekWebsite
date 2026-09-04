@@ -8,8 +8,15 @@
   font-family: $default-font-family;
   height: 100%;
   width: 100%;
+  // "clip" rather than "hidden", and no overflow-y at all: either one makes
+  // this element a scroll container, which silently disables position: sticky
+  // for everything inside it (the pinned search field on the artists page).
+  // The document is what actually scrolls here — .App resolves to height auto
+  // and never scrolled on its own — so overflow-y: auto only had that side
+  // effect. clip suppresses the horizontal overflow without creating a scroll
+  // container; hidden stays as the fallback for browsers that predate clip.
   overflow-x: hidden;
-  overflow-y: auto;
+  overflow-x: clip;
 
   // mix-blend-mode: difference;
 }

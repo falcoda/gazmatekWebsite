@@ -2,6 +2,7 @@ import "./FeaturedArtists.scss";
 
 import { useTranslation } from "react-i18next";
 
+import { ARTIST_FALLBACK_IMAGE } from "@/config/artistFallback";
 import { buildPagePath } from "@/config/pages";
 import { ARTISTS } from "@/content/artists";
 
@@ -54,12 +55,11 @@ function FeaturedArtists() {
           >
             <div className="artistCardPhoto">
               <img
-                src={
-                  artist.images.portrait ??
-                  `https://placehold.co/400x500/141416/21c37a?text=${encodeURIComponent(artist.name)}`
-                }
+                src={artist.images.portrait ?? ARTIST_FALLBACK_IMAGE}
                 alt={artist.name}
-                className="artistCardImg"
+                className={`artistCardImg${
+                  artist.images.portrait ? "" : " artistCardImgFallback"
+                }`}
                 loading="lazy"
                 decoding="async"
               />

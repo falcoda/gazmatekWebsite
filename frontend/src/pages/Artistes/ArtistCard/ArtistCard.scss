@@ -34,6 +34,16 @@
     height: 100%;
     object-fit: cover;
     transition: transform 0.4s ease;
+
+    // Artist without a portrait yet: the Gazmatek logo stands in. It is a
+    // tall transparent glyph, so it has to be contained and inset rather than
+    // cropped to fill like a real photo.
+    &.imageFallback {
+      object-fit: contain;
+      padding: 22%;
+      background: $materials-color;
+      opacity: 0.4;
+    }
   }
 
   .overlay {

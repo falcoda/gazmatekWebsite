@@ -50,7 +50,10 @@ html {
   // which is why refreshing looked like the page glided onto an artist photo,
   // and it silently turned every scrollTo({ behavior: "auto" }) into an
   // animated one, since "auto" defers to this property.
+  // "clip" rather than "hidden" — see App.scss: hidden turns the root into a
+  // scroll container and breaks position: sticky below it.
   overflow-x: hidden;
+  overflow-x: clip;
   background-color: $primary-color;
 }
 

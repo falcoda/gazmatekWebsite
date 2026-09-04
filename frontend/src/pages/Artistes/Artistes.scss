@@ -49,6 +49,23 @@
       margin-bottom: 28px;
       flex-wrap: wrap;
 
+      // Pinned on touch screens. The grid makes this page ~20 000px tall, so
+      // one ordinary flick travels ~3 000px — well past the field, which sits
+      // at ~1 000px — and the page then coasts for ~1.7s. A tap landing in
+      // that window is spent stopping the fling and never becomes a click, so
+      // reaching the field meant flicking back and forth and tapping three
+      // times. Keeping it on screen removes the hunt entirely.
+      @include maxScreen($breakpoint-md-3) {
+        position: sticky;
+        top: 0;
+        z-index: 20;
+        // Opaque: cards scroll underneath it.
+        background: $primary-color;
+        padding-top: $padding-xs;
+        padding-bottom: $padding-xs;
+        margin-bottom: 20px;
+      }
+
       @include maxScreen($breakpoint-sm) {
         flex-direction: column;
         align-items: flex-start;
