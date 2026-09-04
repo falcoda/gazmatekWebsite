@@ -45,7 +45,11 @@
 }
 
 html {
-  scroll-behavior: smooth;
+  // No `scroll-behavior: smooth` — see the note in _reset.scss. Beyond the
+  // touch-focus problem it also animated the scroll restoration on reload,
+  // which is why refreshing looked like the page glided onto an artist photo,
+  // and it silently turned every scrollTo({ behavior: "auto" }) into an
+  // animated one, since "auto" defers to this property.
   overflow-x: hidden;
   background-color: $primary-color;
 }

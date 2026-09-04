@@ -77,14 +77,20 @@ const CookieBanner = () => {
   if (!visible) return null;
 
   return (
+    // A region, not a modal dialog. The banner never blocks the page: it sits
+    // at the bottom, traps no focus, and the site stays usable with consent
+    // denied. Declaring role="dialog" + aria-modal="true" told assistive tech
+    // the opposite — that everything outside it was inert — so screen reader
+    // users lost the whole page until they dealt with the banner.
     <div
       className="cookieBanner"
-      role="dialog"
-      aria-modal="true"
-      aria-label={t("cookieBanner.title")}
+      role="region"
+      aria-labelledby="cookieBannerTitle"
     >
       <div className="cookieBannerInner">
-        <h3 className="cookieBannerTitle">{t("cookieBanner.title")}</h3>
+        <h3 className="cookieBannerTitle" id="cookieBannerTitle">
+          {t("cookieBanner.title")}
+        </h3>
         <p className="cookieBannerBody">{t("cookieBanner.body")}</p>
 
         {customizing && (

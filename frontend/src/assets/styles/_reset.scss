@@ -25,10 +25,15 @@ ol[role="list"] {
   list-style: none;
 }
 
-/* Set core root defaults */
-html:focus-within {
-  scroll-behavior: smooth;
-}
+/* Deliberately no `html:focus-within { scroll-behavior: smooth }` here.
+   It ships with this reset, but on touch devices it makes focusing an input
+   pathological: the moment the field takes focus the rule starts matching, so
+   the scroll the browser performs to clear the virtual keyboard becomes an
+   animation, and the tap that started it gets eaten cancelling that scroll.
+   The field then needs two or three taps before the keyboard opens — and only
+   on a phone, since a desktop click triggers no scroll-into-view.
+   Smooth scrolling where we do want it is driven by GSAP's ScrollToPlugin
+   (see useAnimation.scrollToSection), which this property actively fights. */
 
 /* Set core body defaults */
 body {
@@ -60,10 +65,8 @@ select {
 
 /* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
 @media (prefers-reduced-motion: reduce) {
-  html:focus-within {
-    scroll-behavior: auto;
-  }
-
+  /* The html:focus-within override that normally sits here is gone with the
+     rule it cancelled; the catch-all below still forces scroll-behavior. */
   *,
   *::before,
   *::after {
