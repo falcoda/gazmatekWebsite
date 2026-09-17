@@ -299,6 +299,14 @@
   ],
   "events": [
     {
+      "slug": "shadow-2026",
+      "titleFr": "Shadow 2026 - Halloween | Gazmatek",
+      "titleEn": "Shadow 2026 - Halloween | Gazmatek",
+      "descFr": "Le 31 octobre 2026, Shadow réunit Gazmatek, La Blanquette, Falc'ohm et La Fabriek au Studio Citygate à Bruxelles : 3 stages, 20+ artistes, hardtek et hardcore jusqu'à 7h.",
+      "descEn": "On October 31, 2026, Shadow brings Gazmatek, La Blanquette, Falc'ohm and La Fabriek together at Studio Citygate in Brussels: 3 stages, 20+ artists, hardtek and hardcore until 7am.",
+      "imageKey": "src/assets/img/events/shadow-2026/poster.jpg"
+    },
+    {
       "slug": "gazmatek-invite-alchimyst-infrabass",
       "titleFr": "Gazmatek Invite Alchimyst Infrabass | Gazmatek",
       "titleEn": "Gazmatek Invite Alchimyst Infrabass | Gazmatek",

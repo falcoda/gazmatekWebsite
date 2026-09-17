@@ -136,6 +136,59 @@ function createEventSeo(
 
 export const EVENTS: GazmatekEvent[] = [
   {
+    id: "shadow-2026",
+    slug: "shadow-2026",
+    title: createLocalizedText("Shadow 2026", "Shadow 2026"),
+    status: "upcoming",
+    date: "2026-10-31T22:00:00",
+    venue: "Studio Citygate",
+    city: "Brussels",
+    country: "Belgium",
+    address: "Rue de la Petite Île 1A, 1070 Anderlecht",
+    poster: createEventMedia(
+      "shadow-2026/poster.jpg",
+      "Bannière Shadow 2026 - La Blanquette x Gazmatek x Falc'ohm x La Fabriek",
+      "Shadow 2026 banner - La Blanquette x Gazmatek x Falc'ohm x La Fabriek",
+      "shotgun-shadow-2026",
+    ),
+    gallery: [],
+    lineup: [],
+    description: createLocalizedText(
+      "SHADOW — GAZMATEK x LA BLANQUETTE x FALC'OHM x LA FABRIEK\n\n4 crews / 3 stages / 20+ artistes / plein de surprises.\n\n31/10/2026 • 22:00 - 07:00 • Studio Citygate Brussels\n\nLa brume se lève, les basses frappent et tes sens s'éveillent : te voilà plongé dans Shadow. Bienvenue.\nLaisse les faisceaux de lumière te guider dans le royaume de l'imaginaire pour une nuit d'Halloween remplie de magie et de kicks durs.\nUn entrepôt désaffecté de plus de 2 000 m², divisé en trois salles thématiques soigneusement décorées, pour une expérience immersive et des performances uniques.\n\nLINE UP\nCitygate Room — powered by Gazmatek & Falc'ohm system : TBA\nLaFabriek Room — powered by Aku Soundsystem : TBA\nAlternative Room — powered by Gazmatek & Falc'ohm system : TBA\n\nEau, toilettes et bouchons d'oreilles gratuits. Care team sur place. LGBTQIA+ friendly.\n\nPreventes : Early birds 18€ / Wave 1 22€ / Wave 2 26€ / Wave 3 29€.",
+      "SHADOW — GAZMATEK x LA BLANQUETTE x FALC'OHM x LA FABRIEK\n\n4 crews / 3 stages / 20+ artists / many surprises.\n\n31/10/2026 • 22:00 - 07:00 • Studio Citygate Brussels\n\nThe mist is rising, the bass hits, and your senses awaken: you're now immersed into the Shadow. Be welcome.\nLet the beams of light guide you into the realm of the imagination for a Halloween night filled with magic and hard kicks.\nA disused warehouse spanning over 2,000 square meters, divided into three carefully decorated themed rooms, for an immersive experience featuring one-of-a-kind performances.\n\nLINE UP\nCitygate Room — powered by Gazmatek & Falc'ohm system: TBA\nLaFabriek Room — powered by Aku Soundsystem: TBA\nAlternative Room — powered by Gazmatek & Falc'ohm system: TBA\n\nFree water, toilets and earplugs. Care team on site. LGBTQIA+ friendly.\n\nPresales: Early birds 18€ / Wave 1 22€ / Wave 2 26€ / Wave 3 29€.",
+    ),
+    summary: createLocalizedText(
+      "Halloween 2026 au Studio Citygate : 4 crews, 3 stages et 20+ artistes avec Gazmatek, La Blanquette, Falc'ohm et La Fabriek.",
+      "Halloween 2026 at Studio Citygate: 4 crews, 3 stages and 20+ artists with Gazmatek, La Blanquette, Falc'ohm and La Fabriek.",
+    ),
+    seo: createEventSeo(
+      "Shadow 2026 - Halloween | Gazmatek",
+      "Shadow 2026 - Halloween | Gazmatek",
+      "Le 31 octobre 2026, Shadow réunit Gazmatek, La Blanquette, Falc'ohm et La Fabriek au Studio Citygate à Bruxelles : 3 stages, 20+ artistes, hardtek et hardcore jusqu'à 7h.",
+      "On October 31, 2026, Shadow brings Gazmatek, La Blanquette, Falc'ohm and La Fabriek together at Studio Citygate in Brussels: 3 stages, 20+ artists, hardtek and hardcore until 7am.",
+    ),
+    contentTier: "documented",
+    ticketUrl: "https://shotgun.live/fr/events/shadow-2026",
+    legacySources: [
+      {
+        id: "shotgun-shadow-2026",
+        kind: "facebook-event",
+        label: "Shotgun: Shadow 2026",
+        path: "https://shotgun.live/fr/events/shadow-2026",
+        note: "Source officielle de billetterie. Confirme la date, le lieu, les salles et les tarifs. Line-up encore TBA.",
+      },
+    ],
+    sourceMap: {
+      title: ["shotgun-shadow-2026"],
+      date: ["shotgun-shadow-2026"],
+      description: ["shotgun-shadow-2026"],
+      poster: ["shotgun-shadow-2026"],
+      gallery: [],
+      venue: ["shotgun-shadow-2026"],
+      lineup: [],
+    },
+  },
+  {
     id: "gazmatek-invite-alchimyst-infrabass",
     slug: "gazmatek-invite-alchimyst-infrabass",
     title: createLocalizedText(
